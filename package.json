@@ -1,0 +1,22 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:huan07/css-basic.git"
+  },
+  "author": "huan07",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.0",
+    "gulp.spritesmith": "^6.2.1",
+    "merge-stream": "^1.0.0"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+  }
+}
