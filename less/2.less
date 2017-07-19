@@ -1,8 +1,10 @@
-.tp-home-design-case {
-    -webkit-tap-highlight-color: transparent;
+@import "./common/flex-row.less";
+
+.section-container {
     color: #333;
     background-color: #fff;
     padding: 0 15px;
+    -webkit-tap-highlight-color: transparent;
     position: relative;
     &:before {
         content: " ";
@@ -32,16 +34,10 @@
         display: flex;
         justify-content: space-between;
     }
-    .align-items-center {
-        display: -webkit-flex;
-        -webkit-align-items: center;
-        display: flex;
-        align-items: center;
-    }
-    .case-title {
+    .section-title {
         height: 40px;
         line-height: 40px;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         position: relative;
         &:after {
@@ -55,49 +51,50 @@
             transform-origin: 0 100%;
             transform: scaleY(.5);
         }
-        .more-case {
+        .section-sub-title {
             font-size: 12px;
             font-weight: normal;
             color: #999;
             vertical-align: text-bottom;
         }
     }
-    .case-body {
+    .section-body {
         padding-right: 10px;
-        .case-item {
+        .section-item {
             padding: 10px 0;
             font-size: 12px;
-            .case-detail {
-                .detail-img, .detail-content {
-                    float: left;
+            .section-item-image {
+                width: 80px;
+                height: 60px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .section-item-img {
+                width: 80px;
+                height: 60px;
+                overflow: hidden;
+                > img {
+                    margin: -1px;
+                    width: 82px;
+                    height: 62px;
+                    border-radius: 3px;
                 }
-                .detail-img {
-                    width: 66px;
-                    height: 66px;
-                    overflow: hidden;
-                    .case-img {
-                        margin: -1px;
-                        width: 68px;
-                        height: 68px;
-                        border-radius: 3px;
-                    }
+            }
+            .section-item-content {
+                padding-left: 10px;
+                .section-item-one {
+                    height: 22px;
+                    line-height: 22px;
+                    font-size: 14px;
+                    font-weight: 400;
                 }
-                .detail-content {
-                    padding-left: 10px;
-                    .case-tag {
-                        font-size: 16px;
-                        height: 26px;
-                        line-height: 26px;
-                        font-weight: 400;
-                    }
-                    .case-layout {
-                        height: 20px;
-                        line-height: 20px;
-                    }
-                    .case-price {
-                        color: #999;
-                        margin-top: 5px;
-                    }
+                .section-item-two {
+                    height: 20px;
+                    line-height: 20px;
+                }
+                .color-nine {
+                    color: #999;
                 }
             }
             .case-consult {
