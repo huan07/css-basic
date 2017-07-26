@@ -1,0 +1,99 @@
+@import "./common.less";
+
+#x {
+    padding-left: 15px;
+    background-color: #fff;
+    min-height: 12px;
+    -webkit-tap-highlight-color: transparent;
+    .section-body-x {
+        .section-item-x {
+            padding: 15px 15px 0 0;
+            display: flex;
+            align-items: flex-start;
+            .item-image-x {
+                width: 95px;
+                height: 76px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .item-content-x {
+                padding-left: 10px;
+                font-family: PingFangSC-Regular;
+                .item-course-name, .item-price-consult {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .item-course-name {
+                    color: #333;
+                    font-size: 15px;
+                    line-height: 19px;
+                    height: 19px;
+                    align-items: center;
+                    .special {
+                        color: #666;
+                        font-size: 10px;
+                        line-height: 14px;
+                        padding: 0 2px;
+                        border: 1px solid #ccc;
+                        border-radius: 1px;
+                    }
+                }
+                .item-price-consult {
+                    line-height: 28px;
+                    height: 28px;
+                    .item-price-x {
+                        color: #F45D9D;
+                        dfn, .price-value {
+                            display: inline-block;
+                        }
+                        dfn {
+                            font-size: 15px;
+                            font-style: normal;
+                        }
+                        .price-value {
+                            font-size: 19px;
+                            padding: 0 5px 0 3px;
+                        }
+                        .qi {
+                            font-size: 12px;
+                            color: #999;
+                        }
+                    }
+                    .item-consult-x {
+                        color: #fff;
+                        font-size: 16px;
+                        padding: 0 8px;
+                        background: #F45D9D;
+                        border-radius: 2px;
+                    }
+                }
+                .item-highlight {
+                    color: #777;
+                    font-size: 12px;
+                    line-height: 24px;
+                    height: 24px;
+                    padding-bottom: 4px;
+                }
+                .item-suitable-crowd {
+                    color: #999;
+                    font-size: 11px;
+                    line-height: 32px;
+                    height: 32px;
+                    em {
+                        font-style: normal;
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+    .empty-data {
+        font-size: 14px;
+        line-height: 40px;
+        height: 40px;
+        color: #333;
+        background-color: #fff;
+        text-align: center;
+    }
+}
