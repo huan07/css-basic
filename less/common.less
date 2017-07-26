@@ -12,6 +12,15 @@
     }
 }
 
+.clear-float {
+    &:after {
+        display: block;
+        content: "";
+        height: 0;
+        clear: both;
+    }
+}
+
 .border-top-bottom {
     position: relative;
     &:before {
