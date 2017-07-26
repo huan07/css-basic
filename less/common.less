@@ -1,0 +1,54 @@
+.flex-row {
+    display: flex;
+    .flex-row-one {
+        flex: 1;
+        overflow: hidden;
+        .overflow-ellipsis {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+.border-top-bottom {
+    position: relative;
+    &:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-top: 1px solid #d7d7d7;
+        width: 100%;
+        height: 1px;
+        transform-origin: 0 100%;
+        transform: scaleY(.5);
+    }
+    &:after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom: 1px solid #d7d7d7;
+        width: 100%;
+        height: 1px;
+        transform-origin: 0 100%;
+        transform: scaleY(.5);
+    }
+}
+
+.border-bottom {
+    position: relative;
+    &:after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom: 1px solid #d7d7d7;
+        width: 100%;
+        height: 1px;
+        transform-origin: 0 100%;
+        transform: scaleY(.5);
+    }
+}

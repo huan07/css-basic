@@ -1,103 +1,54 @@
-@import "./common/flex-row.less";
+@import "./common.less";
 
-.section-container {
+#x {
     color: #333;
     background-color: #fff;
     padding: 0 15px;
     -webkit-tap-highlight-color: transparent;
-    position: relative;
-    &:before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-top: 1px solid #d7d7d7;
-        width: 100%;
-        height: 1px;
-        transform-origin: 0 100%;
-        transform: scaleY(.5);
-    }
-    &:after {
-        content: " ";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        border-bottom: 1px solid #d7d7d7;
-        width: 100%;
-        height: 1px;
-        transform-origin: 0 100%;
-        transform: scaleY(.5);
-    }
-    .content-space-between {
-        display: -webkit-flex;
-        -webkit-justify-content: space-between;
-        display: flex;
-        justify-content: space-between;
-    }
-    .section-title {
+    .section-title-x {
         height: 40px;
         line-height: 40px;
         font-size: 14px;
         font-weight: 400;
-        position: relative;
-        &:after {
-            content: " ";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            border-bottom: 1px solid #d7d7d7;
-            width: 100%;
-            height: 1px;
-            transform-origin: 0 100%;
-            transform: scaleY(.5);
-        }
-        .section-sub-title {
+        display: flex;
+        justify-content: space-between;
+        .more-case-x {
             font-size: 12px;
             font-weight: normal;
             color: #999;
             vertical-align: text-bottom;
         }
     }
-    .section-body {
+    .section-body-x {
         padding-right: 10px;
-        .section-item {
+        .section-item-x {
             padding: 10px 0;
             font-size: 12px;
-            .section-item-image {
+            align-items: center;
+            .item-image-x {
                 width: 80px;
                 height: 60px;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
             }
-            .section-item-img {
-                width: 80px;
-                height: 60px;
-                overflow: hidden;
-                > img {
-                    margin: -1px;
-                    width: 82px;
-                    height: 62px;
-                    border-radius: 3px;
-                }
-            }
-            .section-item-content {
+            .item-content-x {
                 padding-left: 10px;
-                .section-item-one {
+                .home-case-name {
+                    font-size: 14px;
                     height: 22px;
                     line-height: 22px;
-                    font-size: 14px;
                     font-weight: 400;
                 }
-                .section-item-two {
+                .home-case-layout, .home-case-price {
                     height: 20px;
                     line-height: 20px;
                 }
-                .color-nine {
+                .home-case-price {
                     color: #999;
                 }
             }
-            .case-consult {
+            .item-consult-x {
                 padding: 0 10px;
                 font-size: 15px;
                 line-height: 30px;
