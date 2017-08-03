@@ -1,18 +1,4 @@
-.flex-row {
-    display: flex;
-    .flex-row-one {
-        flex: 1;
-        overflow: hidden;
-        .overflow-ellipsis {
-            width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-    }
-}
-
-.clear-float {
+.clearFloat() {
     &:after {
         display: block;
         content: "";
@@ -21,13 +7,14 @@
     }
 }
 
-* {
-    -webkit-tap-highlight-color: transparent;
+.justifyContentSpaceBetween() {
+    display: flex;
+    justify-content: space-between;
 }
 
-.borderTopBottom() {
-    .borderTop();
-    .borderBottom();
+.alignItemsCenter() {
+    display: flex;
+    align-items: center;
 }
 
 .borderTop() {
@@ -60,13 +47,29 @@
     }
 }
 
-.justifyContentSpaceBetween() {
-    display: flex;
-    justify-content: space-between;
+.borderTopBottom() {
+    .borderTop();
+    .borderBottom();
 }
 
-.alignItemsCenter() {
-    display: flex;
-    align-items: center;
+.overflowEllipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
+.flex-row {
+    display: flex;
+    .flex-row-one {
+        flex: 1;
+        overflow: hidden;
+        .overflow-ellipsis {
+            width: 100%;
+            .overflowEllipsis();
+        }
+    }
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
 }

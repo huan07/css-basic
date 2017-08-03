@@ -1,9 +1,9 @@
 @import "./common.less";
 
 #x {
-    min-height: 12px;
     background-color: #f0f0f0;
     .section-body-x {
+        .clearFloat();
         .section-item-x {
             float: left;
             width: 50%;
@@ -20,49 +20,47 @@
                 font-family: PingFangSC-Regular;
                 background-color: #fff;
                 padding: 0 8px 10px;
-                line-height: 28px;
                 .item-title-x {
-                    height: 28px;
                     color: #111;
                     font-size: 12px;
+                    line-height: 28px;
+                    height: 28px;
                     padding-top: 4px;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    .overflowEllipsis();
                 }
                 .item-price-consult {
+                    line-height: 28px;
                     height: 28px;
-                    display: flex;
-                    justify-content: space-between; /*两端对齐*/
+                    .justifyContentSpaceBetween();
                     .item-price-x { /*溢出点点*/
-                        color: #F45D9D;
                         dfn, .price-value {
                             display: inline-block;
                         }
                         dfn {
+                            color: #F45D9D;
                             font-size: 10px;
                             font-style: normal;
                             &.origin {
+                                color: #999;
                                 font-size: 9px;
                             }
                         }
                         .price-value {
+                            color: #F45D9D;
                             font-size: 17px;
                             padding-right: 6px;
                             &.origin {
                                 font-size: 11px;
+                                text-decoration: line-through;
                             }
-                        }
-                        .origin {
-                            color: #999;
-                            text-decoration: line-through;
                         }
                     }
                     .item-consult-x {
-                        color: #fff;
                         font-size: 16px;
+                        line-height: 28px;
                         padding: 0 8px;
-                        background: #F45D9D;
+                        color: #fff;
+                        background-color: #F45D9D;
                         border-radius: 2px;
                     }
                 }
