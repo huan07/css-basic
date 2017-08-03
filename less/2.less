@@ -4,18 +4,18 @@
     color: #333;
     background-color: #fff;
     padding: 0 15px;
-    -webkit-tap-highlight-color: transparent;
+    .borderTopBottom();
     .section-title-x {
-        height: 40px;
-        line-height: 40px;
-        font-size: 14px;
         font-weight: 400;
-        display: flex;
-        justify-content: space-between;
-        .more-case-x {
-            font-size: 12px;
+        font-size: 14px;
+        line-height: 40px;
+        height: 40px;
+        .justifyContentSpaceBetween();
+        .borderBottom();
+        .view-more-x {
             font-weight: normal;
             color: #999;
+            font-size: 12px;
             vertical-align: text-bottom;
         }
     }
@@ -24,10 +24,10 @@
         .section-item-x {
             padding: 10px 0;
             font-size: 12px;
-            align-items: center;
+            .alignItemsCenter();
             .item-image-x {
                 width: 80px;
-                height: 60px;
+                height: 70px;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -35,10 +35,10 @@
             .item-content-x {
                 padding-left: 10px;
                 .home-case-name {
-                    font-size: 14px;
-                    height: 22px;
-                    line-height: 22px;
                     font-weight: 400;
+                    font-size: 14px;
+                    line-height: 22px;
+                    height: 22px;
                 }
                 .home-case-layout, .home-case-price {
                     height: 20px;
@@ -49,9 +49,9 @@
                 }
             }
             .item-consult-x {
-                padding: 0 10px;
                 font-size: 15px;
                 line-height: 30px;
+                padding: 0 10px;
                 color: #fff;
                 background-color: #f63;
                 border-radius: 2px;
