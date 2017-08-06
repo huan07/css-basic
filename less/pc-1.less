@@ -48,7 +48,48 @@
             .dialog-player {
                 width: 685px;
                 background-color: #222;
-
+                .player-container {
+                    position: relative;
+                    height: 390px;
+                    background-color: #000;
+                    .dialog-player_flash-not-support {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: auto;
+                        width: 600px;
+                        height: 30px;
+                        color: #fff;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+                .player-bar {
+                    padding: 0 15px;
+                    color: #ddd;
+                    font-size: 18px;
+                    line-height: 50px;
+                    .bar-title {
+                        float: left;
+                        padding-right: 30px;
+                        max-width: 320px; // ==============自适应宽度
+                        .overflowEllipsis();
+                    }
+                    .bar-vv {
+                        color: #bbb;
+                        font-size: 16px;
+                    }
+                    .share-btn {
+                        float: right;
+                        margin-top: 2px;
+                        color: #ccc;
+                        font-size: 23px;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                }
             }
             .dialog-list {
                 width: 215px;
