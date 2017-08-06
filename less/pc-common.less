@@ -1,0 +1,18 @@
+.clearFloat() {
+    zoom: 1;
+    &:after {
+        display: block;
+        height: 0;
+        clear: both;
+        font-size: 0;
+        content: '';
+        visibility: hidden;
+    }
+}
+
+.overflowEllipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
