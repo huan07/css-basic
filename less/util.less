@@ -10,6 +10,54 @@ section {
     padding: 0 15px;
     background-color: #fff;
     -webkit-tap-highlight-color: transparent;
+    .x-arrow-triangle {
+        .alignItemsCenter();
+        color: #333;
+        font-size: 14px;
+        line-height: 40px;
+        height: 40px;
+        .arrow {
+            height: 8px;
+            width: 8px;
+            border-left: 2px solid #bab5ad;
+            border-top: 2px solid #bab5ad;
+            &.top {
+                transform: rotate(45deg);
+            }
+            &.right {
+                transform: rotate(135deg);
+            }
+            &.bottom {
+                transform: rotate(225deg);
+            }
+            &.left {
+                transform: rotate(315deg);
+            }
+        }
+    }
+
+    .x-link {
+        .alignItemsCenter();
+        color: #333;
+        font-size: 14px;
+        line-height: 40px;
+        height: 40px;
+        .arrow-right {
+            height: 8px;
+            width: 8px;
+            border-top: 2px solid #bab5ad;
+            border-right: 2px solid #bab5ad;
+            transform: rotate(45deg);
+        }
+        .arrow-bottom {
+            height: 8px;
+            width: 8px;
+            border-right: 2px solid #bab5ad;
+            border-bottom: 2px solid #bab5ad;
+            transform: rotate(45deg);
+        }
+    }
+
     .section-title-x {
         .justifyContentSpaceBetween();
         font-weight: 400;
@@ -22,21 +70,6 @@ section {
             color: #999;
             font-size: 12px;
             vertical-align: text-bottom;
-        }
-    }
-
-    .x-link {
-        .alignItemsCenter();
-        color: #333;
-        font-size: 14px;
-        line-height: 40px;
-        height: 40px;
-        .arrow-right {
-            transform: rotate(-45deg);
-            height: 8px;
-            width: 8px;
-            border-right: 2px solid #bab5ad;
-            border-bottom: 2px solid #bab5ad;
         }
     }
 
@@ -53,6 +86,20 @@ section {
             padding: 0 2px;
             border: 1px solid #bbb;
             border-radius: 2px;
+        }
+    }
+
+    .class-cat {
+        .class-cat-item {
+            display: inline-block;
+            color: #666;
+            font-size: 12px;
+            line-height: 28px;
+            height: 28px;
+            padding: 0 6px;
+            margin: 0 5px 10px 0;
+            border: 1px solid #bbb;
+            border-radius: 5px;
         }
     }
 
@@ -77,20 +124,6 @@ section {
                 top: 50%;
                 margin-top: -10px;
             }
-        }
-    }
-
-    .class-cat {
-        .class-cat-item {
-            display: inline-block;
-            color: #666;
-            font-size: 12px;
-            line-height: 28px;
-            height: 28px;
-            padding: 0 6px;
-            margin: 0 5px 10px 0;
-            border: 1px solid #bbb;
-            border-radius: 5px;
         }
     }
 
