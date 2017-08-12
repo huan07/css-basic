@@ -1,6 +1,42 @@
 @import "./app-reset.less";
 @import "./app-common.less";
 
+.article-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
+    .header-title {
+        .justifyContentSpaceBetween();
+        .alignItemsCenter();
+        .borderBottom();
+        color: #333;
+        font-size: 18px;
+        //line-height: 50px;
+        height: 50px;
+        padding: 0 15px;
+        background-color: #fff;
+        .title-text {
+            padding: 0 15px;
+            text-align: center;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: 20px auto;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .icon-back {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAABG5JREFUWAnNmH1oG3UYx5/nLk3SZauzrGwMJxMrBStTdGhRcunctMx1dknnC+IQ39A/REH/0f2hglAVQVHwL18QX0Dc2qTr6FZq7XbptiIBURwIxemcWERrNrskl0tyj89d8ktLIeSSuysetM/v+eW55/nc934vdwewSsd9RHJAHXmb//4IJEeetVsW7QY6ieulad9pNf0FAN1v5kHEn/NKrNNOTslOkJOYW1KpljNq+isBV8n1vt2cnirYOTceuDCvHSai/ioQwsu6Mvha1a/T8Axw6y/TwfkL/ySIoK/KIOGLejj2ZtW30fAEcHNqbM1CtnCEldspGHjcPc/j7h3h27Wuj8GOs9NrF7L6sSocIiHgM83AmRfhqoLts+Ntl/XcMSC43VKI4ViBpzQl9oFdxVbGuQa4/rv4+uwiTQDRrWU4MCSQHteU6CcrizbiuwLYdvp4u1bMTjLczZXiJQnwES0S47XP2eEYcK063qFD7mu+rdvKKFgECR7i2XrIGVolm5MkodnRjQW9OMVw3VYeBB1AekBXogkneZef27SCa2ZGN5eM0jc8W7vKCTGPEuzPh2NHlxdw2m4KsPVkYosBDAdQ3k8RcghyNK/sm3AKtPL8htfB4Jn4VgMMdQkOsxJhvxdwJmxDCgZOxa+FEk3zbd1SudLLEvj2aJEBdeWVu+XbVjAwM9rFcGoVDvFfGeQ+L+HMi7SloF9NXI9UmuLbuqmsDF6UEftySvRbt5SqlaeugiF1dBtC6cQyuAUf0s7VgDOhfbXIRX+Bih9xu8P0EeEvH8i7MsrAD+J3r21dBRmrKCBYRZnQaBH+atj6gH54jJ/l5i0YgvaiYUy1JhO3rQacWcPWJAnMjl0H+QIvzHSVBYa4yDN4d04ZOOU1aH0FmSDfs3cOJX+Ex+B5C4hoXYmKE8FkvPd/AWhCaOH+cygHTchzFaiQQcZ4MJnY5SWkLQUFgHbHnvOSHyI8LuasPoJWwyiNBWbiu0WM27YhQLN4rmfwdxktyJ8qMEEyjERgZvhet+HMfA0DmidllcH5Fh9GeI79aPr8POgnAw771fig5bv4z9YsrlVvXWpsQz5TmGTCm8oxWGR1D+SU2Je1zmm0vykFRZHF7Xv/bpX8d7KfKveRr0T0Oc/uAyLGqXWkoCh+ZWryikxm8Tgr2WP1Ib/RIT6phWMfi5hmrSMFRdH09rsutcny3bzjzFh9BJJB8CF/antaxDRrXVFQFN/4/UTo4qXMUX5m7BV9KOFz/J7ynvAbta4oKIr+eWNfpsO36R7+1METp3yQQe8GkvEXhN+odVVBUdz6svVbeoT37qUFHKWD/Dr6uoixa11VUBT99ZodWueGrn2s5BHRB2QMBU8Ov1r1bTY8ATRrn+3u1m8IXb2f9+5hwWIAvBJUh4eEb8d6couXF7a+TyfTn/F3mweX+vElPRJ7Y8mv3fJMQVHyBO4oDoSjD/O2+KnoY1WfEO161nNAE+AQYumgEn2UF+8h63GN6K16YOL3/wBNw3UiSYKz0gAAAABJRU5ErkJggg==);
+        }
+        .icon-share {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAABqpJREFUWAnNWGtsVEUUnnPvdh8URFBEQDEB4iMVUSgotbuEiBGQWnYrzyAB8QXxhwlGpYlQ/AEa+KkEDCaICD7S3T6ogiDQblkUS4LBAgoaISXyaCml7b7vHb+57O7dLe3dbWWD0+bO3DPn8c2ZOefMXWKxZvFVjuFRpZQYc3DGRzLOpPhcSk8MLKnNRpa72+yzWlOpt+bNJNRY6j0zeETxMMYtPJ3ebhjC5lAuxLID0FZfPVJRwm6BkxEJ87/g2QQ/qd1hBcNNECXJEu2O91bQTCqPlEKRVYAjiZ4PFTq/763isIFAv7ryYQqjnzln+wocg14/RFN7tRiJcT5d6CfGfX0BZ4BNm1JJzuOc3w/Hv3zEe/WrvMZGczqZ5HkJK3tAEDinC8kT2RjDVsnZltM1QxoP9s9Uvx6pPZy5TBWl5SMWETwAOa2tpfVQ/8Pue9LKgEEHyHm3QZGJEiMeTmosLdEJIlquBR/nEyIK84nUZiQr5nSANyI4HX+v54lL8ajnIYdrs8RpMU58FOdyNItGfTZvxZNGSnWALDseTDKueTI4xfWlRDQdnryK7R6icPWAxeuelcSXMtQStUbhWg5MmezLS+5PlUOjEWUiZEchk47iXMnvqifocP5o9e6eqPJwJQ7lowBaYfV6VgTtzk+78uoAkWe6Tmb6LlLHmZY/iqBiSSQUnQE5OSHbg9agfdZfiObJ15tbt6O0OlVV3WKtLR8enFJSlpDFQAco4qsPTZTJsy2/fwbxYUIBAuEkujos9zck/uuIkTDDA1Wguav6K3lTO3AWS2x17jUq0WqV8zWW2vJhqxyu5WVEWtAmAewqbvx+n89nuxK5tJEr6grBCWC7ZUle6y8sbjCWTJ2FnFhXma3ec1JR+Q646bX1Xs/gCQ0NC4/l50eSAGZ+Bgc17Bt42X+xFlltHJR3MJKWhBzO8lTTvXsLFDq/wW60c1Uth1dfPOE/p0DD/KQozkwhVpbj97eXY0vHISwvmohNCf9HcHHLsVK7XnvnbJ7NVz1C9yBOapzRqD/hP78F4J4RaYLJUqH/aeefRvy9mTN73XOg+31Nhti2QEHRhYQHSVTlNM1S534DCpaCTZFInhe6heCsdeWvMJXvgptycC63ltpdywQc3YNpwInaGY4yzf0SSeuC9tn7uxMZ3lDdrzWgjFUQ1YypJpnLMkfPJdYWsrt2d5WZw7lc5a3YqHL1LTFHTNoE3W/GgicJYJpEHVFoFQzeCcF/Bg7s91EwydLQX/fmtrV1LFA5LWv2hyfBC4mdUZg462gqHcczBeAdvj2Dq7zur7F30wQLKswHSOJrtJIjCGgZeVBEbae/XXM5tnjtpXHPdQrhMs6lD+s9S65d61yH8zEUUa39ww8tGJzHYq6DYoPMJMGf3PrXV+WFov5KgBsNt0VQo18NOlyfJ/OIcUYAA/6OIhgZAEWBAZJpZwiCosiv83o+AX0C6Liy0B54YDsj0+FAYdH5uCFLvftZrrAf4u+iN9e5i8Nq9AtNJ6NrkiS7goXFB5N54uNkgFhs9w3nQ5Qv0aqaC4vbbV7PAoUr2+AwM7xUyWRamWnAiECDoU0AR1jU39zMZgYnF5+6of7mpw4Q2fHm6TiFHhN7h+CoQSp4FwGwHrXrMiO+DFeomjhXut5S634bZjZofERHc2RW1DHZddlITgdoxEV8uHa8VL4AQGfAawdyyDq/wzHzipFYyhxxfJswDRxcVzHEdO/CpoKCQAoPXnIPex6PKuoIQQ85SmoyA4hKKzyIP7HVO8fc9dDSxrw8o485oT+1Ib9pBKJdL9idL31LFAvvVLaIwlfC0KIYlRLpAPvX8xZzhAEaYO4vdrgW9wZc0o1aaNheancu6glcDFRKl5EHgQ4XAtZmJcvc3igXlizMdCzA1OPwxN73HM7S+DUqBYXBiw7QqBYTPwcnbujL7y8xmScEhjIDID1N6VvcEwfoKD+bww5XpQFL1qaSAPacZlB+dmQNQRrFSQDTcN6maR2g/v16m6B0b1YHmMF9sHsV2aXqAFV+I5Fm114m2i0aU+y3HAkFu0kQkKXHZyKdbR7ifKywAVxnRC+h4FeLASjjtSu99nJ7HuY6zztw1MOadc7rRU+5voqxkYhyFGOrNkF0DP0puLRvv3bhmqPpSXmIWp5o+hhXLo1KlCM8lwCHe6dsZg8Gnipp0hisXvdifNVvBaj/wznsJFmeGyqc/Z0An1iN+Yj7EfzEuBoryce6RgGsHkCJxWdtoOAKh/slc3M55+NwQdHpuKV/AQOOpDTMtTeiAAAAAElFTkSuQmCC);
+        }
+    }
+}
+
 section {
     margin: 20px 0;
 }
@@ -10,6 +46,53 @@ section {
     padding: 0 15px;
     background-color: #fff;
     -webkit-tap-highlight-color: transparent;
+
+    .x-lesson {
+        .icon-lesson {
+            display: inline-block;
+            color: #333;
+            font-size: 15px;
+            line-height: 45px;
+            height: 45px;
+            padding-left: 26px;
+            position: relative;
+            &:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-size: 20px auto;
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAM1BMVEVRjM5hldFvndV8pdiJrduVtd6gvOGrxOS2y+fA0urK2e3T3/Dd5vPm7fbu8/n3+fz////Sfc7DAAAAyUlEQVQ4y+3TQY7DIBBE0cK0MSaN+fc/7SzsRB4J7EQzy9T6CZpqIX3zv4k1StJkp8Qe3GhJUuYU78GpQpIym7uDu9c+VCiQlMmSQJINoFQo70Gld2Y8cgdfbdxd/TrgA3hbjx3w9jHnm+DivZ/B1d2fM7q7D6HzO0MYzWxuDTZmM7MhDHuVkHhczBh8kYwWQJU0hLXyUGzMAkVG0oAWrbHu9aSRLNBihvLsscDah3VadncUXmDpfcM1KGzLeTOp3v3dyxV+84f8AF7rD9VaDGTVAAAAAElFTkSuQmCC);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -10px;
+            }
+        }
+    }
+
+    .x-discount {
+        .alignItemsCenter();
+        color: #999;
+        font-size: 11px;
+        line-height: 31px;
+        height: 31px;
+        .discount-tag-1, .discount-tag-2 {
+            color: #fff;
+            font-size: 10px;
+            padding: 1px 2px;
+            background-color: #ffa718;
+            border-radius: 2px;
+            margin-right: 5px;
+        }
+        .discount-tag-2 {
+            background-color: #3572b0;
+        }
+        .discount-text {
+            color: #f63;
+        }
+    }
+
     .x-arrow-triangle {
         .alignItemsCenter();
         color: #333;
@@ -102,52 +185,6 @@ section {
         }
     }
 
-    .x-lesson {
-        .icon-lesson {
-            display: inline-block;
-            color: #333;
-            font-size: 15px;
-            line-height: 45px;
-            height: 45px;
-            padding-left: 26px;
-            position: relative;
-            &:before {
-                content: '';
-                width: 20px;
-                height: 20px;
-                background-repeat: no-repeat;
-                background-size: 20px auto;
-                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAM1BMVEVRjM5hldFvndV8pdiJrduVtd6gvOGrxOS2y+fA0urK2e3T3/Dd5vPm7fbu8/n3+fz////Sfc7DAAAAyUlEQVQ4y+3TQY7DIBBE0cK0MSaN+fc/7SzsRB4J7EQzy9T6CZpqIX3zv4k1StJkp8Qe3GhJUuYU78GpQpIym7uDu9c+VCiQlMmSQJINoFQo70Gld2Y8cgdfbdxd/TrgA3hbjx3w9jHnm+DivZ/B1d2fM7q7D6HzO0MYzWxuDTZmM7MhDHuVkHhczBh8kYwWQJU0hLXyUGzMAkVG0oAWrbHu9aSRLNBihvLsscDah3VadncUXmDpfcM1KGzLeTOp3v3dyxV+84f8AF7rD9VaDGTVAAAAAElFTkSuQmCC);
-                position: absolute;
-                left: 0;
-                top: 50%;
-                margin-top: -10px;
-            }
-        }
-    }
-
-    .x-discount {
-        .alignItemsCenter();
-        color: #999;
-        font-size: 11px;
-        line-height: 31px;
-        height: 31px;
-        .discount-tag-1, .discount-tag-2 {
-            color: #fff;
-            font-size: 10px;
-            padding: 1px 2px;
-            background-color: #ffa718;
-            border-radius: 2px;
-            margin-right: 5px;
-        }
-        .discount-tag-2 {
-            background-color: #3572b0;
-        }
-        .discount-text {
-            color: #f63;
-        }
-    }
-
     .item-class-nature {
         .overflowEllipsis();
         color: #999;
@@ -162,5 +199,3 @@ section {
         }
     }
 }
-
-
