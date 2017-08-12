@@ -1,6 +1,10 @@
 @import "./app-reset.less";
 @import "./app-common.less";
 
+section {
+    margin: 20px 0;
+}
+
 .x {
     .borderTopBottom();
     padding-left: 15px;
@@ -70,5 +74,37 @@
             }
         }
 
+    }
+}
+
+.x2 {
+    background-color: #f0f0f0;
+    .section-body-x {
+        .clearFloat();
+        .section-item-x {
+            float: left;
+            width: 50%;
+            padding: 3px;
+            box-sizing: border-box;
+            .item-image-x {
+                width: 100%;
+                height: 100px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .item-content-x {
+                font-family: PingFangSC-Regular;
+                background-color: #fff;
+                padding: 0 8px 10px;
+                .item-title-x {
+                    color: #111;
+                    font-size: 12px;
+                    line-height: 28px;
+                    height: 28px;
+                    .overflowEllipsis();
+                }
+            }
+        }
     }
 }
