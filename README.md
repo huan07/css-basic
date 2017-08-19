@@ -8,7 +8,7 @@
 4. margin 居中对齐方式
 
 
-position absolute 100%覆盖父元素，opacity ==> util.2
+position absolute 100%覆盖父元素，opacity ==> util.2 xxx
 
 
   
