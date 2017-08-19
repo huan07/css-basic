@@ -14,32 +14,30 @@
 
         .pos_relative_left {
             position: relative;
-            left: -20px;
+            left: -30px;
         }
 
         .pos_relative_right {
             position: relative;
-            left: 20px;
+            left: 30px;
         }
 
         .pos_fixed {
             position: fixed;
-            top: 200px;
-            right: 50px;
-            margin: 0;
+            top: 100px;
+            right: 100px;
         }
 
         .html_absolute {
             position: absolute;
             top: 200px;
             right: 50px;
-            margin: 0;
         }
 
         .parent_relative {
             position: relative;
             width: 500px;
-            height: 150px;
+            height: 500px;
             background-color: #333;
         }
 
@@ -47,33 +45,29 @@
             position: absolute;
             top: 50px;
             right: 50px;
-            width: 300px;
-            height: 100px;
+            width: 250px;
+            height: 250px;
             background-color: #999;
-            margin: 0;
             padding: 0;
         }
     </style>
 </head>
 
 <body>
-<div class="pos_static">static=>没有定位，top,left 属性无效</div>
+<div class="pos_static">static=>没有定位，top,left 属性无效 默认属性<span style="color:#2546FF">不会脱离文档流</span></div>
 
-<div class="pos_relative_left">relative left相对于其正常位置向左移动</div>
+<div class="pos_relative_left">relative left相对于其正常位置向左移动 <span style="color:#2546FF">不会脱离文档流</span></div>
 <div class="pos_relative_right">relative right相对于其正常位置向右移动</div>
 
 
-<div class="pos_fixed">fixed相对于浏览器窗口是固定位置。即使窗口是滚动的它也不会移动</div>
+<div class="pos_fixed">fixed相对于浏览器窗口是固定位置。即使窗口是滚动的它也不会移动 <span style="color:red">脱离文档流</span></div>
 
-<div class="html_absolute">absolute如果元素没有已定位的父元素，那么它的位置相对于html/body</div>
+<div class="html_absolute">absolute如果元素没有已定位的父元素，那么它的位置相对于html/body <span style="color:red">脱离文档流</span></div>
 <div class="parent_relative">
     <div class="children_absolute">
         absolute绝对定位的元素的位置相对于最近的已定位父元素relative，
     </div>
 </div>
-
-<div> 脱离文档流的position-fixed;position-absolute "会和其他元素重叠" 元素的定位与文档流无关，所以它们可以覆盖页面上的其它元素</div>
-<div> 没有脱离文档流的position-static;position-relative</div>
 
 </body>
 </html>

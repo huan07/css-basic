@@ -1,6 +1,13 @@
 @import "./app-reset.less";
 @import "./app-common.less";
 
+body > div,
+body > section {
+    background-color: #fff;
+    padding: 0 15px;
+    margin: 20px 0;
+}
+
 .article-title {
     position: fixed;
     top: 0;
@@ -36,15 +43,8 @@
     }
 }
 
-section {
-    margin: 20px 0;
-}
-
 .x {
     .borderTopBottom();
-    padding: 0 15px;
-    background-color: #fff;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .x-lesson {
@@ -113,26 +113,11 @@ section {
         border: 1px solid #bbb;
         border-radius: 2px;
     }
-}
-
-.x-link {
-    .alignItemsCenter();
-    color: #333;
-    font-size: 14px;
-    line-height: 40px;
-    height: 40px;
     .arrow-right {
         height: 8px;
         width: 8px;
         border-top: 2px solid #bab5ad;
         border-right: 2px solid #bab5ad;
-        transform: rotate(45deg);
-    }
-    .arrow-bottom {
-        height: 8px;
-        width: 8px;
-        border-right: 2px solid #bab5ad;
-        border-bottom: 2px solid #bab5ad;
         transform: rotate(45deg);
     }
 }
