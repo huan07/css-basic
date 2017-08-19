@@ -6,4 +6,9 @@
 2. position(absolute的父元素是fixed)；清除浮动；
 3. img；
 4. margin 居中对齐方式
+
+
+position absolute 100%覆盖父元素，opacity ==> util.2
+
+
   
