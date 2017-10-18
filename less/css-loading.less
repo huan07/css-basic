@@ -1,3 +1,7 @@
+body {
+    background-color: #0CCCC8;
+}
+
 .container {
     margin: 100px auto;
     width: 1000px;
@@ -20,21 +24,19 @@
                 height: 20px;
                 margin: 2px;
                 border-radius: 50%;
-                background-color: grey;
+                background-color: white;
                 -webkit-animation-fill-mode: both; // to learn
                 animation-fill-mode: both; // to learn
-            }
-            div:nth-child(1) {
                 -webkit-animation: ball-plus 1s linear infinite;
                 animation: ball-plus 1s linear infinite;
             }
             div:nth-child(2) {
-                -webkit-animation: ball-plus 1s linear .2s infinite;
-                animation: ball-plus 1s linear .2s infinite;
+                -webkit-animation-delay: .2s;
+                animation-delay: .2s;
             }
             div:nth-child(3) {
-                -webkit-animation: ball-plus 1s linear .4s infinite;
-                animation: ball-plus 1s linear .4s infinite;
+                -webkit-animation-delay: .4s;
+                animation-delay: .4s;
             }
 
             @-webkit-keyframes ball-plus {
