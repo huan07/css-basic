@@ -9,3 +9,6 @@
 - width:xx,height:xx,margin:0 auto; // lib.html
 
 ## 覆盖原生的button textarea // lib.html
+
+##
+-webkit- Safari,Chrome
