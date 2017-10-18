@@ -1,3 +1,8 @@
+.animationDelay(@time) {
+    -webkit-animation-delay: @time;
+    animation-delay: @time;
+}
+
 body {
     background-color: #0CCCC8;
 }
@@ -25,20 +30,18 @@ body {
                 margin: 2px;
                 border-radius: 50%;
                 background-color: white;
+
                 -webkit-animation-fill-mode: both; // to learn
                 animation-fill-mode: both; // to learn
                 -webkit-animation: ball-plus 1s linear infinite;
                 animation: ball-plus 1s linear infinite;
             }
             div:nth-child(2) {
-                -webkit-animation-delay: .2s;
-                animation-delay: .2s;
+                .animationDelay(.2s);
             }
             div:nth-child(3) {
-                -webkit-animation-delay: .4s;
-                animation-delay: .4s;
+                .animationDelay(.4s);
             }
-
             @-webkit-keyframes ball-plus {
 
             }
@@ -48,21 +51,68 @@ body {
                     transform: scale(1);
                     opacity: 1;
                 }
-
                 50% {
                     -webkit-transform: scale(.3);
                     transform: scale(.3);
                     opacity: .7;
                 }
-
                 100% {
                     -webkit-transform: scale(1);
                     transform: scale(1);
                     opacity: 1;
                 }
             }
-
         }
+
+        .inner.ball-scale {
+            position: relative;
+            top: -24px;
+            left: -24px;
+            div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+
+                background-color: white; // 实心圆
+                // border: 3px solid #fff;  空心圆
+                // background-color: transparent;
+
+                opacity: 0; /* 最初是看不见的 */
+
+                -webkit-animation-fill-mode: both; // to learn
+                animation-fill-mode: both; // to learn
+                -webkit-animation: ball-scale 1.5s linear infinite;
+                animation: ball-scale 1.5s linear infinite;
+            }
+            div:nth-child(2) {
+                .animationDelay(.5s);
+            }
+            div:nth-child(3) {
+                .animationDelay(1s);
+            }
+            @-webkit-keyframes ball-scale {
+
+            }
+            @keyframes ball-scale {
+                0% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                100% {
+                    -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+                    opacity: 0;
+                }
+            }
+        }
+
     }
 }
 
