@@ -1,0 +1,66 @@
+.container {
+    margin: 100px auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .loading { /*它的一个子元素 水平居中 垂直居中的*/
+        width: 200px;
+        height: 200px;
+        display: -webkit-flex; /* Safari */
+        -webkit-justify-content: center; /* Safari 6.1+ */
+        -webkit-align-items: center; /* Safari 7.0+ */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .inner.ball-plus {
+            div {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin: 2px;
+                border-radius: 50%;
+                background-color: grey;
+                -webkit-animation-fill-mode: both; // to learn
+                animation-fill-mode: both; // to learn
+            }
+            div:nth-child(1) {
+                -webkit-animation: ball-plus 1s linear infinite;
+                animation: ball-plus 1s linear infinite;
+            }
+            div:nth-child(2) {
+                -webkit-animation: ball-plus 1s linear .2s infinite;
+                animation: ball-plus 1s linear .2s infinite;
+            }
+            div:nth-child(3) {
+                -webkit-animation: ball-plus 1s linear .4s infinite;
+                animation: ball-plus 1s linear .4s infinite;
+            }
+
+            @-webkit-keyframes ball-plus {
+
+            }
+            @keyframes ball-plus {
+                0% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+                50% {
+                    -webkit-transform: scale(.3);
+                    transform: scale(.3);
+                    opacity: .7;
+                }
+
+                100% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+}
+
