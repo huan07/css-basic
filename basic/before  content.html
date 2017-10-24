@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>伪类选择器</title>
+    <style>
+        p:before {
+            content: "Read this -";
+            background-color: yellow; /* 插入的内容的颜色之类*/
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<p>My name is Donald</p>
+<p>I live in Ducksburg</p>
+
+<p>伪类选择器 before/after 要搭配 content属性 才能生效的</p>
+
+</body>
+</html>
