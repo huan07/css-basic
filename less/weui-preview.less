@@ -1,35 +1,13 @@
+@import './common-weui.less';
+
 .x-preview {
     background-color: #fff;
     position: relative;
-    &:before { // top  1像素 to 封装 参照自己写的去封装transform transform-origin
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        border-top: 1px solid red;
-
-        transform: scaleY(.5);
-        //transform-origin: 0 0;
-        transform-origin: 0 0;
-
-        //-webkit-transform: scaleY(.5);
-        //-webkit-transform-origin: 0 0;
+    &:before {
+        .setTopHalfPix();
     }
-    &:after { // bottom
-        content: " ";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-bottom: 1px solid red;
-
-        transform: scaleY(.5);
-        //transform-origin: 0 100%;
-        transform-origin: 0 0;
-
-        // -webkit-transform: scaleY(.5);
-        //-webkit-transform-origin: 0 100%;
+    &:after {
+        .setBottomHalfPix();
     }
 }
 
@@ -39,19 +17,7 @@
     line-height: 2.5em;
     position: relative;
     &:after {
-        content: " ";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-bottom: 1px solid red;
-
-        transform: scaleY(.5);
-        //transform-origin: 0 100%;
-        transform-origin: 0 0;
-
-        // -webkit-transform: scaleY(.5);
-        //-webkit-transform-origin: 0 100%;
+        .setBottomHalfPix();
         left: 15px;
     }
     .x-preview__value {

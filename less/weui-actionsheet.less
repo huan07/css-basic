@@ -1,0 +1,73 @@
+@import './common-weui.less';
+
+.x-mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; /* 对浏览器全面覆盖的  不用加width height           */
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.x-actionsheet {
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* 对浏览器 底部覆盖的  高度自适应                */
+
+    background-color: #EFEFF4;
+    //slide up animation
+    //transform: translate(0, 100%); 动画的形势呈现 to add
+    //backface-visibility: hidden;
+    //transition: transform .3s;
+
+    .x-actionsheet__title {
+        padding: 0 20px;
+        height: 65px;
+        line-height: 1.4;
+        font-size: 14px;
+        color: #888;
+        background: #FCFCFD;
+        //text-align: center;
+
+        display: flex; // ??
+        justify-content: center; // ??
+        flex-direction: column; // ??
+
+        position: relative;
+        &:before {
+            .setBottomHalfPix();
+        }
+        .x-actionsheet__title-text {
+            .ellipsisLn(3);
+        }
+    }
+
+    .x-actionsheet__menu {
+        background-color: #FCFCFD;
+    }
+
+    .x-actionsheet_action {
+        background-color: #FCFCFD;
+        margin-top: 6px;
+    }
+
+    .x-actionsheet__cell {
+        position: relative;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 18px;
+        &:before {
+            .setTopHalfPix();
+        }
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+

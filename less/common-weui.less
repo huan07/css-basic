@@ -1,0 +1,46 @@
+.setTopHalfPix(@color:#c7c7c7) { // top  1像素 to 封装 参照自己写的去封装transform transform-origin
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid @color;
+
+    transform: scaleY(.5);
+    //transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    //-webkit-transform: scaleY(.5);
+    //-webkit-transform-origin: 0 0;
+}
+
+.setBottomHalfPix(@color:#c7c7c7) {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid @color;
+
+    transform: scaleY(.5);
+    //transform-origin: 0 100%;
+    transform-origin: 0 0;
+
+    // -webkit-transform: scaleY(.5);
+    //-webkit-transform-origin: 0 100%;
+}
+
+.ellipsisLn(@line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @line;
+}
+
+.xx {
+    text-align: justify; // 段落整齐
+    text-justify: inter-ideograph; /*IE*/
+    word-wrap: break-word; // 长文本换行
+    word-break: break-all; // 长单词断开 better than keep-all
+}
