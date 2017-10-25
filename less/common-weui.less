@@ -44,3 +44,13 @@
     word-wrap: break-word; // 长文本换行
     word-break: break-all; // 长单词断开 better than keep-all
 }
+
+.mask() {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; /* 对浏览器全面覆盖的  不用加width height           */
+    background-color: rgba(0, 0, 0, .6);
+}
