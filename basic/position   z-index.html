@@ -31,12 +31,14 @@
             position: fixed;
             top: 100px;
             right: 100px;
+            z-index: 9999; /*   设置在fixed relative absolute有效 */
         }
 
         .html_absolute {
             position: absolute;
             top: 100px;
             right: 100px;
+            z-index: 99;
         }
 
         .parent_relative {
