@@ -21,6 +21,19 @@
             width: 70px;
             height: 70px;
         }
+
+        #main2 {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        #main2 div {
+            position: absolute; /* 要是fixed 是相对浏览器窗口 水平垂直居中的*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 <body>
@@ -28,5 +41,12 @@
 <div id="main">
     <div style="background-color:coral;"></div>
 </div>
+
+
+<div id="main2">
+    <div>第二种水平，垂直居中方式</div>
+</div>
+
+
 </body>
 </html>
