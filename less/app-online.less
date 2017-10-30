@@ -1,6 +1,25 @@
 @import "./app-reset.less";
 @import "./app-common.less";
 
+.ellipsis(@w:auto) { // copy from weui  better_code
+    width: @w;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.clearFloat() { /* better_code */
+    zoom: 1;
+    &:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0;
+    }
+}
+
 body > div,
 body > section {
     background-color: #fff;
@@ -47,7 +66,7 @@ body > section {
     .borderTopBottom();
 }
 
-.x-lesson {
+.x-lesson { // base
     .icon-lesson {
         display: inline-block;
         color: #333;
@@ -67,6 +86,37 @@ body > section {
             left: 0;
             top: 50%;
             margin-top: -10px;
+        }
+    }
+}
+
+.x-lesson-example { // to add  line top  and  bottom
+    padding: 10px 15px;
+    .clearFloat();
+    .icon-lesson {
+        float: left;
+
+        color: #333;
+        font-size: 12px;
+        line-height: 25px;
+        height: 25px;
+
+        .ellipsis(33.33333333%);
+        padding: 0 2px 0 18px;
+        box-sizing: border-box;
+
+        position: relative;
+        &:before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            background-repeat: no-repeat;
+            background-size: 14px auto;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAZlBMVEUAAABYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmpYpmplwHr///9ftHNiu3ddsXH0+vV8uothuHVbrG5ssHxgtnR0tYPp8+vg7uOHv5Tp8+yfzKr0QZZbAAAAEXRSTlMA++nLxPPbiUgnYj8+Y9yLIW20d+kAAADvSURBVCjPfZPXDoMwDEWTsDdkMAtt//8nG8XGCKvivoB8lBuvCFKdxUpKFWe14CrTxdjBy5olLW+oj1wgIOui/mKVMsNNRpF3LueBaZM5sCLxjGtOigAj9GTOUcjTDX/lGg9Ty6LWwif1mS7c77XCPUslMsPZuK9b+MtEbNFsPpnWhwyRWCi8fnq7k43TFmJKSCh6GrWnyDB/iVAeWntKDKGCk+vu6ZcY2mJCJlBikBCWgpQYlAJNAPohhk2A9iE9kFH7ROOuIW6s8Q8jexw2rQlnYU2AJnw0CTBw5qtZ3Je6vZa6LQVX3cFz6GoK/QDP5SpBxAp/AQAAAABJRU5ErkJggg==);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -8px;
         }
     }
 }
