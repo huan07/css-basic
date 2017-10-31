@@ -39,10 +39,9 @@
             font-size: 16px;
             color: #333;
 
-           /* border: 1px solid #c3c3c3;*/
+            /* border: 1px solid #c3c3c3;*/
 
             padding: 10px 15px;
-
 
             display: -webkit-flex; /* Safari */
             -webkit-justify-content: space-between; /* Safari 6.1+ */
@@ -53,14 +52,13 @@
 
         }
 
-
-
         .row2 .right {
             font-size: 12px;
             color: #fff;
             padding-right: 14px;
             position: relative;
         }
+
         .row2 .right:after {
             content: "";
             height: 8px;
@@ -69,54 +67,11 @@
             border-top: 2px solid #bab5ad;
             transform: rotate(135deg);
             position: absolute;
-            right: 2px;  /* 估算的哦  不准确的*/
-            top:50%;
+            right: 2px; /* 估算的哦  不准确的*/
+            top: 50%;
             margin-top: -6px;
         }
 
-
-        .row3 {
-            /*width: 400px;  宽度 整个一行*/
-            /*height: 150px; 高度 是子元素撑起来的*/
-
-            line-height: 45px;
-            font-size: 16px;
-            color: #333;
-
-            /* border: 1px solid #c3c3c3;*/
-
-            padding: 10px 15px;
-
-
-            display: -webkit-flex; /* Safari */
-            -webkit-justify-content: space-between; /* Safari 6.1+ */
-            -webkit-align-items: center; /* Safari 7.0+ */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-
-
-        .row3 .right {
-            font-size: 12px;
-            color: #fff;
-            padding-right: 14px;
-            position: relative;
-        }
-        .row3 .right:after {
-            content: "";
-            height: 8px;
-            width: 8px;
-            border-left: 2px solid #bab5ad;
-            border-top: 2px solid #bab5ad;
-            transform: rotate(135deg);
-            position: absolute;
-            right: 2px;  /* 估算的哦  不准确的*/
-            top:50%;
-            margin-top: -6px;
-        }
     </style>
 </head>
 
@@ -132,11 +87,6 @@
     <div class="right" style="background-color:lightblue;">右文字 flex 布局</div>
 </div>
 
-
-<div class="row3">
-    <div style="background-color:coral;">左文字 flex 布局</div>
-    <div class="right" style="background-color:lightblue;">右文字 flex 布局</div>
-</div>
 
 </body>
 </html>
