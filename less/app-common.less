@@ -1,9 +1,11 @@
-.clearFloat() {
+.clearFloat() { /* better_code */
+    zoom: 1;
     &:after {
         display: block;
-        content: "";
-        height: 0;
         clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0;
     }
 }
 
@@ -67,10 +69,12 @@
     .borderBottom();
 }
 
-.overflowEllipsis() {
+.ellipsis(@w:auto) { // copy from weui  better_code
+    width: @w;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    word-wrap: normal;
 }
 
 .flex-row {
@@ -85,8 +89,7 @@
         flex: 1;
         overflow: hidden;
         .overflow-ellipsis {
-            width: 100%;
-            .overflowEllipsis();
+            .ellipsis(100%);
         }
     }
 }
