@@ -1,0 +1,31 @@
+@import "./app-common";
+
+.x-grids {
+    overflow: hidden; /* 清除浮动*/
+
+    .x-grid {
+        float: left;
+
+        width: 33.33333333%;
+        box-sizing: border-box;
+        padding: 20px 10px;
+        border: 1px solid red;
+
+        .x-grid__icon {
+            //width: 28px;
+            height: 28px;
+            background-image: url('../basic/icon-correct.png');
+            background-repeat: no-repeat;
+            background-size: 28px; /* 不写的话 图片原始大小 */
+            background-position: center;
+
+        }
+        .x-grid__text {
+            margin-top: 10px;
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+            .ellipsis();
+        }
+    }
+}

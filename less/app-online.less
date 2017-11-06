@@ -59,6 +59,22 @@ body > section {
     }
 }
 
+.x-line-left-right {
+    padding: 0 15px;
+    background-color: #fff;
+    .inner {
+        height: 45px;
+        background-color: yellow;
+        position: relative;
+        &:before {
+            .setHalfPixLeft();
+        }
+        &:after {
+            .setHalfPixRight();
+        }
+    }
+}
+
 .x-lesson-inline-block {
     padding: 10px 15px;
     .icon-lesson {
