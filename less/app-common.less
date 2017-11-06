@@ -1,3 +1,25 @@
+.setHalfPixTop(@c:#ccc) {
+    content: " ";
+    border-top: 1px solid @c;
+    transform: scaleY(.5);
+    transform-origin: 0 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.setHalfPixBottom(@c:#ccc) {
+    content: " ";
+    border-bottom: 1px solid @c;
+    transform: scaleY(.5);
+    transform-origin: 0 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+}
+
 .clearFloat() { /* better_code */
     zoom: 1;
     &:after {
@@ -34,42 +56,7 @@
     align-items: flex-start;
 }
 
-.borderTop() {
-    position: relative;
-    &:before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        top: -1px;
-        border-top: 1px solid #d7d7d7;
-        width: 100%;
-        height: 1px;
-        transform-origin: 0 100%;
-        transform: scaleY(.5);
-    }
-}
-
-.borderBottom() {
-    position: relative;
-    &:after {
-        content: " ";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        border-bottom: 1px solid #d7d7d7;
-        width: 100%;
-        height: 1px;
-        transform-origin: 0 100%;
-        transform: scaleY(.5);
-    }
-}
-
-.borderTopBottom() {
-    .borderTop();
-    .borderBottom();
-}
-
-.ellipsis(@w:auto) { // copy from weui  better_code
+.ellipsis(@w:auto) { //  copy from weui  better_code
     width: @w;
     overflow: hidden;
     text-overflow: ellipsis;

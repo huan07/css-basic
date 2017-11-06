@@ -5,62 +5,60 @@
     <title>菜鸟教程(runoob.com)</title>
     <style>
         #img1 {
-            width: 200px;
+            width: 400px;
             /*
                        宽高不写 会按照图片本身的大小展示；
-                       只写一个会自适应宽高；
+                       只写一个，另一个会自适应宽高；
                        写两个会按照指定的大小展示 但是比例拿捏不好，图片展示可能会变形
                        */
-            height: 150px;
+            height: 120px;
             border-radius: 8px;
         }
 
         #img2 {
-            width: 200px;
-            height: 150px;
+            width: 400px;
+            height: 120px;
             border-radius: 50%;
         }
 
-        #img3 {
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
+        #a4 { /* ！！！！！！！！！！！！！！！！！！！！！！*/
+            background-color: #fff;
+            font-size: 0;
+            display: block;
         }
 
-        #a4 {
-            display: inline-block; /* 被撑起宽高 */
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
-            transition: 0.3s;
-        }
+        #a4 img {
+            width: 100%;
+            min-height: 80px;
+            border: 0;
 
-        #a4:hover {
-            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
         }
-
-        #img5 { /* 自适应到图片的原始尺寸 */
-            max-width: 100%;
-            height: auto;
-        }
-
     </style>
 </head>
 <body>
 
-<img src="http://www.runoob.com/try/demo_source/paris.jpg" alt="Paris" id="img1"><br>
-
-<img src="http://www.runoob.com/try/demo_source/paris.jpg" alt="Paris" id="img2"><br>
-
-<img src="http://www.runoob.com/try/demo_source/paris.jpg" alt="Paris" id="img3" width="200" height="150"><br>
-
-<a target="_blank" href="http://www.runoob.com/try/demo_source/paris.jpg" id="a4">
-    <img src="http://www.runoob.com/try/demo_source/paris.jpg" alt="Paris" id="img4" width="200" height="150">
-</a><br>
+<img src="image.jpg" alt="Paris" id="img1">
 
 
-<img src="http://www.runoob.com/wp-content/uploads/2016/04/trolltunga.jpg" alt="Paris" id="img5" width="1000"
-     height="300"><br>
+<img src="image.jpg" alt="Paris" id="img2">
+
+
+<img src="image.jpg" alt="Paris" width="500">
+
+
+<img src="image4.jpg" alt="Paris" height="100" onerror="myErrorFun(event)">
+
+
+<a target="_blank" href="https://www.baidu.com/" id="a4">
+    <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="Paris">
+</a>
+
+
+<script>
+    function myErrorFun(event) {
+        console.log(event, event.target.src);
+    }
+</script>
 
 </body>
 </html>

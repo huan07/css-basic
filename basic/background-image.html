@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        h1 {
+            /*
+            默认情况下，background-image放置在元素的左上角，并重复垂直和水平方向，
+            按照元素的内容撑起来的大小平铺开的,
+            没有元素的内容撑开来，要设置元素大小的；！！！！！！！！！！！！！！！
+            */
+            background-image: url('image.jpg');
+        }
+
+        .h2 {
+            width: 500px;
+            height: 150px;
+        }
+
+        .h3 {
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            /*  background-attachment: fixed;*/
+
+        }
+
+        .div4 { /* ！！！！！！！！！！！！！！！！！！！！！！*/
+            width: 28px;
+            height: 28px;
+            background-image: url('icon-correct.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div5 {
+            background-size: contain;
+        }
+
+        .icon-wrapper { /* ！！！！！！！！！！！！！！！！！！！！！其他实现方式 参照 app-online！*/
+            width: 700px;
+            padding: 0 60px;
+            box-sizing: border-box;
+        }
+
+        .icon-wrapper .left-right-icon {
+            width: 100%;
+            height: 60px;
+            background-image: url('icon-wyz-logo.png'), url('icon-correct.png');
+            background-position: left center, right center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 118px, 28px;
+        }
+    </style>
+</head>
+
+<body>
+<h1 style="font-size: 100px;">
+    Hello World!Hello World!Hello World!Hello World!
+</h1>
+
+<h1 style="font-size: 100px;" class="h2">
+</h1>
+
+<h1 style="font-size: 100px;" class="h3">
+    Hello World!Hello World!Hello World!Hello World!
+</h1>
+
+<div class="div4"></div>
+
+<div class="div4 div5"></div>
+
+<div class="icon-wrapper">
+    <div class="left-right-icon"></div>
+</div>
+
+</body>
+
+</html>
