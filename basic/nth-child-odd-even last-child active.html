@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>菜鸟教程(runoob.com)</title>
     <style>
+        div:nth-child(2) {
+            background: pink;
+        }
+
+        /*           */
         p:nth-child(odd) {
             background: grey;
         }
@@ -12,19 +17,38 @@
             background: pink;
         }
 
-        div:nth-child(2) {
-            color: pink;
+        /*           */
+        h1:last-child {
+            background: red;
+        }
+
+        /*           */
+        a:active {
+            background: rgba(250, 0, 0, .6); /* 单击改变背景颜色 */
         }
     </style>
 </head>
 <body>
 
 <div>用于同类兄弟元素中 满足条件的元素 第几个元素 或者奇数，偶数序号的元素</div>
-
 <div>This is a heading</div>
+
+
 <p>The first paragraph.</p>
 <p>The second paragraph.</p>
 <p>The third paragraph.</p>
+
+<section>
+    <h1>测试last-child</h1>
+    <h1>测试last-child</h1>
+</section>
+
+<section>
+    <a href="javascript:;">联合测试last-child active</a><br>
+    <a href="javascript:;">联合测试last-child active</a><br>
+    <a href="javascript:;">联合测试last-child active</a><br>
+</section>
+
 
 <p><b>注意:</b> Internet Explorer 8 and以及更早版本的浏览器 :nth-child()选择器.</p>
 
