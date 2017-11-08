@@ -1,0 +1,33 @@
+@import "common-weui";
+
+.x-mask {
+    .mask();
+}
+
+.x-dialog {
+    position: fixed;
+    z-index: 5000;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 300px; /*   = ======================================  */
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+
+    .x-dialog__hd {
+        padding: 15px;
+        color: #333;
+    }
+    .x-dialog__bd {
+        padding: 15px;
+        color: #999;
+        font-size: 15px;
+        line-height: 1.4;
+        word-wrap: break-word;
+        word-break: break-all;
+        text-align: left;
+    }
+}
