@@ -1,4 +1,5 @@
-@import "common-weui";
+@import "app-common.less";
+@import "common-weui.less";
 
 .x-mask {
     .mask();
@@ -29,5 +30,38 @@
         word-wrap: break-word;
         word-break: break-all;
         text-align: left;
+    }
+    .x-dialog__ft {
+        line-height: 48px;
+        font-size: 18px;
+        position: relative;
+        &:before {
+            .setHalfPixTop();
+        }
+        .x-dialog__btn {
+            display: block;
+            text-decoration: none;
+
+            position: relative;
+            &:after {
+                .setHalfPixLeft();
+            }
+            &:first-child {
+                &:after {
+                    display: none;
+                }
+            }
+
+            &:active {
+                background-color: #eee;
+            }
+
+            &.x-dialog__btn_default {
+                color: #353535;
+            }
+            &.x-dialog__btn_primary {
+                color: #0BB20C;
+            }
+        }
     }
 }
