@@ -1,0 +1,38 @@
+.x-uploader__bd {
+    //overflow: hidden;
+    ul {
+        list-style: none;
+    }
+    .x-uploader__file {
+        float: left;
+        margin-right: 9px;
+        margin-bottom: 9px;
+
+        width: 79px;
+        height: 79px;
+        background-image: url('../image/pic_160.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &.x-uploader__file-status {
+            position: relative;
+            &:before {
+                content: " ";
+                position: absolute; /*    针对 父元素覆盖起来   */
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, .5);
+            }
+            .x-uploader__file-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+            }
+        }
+    }
+}
