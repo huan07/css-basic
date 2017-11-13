@@ -10,9 +10,9 @@
     z-index: 5000;
     top: 50%;
     left: 50%;
-    width: 80%;
-    max-width: 300px; /*   = ======================================  */
-    transform: translate(-50%, -50%);
+    width: 80%; /* 自适应宽度，给一个最大宽度 */
+    max-width: 300px;
+    transform: translate(-50%, -50%); /*  不定宽度，高度元素的水平垂直居中方式  */
     background-color: #fff;
     text-align: center;
     border-radius: 3px;
@@ -27,9 +27,7 @@
         color: #999;
         font-size: 15px;
         line-height: 1.4;
-        word-wrap: break-word;
-        word-break: break-all;
-        text-align: left;
+        .textBreak();
     }
     .x-dialog__ft {
         line-height: 48px;
@@ -39,12 +37,15 @@
             .setHalfPixTop();
         }
         .x-dialog__btn {
-            display: block;
+            display: block; /* flex 布局针对div ????*/
             text-decoration: none;
 
             position: relative;
             &:after {
                 .setHalfPixLeft();
+            }
+            &:first-child:after {
+                /* display: none;*/
             }
             &:first-child {
                 &:after {
