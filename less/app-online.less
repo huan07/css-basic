@@ -94,7 +94,7 @@ body > section {
     }
 }
 
-.x-lesson-clear-float { // to add  line top  and  bottom
+.x-lesson-clear-float {
     padding: 10px 15px;
     .clearFloat();
     .icon-lesson {
@@ -122,7 +122,8 @@ body > section {
             position: absolute;
             left: 0;
             top: 50%;
-            margin-top: -8px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); /* 用手机看很整齐的*/
         }
     }
 }
@@ -302,7 +303,7 @@ body > section {
         color: #999;
         font-size: 12px;
 
-        padding-right: 14px;
+        padding-right: 17px;
         position: relative;
         &:after {
             content: "";
@@ -315,6 +316,35 @@ body > section {
             right: 0;
             top: 50%;
             transform: translateY(-50%);
+        }
+    }
+}
+
+.x-img-container {
+    padding: 0;
+    background-color: #fff;
+    font-size: 0;
+    .x-img {
+        width: 100%;
+        max-height: 80px;
+        border: 0;
+    }
+    &.show-arrow {
+        position: relative;
+        z-index: 9;
+        &:after {
+            content: "";
+            width: 13px;
+            height: 13px;
+            background-repeat: no-repeat;
+            background-size: 13px auto;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA5UExURUdwTLy8vMXFxby8vLu7u7y8vLu7u8LCwv///7y8vLu7u////8TExLy8vLu7u7u7u7y8vLu7u7u7u0GjFnQAAAASdFJOUwDUFoGW99MVAUXEAg2r9LSu2u5LrIQAAAA7SURBVCjP5cknEgAgDATAUEMv+f9jEUjmHArWLtHWExOQxGtQ7EXxA6dv35QBKjoxcGz4fEpDQ7maYxZ5oAQsBRGiiQAAAABJRU5ErkJggg==);
+
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            z-index: 99;
         }
     }
 }
