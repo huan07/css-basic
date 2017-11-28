@@ -21,13 +21,13 @@
             border-radius: 50%;
         }
 
-        #a4 { /* ！！！！！！！！！！！！！！！！！！！！！！*/
+        .x-img-container { /* ！！！！！！！！！！！！！！！！！！！ done ！！！*/
+            display: block;
             background-color: #fff;
             font-size: 0;
-            display: block;
         }
 
-        #a4 img {
+        .x-img-container img {
             width: 100%;
             min-height: 80px;
             border: 0;
@@ -49,14 +49,25 @@
 <img src="image4.jpg" alt="Paris" height="100" onerror="myErrorFun(event)">
 
 
-<a target="_blank" href="https://www.baidu.com/" id="a4">
+<a target="_blank" href="https://www.baidu.com/" class="x-img-container">
     <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="Paris">
 </a>
+
+
+<div class="x-img-container">
+    <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc76599.png"
+         onerror="imgErrorFun(event)"
+         alt="Paris">
+</div>
 
 
 <script>
     function myErrorFun(event) {
         console.log(event, event.target.src);
+    }
+
+    function imgErrorFun(event) {
+        event.target.src = 'https://p0.meituan.net/emidasmanage/024e2401ede76a27fe1970b46a56050329122.png';
     }
 </script>
 
