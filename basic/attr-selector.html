@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        [title] {
+            color: #aaa;
+        }
+
+        [title2=Hello] {
+            border: 3px solid #aaa;
+        }
+
+        [title3~=Hello] {
+            border: 6px solid #aaa;
+        }
+
+        [title4|=stu] {
+            border: 9px solid #aaa;
+        }
+
+        input[type="text"] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+            background-color: #aaa;
+        }
+
+        input[type="button"] {
+            width: 50px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h1 title="Hello world">Hello world</h1>
+
+
+<h1 title2="Hello">Hello world</h1>
+
+
+<h1 title3="Hello world">Hello world</h1>
+<h1 title3="student Hello">student Hello</h1>
+<h1 title3="student">student</h1>
+
+
+<h1 title4="Hello world">Hello world</h1> <!-- ????? -->
+<h1 title4="student Hello">student Hello</h1>
+<h1 title4="student">student</h1>
+
+
+<form action="" method="">
+    <input type="text" name="fname" value="huan">
+    <input type="button" value="example button">
+</form>
+
+</body>
+</html>
