@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-        .animation {
+        .animation, .div2 {
             width: 100px;
             height: 100px;
             background: red;
@@ -14,6 +14,20 @@
         .animation:hover {
             -webkit-animation: myfirst 5s linear 0s infinite; /* Safari and Chrome */
             animation: myfirst 5s linear 0s infinite;
+        }
+
+        .div2:hover {
+            -webkit-animation-name: myfirst;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 2s;
+            -webkit-animation-iteration-count: infinite;
+
+            animation-name: myfirst;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
         }
 
         @-webkit-keyframes myfirst /* Safari and Chrome */
@@ -76,7 +90,9 @@
 </head>
 <body>
 
-<div class="animation"></div>
+<div class="animation" style="float: left;"></div>
+
+<div class="div2" style="float: right; margin-right: 400px;"></div>
 
 </body>
 </html>
