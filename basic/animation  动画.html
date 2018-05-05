@@ -12,49 +12,21 @@
         }
 
         .animation:hover {
-            animation: myfirst 5s linear 0s infinite;
             -webkit-animation: myfirst 5s linear 0s infinite; /* Safari and Chrome */
-        }
-
-        @keyframes myfirst {
-            0% { /* from  始终定义 0% 和 100% 选择器。 */
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
-            25% {
-                background: yellow;
-                left: 200px;
-                top: 0px;
-            }
-            50% {
-                background: blue;
-                left: 200px;
-                top: 200px;
-            }
-            75% {
-                background: green;
-                left: 0px;
-                top: 200px;
-            }
-            100% { /* to */
-                background: white;
-                left: 0px;
-                top: 0px;
-            }
+            animation: myfirst 5s linear 0s infinite;
         }
 
         @-webkit-keyframes myfirst /* Safari and Chrome */
         {
             0% {
                 background: red;
-                left: 0px;
-                top: 0px;
+                left: 0;
+                top: 0;
             }
             25% {
                 background: yellow;
                 left: 200px;
-                top: 0px;
+                top: 0;
             }
             50% {
                 background: blue;
@@ -63,13 +35,41 @@
             }
             75% {
                 background: green;
-                left: 0px;
+                left: 0;
                 top: 200px;
             }
             100% {
                 background: white;
-                left: 0px;
-                top: 0px;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        @keyframes myfirst {
+            0% { /* from  始终定义 0% 和 100% 选择器。 */
+                background: red;
+                left: 0;
+                top: 0;
+            }
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0;
+            }
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+            75% {
+                background: green;
+                left: 0;
+                top: 200px;
+            }
+            100% { /* to */
+                background: white;
+                left: 0;
+                top: 0;
             }
         }
     </style>
