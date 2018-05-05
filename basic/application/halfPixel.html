@@ -8,9 +8,11 @@
             background-color: #f8f8f8;
         }
 
-        .half-line {
+        .half-line, .half-line-2 {
             background-color: #fff;
             position: relative;
+            width: 300px;
+            margin-bottom: 30px;
         }
 
         .half-line:before {
@@ -37,11 +39,6 @@
             background-color: red;
             transform: scaleY(0.5);
             transform-origin: 0 0;
-        }
-
-        .half-line-2 {
-            background-color: #fff;
-            position: relative;
         }
 
         .half-line-2:before {
@@ -73,14 +70,10 @@
     </style>
 </head>
 <body>
-<div class="half-line" style="margin-bottom: 30px;">
-    0.5px的一条线 上下侧
-</div>
 
+<div class="half-line">0.5px的一条线 上下侧</div>
 
-<div class="half-line-2" style="margin-bottom: 30px;">
-    0.5px的一条线 左右侧
-</div>
+<div class="half-line-2">0.5px的一条线 左右侧</div>
 
 </body>
 </html>
