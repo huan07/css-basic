@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+        * {
+            margin-bottom: 50px;
+        }
+
+        div {
+            width: 250px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            border: 1px solid #000000;
+        }
+
+        .test {
+            width: 250px;
+            border: 1px solid #000;
+            word-wrap: break-word;
+        }
+
+        .test2 {
+            width: 250px;
+            border: 1px solid #000;
+            word-break: break-all; /* best  best  used */
+        }
+
+        .test3 {
+            width: 250px;
+            border: 1px solid #000;
+            word-break: keep-all;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div>This is some long text that will not fit in the box</div>
+
+<p class="test"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
+    break and wrap to the next line.</p>
+
+<p class="test2"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
+    break and wrap to the next line.</p>
+
+<p class="test3"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
+    break and wrap to the next line.</p>
+
+</body>
+</html>
