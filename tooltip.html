@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            margin: 50px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            /* visibility: hidden;*/
+            /* display: none;*/
+            width: 90px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+
+            /* 定位 */
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -45px;
+        }
+
+        .tooltip .tooltiptext:before {
+            content: '';
+            /*width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 10px solid red;*/
+
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+
+            border-width: 5px;
+            border-style: solid;
+            border-color: red transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            /*display: block;*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="tooltip">鼠标移动到这
+    <span class="tooltiptext">提示文本</span>
+</div>
+
+<div>div节点</div>
+
+<div>div节点</div>
+
+</body>
+</html>
