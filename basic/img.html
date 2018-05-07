@@ -37,13 +37,13 @@
 </head>
 <body>
 
-<img src="image.jpg" alt="Paris" id="img1">
+<img src="images/image.jpg" alt="Paris" id="img1">
 
 
-<img src="image.jpg" alt="Paris" id="img2">
+<img src="images/image.jpg" alt="Paris" id="img2">
 
 
-<img src="image.jpg" alt="Paris" width="500">
+<img src="images/image.jpg" alt="Paris" width="500">
 
 
 <img src="image4.jpg" alt="Paris" height="100" onerror="myErrorFun(event)">
@@ -62,11 +62,11 @@
 
 
 <script>
-    function myErrorFun(event) {
+    function myErrorFun(event){
         console.log(event, event.target.src);
     }
 
-    function imgErrorFun(event) {
+    function imgErrorFun(event){
         event.target.src = 'https://p0.meituan.net/emidasmanage/024e2401ede76a27fe1970b46a56050329122.png';
     }
 </script>
