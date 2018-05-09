@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/0.css">
+    <style>
+        input:checked {
+            width: 50px;
+            height: 50px;
+        }
+
+        input[type="text"]:enabled {
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        input[type="text"]:disabled {
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        .test-optional input:optional {
+            background-color: yellow;
+        }
+
+        .text-focus input:focus {
+            background-color: yellow;
+        }
+
+        .test-not :not(p) {
+            background-color: gray;
+        }
+
+        .test-before p:before {
+            content: "Read this -";
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+
+        .test-before h1:after {
+            content: url("images/icon-correct.png");
+        }
+
+        .test-before-2 h1 {
+            padding-left: 33px;
+            position: relative;
+        }
+
+        .test-before-2 h1:after {
+            content: '';
+            width: 28px;
+            height: 28px;
+            background-image: url('images/icon-correct.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -14px;
+        }
+    </style>
+</head>
+<body>
+
+<form action="">
+    <input type="radio" value="male" name="gender" /> Male<br>
+    <input type="radio" checked="checked" value="female" name="gender" /> Female<br>
+    <input type="checkbox" value="Bike" /> I have a bike<br>
+    <input type="checkbox" checked="checked" value="Car" /> I have a car<br>
+
+
+    First name: <input type="text" value="Mickey" /><br>
+    Last name: <input type="text" value="Mouse" /><br>
+    Country: <input type="text" disabled="disabled" value="Disneyland" /><br>
+</form>
+
+<form class="test-optional">
+    <input type="text" name="input1" /><br>
+    <input type="text" name="input1" required /><br>
+</form>
+
+<form class="text-focus">
+    First name: <input type="text" value="Mickey" /><br>
+</form>
+
+<div class="test-not">
+    <h2>这是标题</h2>
+    <p>这是段落</p>
+</div>
+
+<div class="test-before">
+    <p>My name is Donald</p>
+    <p>伪类选择器 before/after 要搭配 content属性 才能生效的</p>
+    <h1>This is a heading</h1>
+</div>
+
+<div class="test-before-2">
+    <h1>This is a heading</h1>
+</div>
+
+</body>
+</html>
