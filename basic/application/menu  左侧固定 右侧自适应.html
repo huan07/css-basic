@@ -4,37 +4,12 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
         .left-ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
             width: 25%;
             background-color: #f1f1f1;
             position: fixed; /* 脱离文档流 */
             height: 100%;
             overflow: auto;
-        }
-
-        .left-ul li a {
-            display: block;
-            padding: 8px 16px;
-            text-decoration: none;
-            color: #000;
-        }
-
-        .left-ul li a.active {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .left-ul li a:hover:not(.active) {
-            background-color: #555;
-            color: white;
         }
 
         .right-div {
@@ -53,7 +28,7 @@
     <li><a href="#about">关于</a></li>
 </ul>
 
-<div class="right-div" style="">
+<div class="right-div">
     <h2>Fixed Full-height Side Nav</h2>
     <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
     <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width.

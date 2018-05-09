@@ -12,6 +12,12 @@
             margin: 0;
         }
 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
         .header {
             background-color: #2196F3;
             color: white;
@@ -26,9 +32,6 @@
         }
 
         .topmenu {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
             overflow: hidden;
             background-color: #777;
         }
@@ -39,8 +42,8 @@
 
         .topmenu li a {
             display: inline-block;
-            padding: 16px;
             text-decoration: none;
+            padding: 16px;
             color: white;
         }
 
@@ -71,28 +74,22 @@
             width: 75%;
         }
 
-        .sidemenu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
         .sidemenu li a {
             display: block; /* 独占一行 */
+            text-decoration: none;
             margin-bottom: 4px;
             padding: 8px;
-            text-decoration: none;
             background-color: #eee;
             color: #666;
         }
 
-        .sidemenu li a:hover {
-            background-color: #555;
+        .sidemenu li a.active {
+            background-color: #008CBA;
             color: white;
         }
 
-        .sidemenu li a.active {
-            background-color: #008CBA;
+        .sidemenu li a:hover:not(.active) {
+            background-color: #555;
             color: white;
         }
     </style>
