@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/0.css">
+    <style>
+        .center {
+            padding: 30px 0;
+            text-align: center;
+            border: 3px solid red;
+        }
+
+        .center2 {
+            line-height: 100px;
+            height: 100px;
+            text-align: center;
+            border: 3px solid green;
+
+            width: 300px;
+        }
+
+        .center2 .multi-line {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .center3 {
+            height: 200px;
+            border: 3px solid blue;
+            position: relative;
+        }
+
+        .center3 p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #main {
+            width: 200px;
+            height: 200px;
+            border: 1px solid gray;
+            /* height: 100vh;*/
+            display: -webkit-flex; /* Safari */
+            -webkit-justify-content: center; /* Safari 6.1+ */
+            -webkit-align-items: center; /* Safari 7.0+ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main div {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="center">
+    <p>我是水平垂直居中的。</p>
+</div>
+
+<div class="center2">
+    <p>我是水平垂直居中的。2</p>
+</div>
+
+<div class="center2">
+    <p class="multi-line">我是水平垂直居中的。2 针对多行文本 针对多行文本 针对多行文本 针对多行文本 针对多行文本</p>
+</div>
+
+<div class="center3">
+    <p>我是水平垂直居中的。3</p>
+</div>
+
+<div id="main">
+    <div style="background-color:coral;"></div>
+</div>
+
+</body>
+</html>

@@ -3,45 +3,42 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <base href="http://www.runoob.com/" target="_blank">
+    <link rel="stylesheet" type="text/css" href="../css/0.css">
     <style>
         .center {
             margin: auto;
             width: 60%;
             border: 3px solid #73AD21;
             padding: 10px;
-            background-color: #ccc;
         }
 
         .text-center {
             text-align: center;
             border: 3px solid #73AD21;
             padding: 10px;
-            background-color: #ccc;
         }
 
         .thumbnail {
-            margin: auto;
-            width: 40%;
             display: block;
+            margin: 20px auto;
+            width: 40%;
         }
     </style>
 </head>
 <body>
 
-<p>1.水平居中，可以使用 margin: auto; width:xx ; 针对块级元素(如 div)，宽度固定的</p>
 <div class="center">
     <p><b>注意: </b>使用 margin:auto 无法兼容 IE8, 除非 !DOCTYPE 已经声明。</p>
 </div>
 
+<div class="text-center">
+    <p>针对文本的水平居中针对文本的水平居中针对文本的水平居中</p>
+</div>
+<div class="text-center">
+    针对文本的水平居中针对文本的水平居中针对文本的水平居中
+</div>
 
-<p>2.针对文本的水平居中</p>
-<div class="text-center">针对文本的水平居中针对文本的水平居中针对文本的水平居中</div>
-
-
-<p>3.图片水平居中</p>
-<img class="thumbnail" src="images/klematis_small.jpg">
-
+<img class="thumbnail" src="../images/image.jpg">
 
 </body>
 </html>
