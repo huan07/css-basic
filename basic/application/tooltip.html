@@ -16,7 +16,7 @@
     }
 
     .tooltip .tooltiptext {
-        visibility: visible;
+        visibility: hidden;
         width: 160px;
         background-color: black;
         color: #fff;
@@ -26,6 +26,15 @@
         /* 定位 */
         position: absolute;
         z-index: 1;
+
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+
+        opacity: 1;
     }
 
     .top {
@@ -54,10 +63,6 @@
         margin-left: 10px;
         top: 50%;
         transform: translateY(-50%);
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
     }
 
     .tooltiptext:after {
