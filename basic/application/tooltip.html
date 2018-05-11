@@ -1,67 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title></title>
-    <style>
-        div {
-            margin: 50px;
-        }
-
-        .tooltip {
-            position: relative;
-            display: inline-block;
-        }
-
-        .tooltip .tooltiptext {
-            /* visibility: hidden;*/
-            /* display: none;*/
-            width: 90px;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-
-            /* 定位 */
-            position: absolute;
-            z-index: 1;
-            bottom: 150%;
-            left: 50%;
-            margin-left: -45px;
-        }
-
-        .tooltip .tooltiptext:before {
-            content: '';
-            /*width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 10px solid red;*/
-
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-
-            border-width: 5px;
-            border-style: solid;
-            border-color: red transparent transparent transparent;
-        }
-
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            /*display: block;*/
-        }
-    </style>
 </head>
+<link rel="stylesheet" type="text/css" href="../css/0.css">
+<style>
+    body > div {
+        margin: 80px 0 0 200px;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: visible;
+        width: 160px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+
+        /* 定位 */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .top {
+        bottom: 100%;
+        margin-bottom: 10px;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    .bottom {
+        top: 100%;
+        margin-top: 10px;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    .left {
+        right: 100%;
+        margin-right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .right {
+        left: 100%;
+        margin-left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+    .tooltiptext:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px;
+        border-color: red transparent transparent transparent;
+        position: absolute;
+    }
+
+    .top:after {
+        border-color: red transparent transparent transparent;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bottom:after {
+        border-color: transparent transparent red transparent;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .left:after {
+        border-color: transparent transparent transparent red;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .right:after {
+        border-color: transparent red transparent transparent;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+</style>
 <body>
 
 <div class="tooltip">鼠标移动到这
+    <span class="tooltiptext top">提示文本</span>
+</div>
+<br>
+
+<div class="tooltip">鼠标移动到这
+    <span class="tooltiptext bottom">提示文本</span>
+</div>
+<br>
+
+<div class="tooltip">鼠标移动到这
+    <span class="tooltiptext left">提示文本</span>
+</div>
+<br>
+
+<div class="tooltip">鼠标移动到这
+    <span class="tooltiptext right">提示文本</span>
+</div>
+<br>
+
+<div class="tooltip">鼠标移动到这 提示文本、箭头基位置
     <span class="tooltiptext">提示文本</span>
 </div>
 
-<div>div节点</div>
-
-<div>div节点</div>
 
 </body>
 </html>
