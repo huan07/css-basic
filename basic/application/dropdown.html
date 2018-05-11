@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            /*left:0;
+            top:0;    默认不写出现在文档流  ？？  */
+            background-color: #f9f9f9;
+            /* min-width: 160px;*/
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown">
+    <span>鼠标移动到我这！</span>
+    <div class="dropdown-content">
+        <p>菜鸟教程</p>
+        <p>www.runoob.com</p>
+    </div>
+</div>
+
+</body>
+</html>
