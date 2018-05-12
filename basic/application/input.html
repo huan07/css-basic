@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/0.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        input[type=text] {
+            width: 130px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('../images/icon-correct.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]:focus {
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <input type="text" name="search" placeholder="搜索..">
+</form>
+
+</body>
+</html>

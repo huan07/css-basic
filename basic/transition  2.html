@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        .div2 {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        .div2:hover {
+            width: 100px;
+            height: 100px;
+            -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+            transform: rotate(180deg);
+        }
+
+        .div2 {
+            -webkit-transition-property: width, height, -webkit-transform;
+            -webkit-transition-duration: 2s;
+            -webkit-transition-timing-function: ease;
+            -webkit-transition-delay: 0s;
+
+            transition-property: width, height, transform;
+            transition-duration: 2s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="div2" style="float: right;">鼠标移动到 div 元素上，查看过渡效果。</div>
+
+</body>
+</html>
