@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../css/0.css">
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            /*  bottom: 0; 可以不用设置 */
+            left: 0;
+            /*  right: 0; */
+            height: 100%;
+            width: 100%;
+            background-color: #008CBA;
+            opacity: 0;
+            transition: .5s ease;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img class="image" src="https://static.runoob.com/images/mix/img_avatar.png" alt="Avatar">
+    <div class="overlay">
+        <div class="text">Hello World</div>
+    </div>
+</div>
+
+</body>
+</html>
