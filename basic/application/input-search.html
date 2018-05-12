@@ -14,11 +14,11 @@
         }
 
         input[type=text] {
-            width: 130px;
+            width: 230px;
             font-size: 16px;
             border: 2px solid #ccc;
             border-radius: 4px;
-            padding: 12px 20px 12px 40px;
+            padding: 12px 40px 12px 40px;
             background-color: white;
             background-image: url('../images/icon-correct.png');
             background-repeat: no-repeat;
@@ -31,12 +31,36 @@
             width: 60%;
             outline: none;
         }
+
+        input[type=text].test {
+            width: 230px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            padding: 12px 40px;
+            background-color: white;
+            background-image: url('../images/icon-correct.png'), url('../images/icon-correct.png');
+            background-repeat: no-repeat, no-repeat;
+            background-position: 5px center, right center;
+
+            transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text].test:focus {
+            width: 60%;
+            outline: none;
+        }
     </style>
 </head>
 <body>
 
 <form>
     <input type="text" name="search" placeholder="搜索..">
+</form>
+
+
+<form>
+    <input type="text" class="test" name="search" placeholder="搜索..">
 </form>
 
 </body>
