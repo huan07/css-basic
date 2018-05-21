@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/0.css">
+    <style>
+        .flex-container {
+            display: -webkit-flex;
+            display: flex;
+            width: 400px;
+            height: 200px;
+            background-color: lightgrey;
+        }
+
+        .flex-item {
+            width: 100px;
+            /* height: 100px; 写上就不生效了 */
+            margin: 10px;
+            background-color: cornflowerblue;
+        }
+
+        .flex-end {
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
+        }
+
+        .center {
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .baseline {
+            -webkit-align-items: baseline;
+            align-items: baseline;
+        }
+
+        .stretch {
+            -webkit-align-items: stretch;
+            align-items: stretch;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex-container flex-end">
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 2</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
+<div class="flex-container center">
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 2</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
+<div class="flex-container baseline">
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 2</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
+<div class="flex-container stretch">
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 2</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
+</body>
+</html>
