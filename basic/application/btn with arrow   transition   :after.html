@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .button {
+            cursor: pointer;
+            display: inline-block;
+            font-size: 28px;
+            text-align: center; /* 设置宽度 有效*/
+            color: #FFFFFF;
+            background-color: #f4511e;
+            width: 200px;
+            padding: 20px;
+            border: none;
+            border-radius: 4px;
+            margin: 5px;
+            transition: all 0.5s; /* 不怎么管用 */
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '»';
+            position: absolute;
+            top: 0;
+            right: -20px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            right: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<button class="button" style="vertical-align:middle"><span>Hover </span></button>
+
+</body>
+</html>
