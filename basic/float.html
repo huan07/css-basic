@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="./css/0.css">
     <style>
         p {
             width: 300px;
@@ -26,7 +25,7 @@
             float: right;
         }
 
-        .clear-float {
+        .clear-float { /* 清除浮动1 */
             clear: both;
         }
 
@@ -35,7 +34,7 @@
             padding: 5px;
         }
 
-        .clearfix {
+        .clearfix { /* 清除浮动2 */
             overflow: auto;
         }
     </style>
@@ -60,15 +59,14 @@
 <img class="float-left img-item" src="./images/image.jpg" alt="">
 
 <div class="clear-float">清除浮动1</div>
+<br><br>
 
 <img class="float-left img-item" src="./images/image.jpg" alt="">
 <img class="float-left img-item" src="./images/image.jpg" alt="">
-<div class="float-left">块元素1</div>
+<div class="float-left" style="width: 200px;">块元素1</div>
 <div class="float-left">块元素2</div>
-<span class="float-left">内联元素1</span>
+<span class="float-left" style="width: 200px;">内联元素1</span>
 <span class="float-left">内联元素2</span>
-<p class="float-right">段落元素1</p>
-<p class="float-right">段落元素2 定义浮动 没有设置宽度 由自身撑起宽度！！</p>
 
 <div class="clear-float">清除浮动1</div>
 
@@ -78,6 +76,7 @@
 </div>
 <div>
     清除浮动2
+    <br>
     如果子元素的高度大于父元素，且子元素设置了浮动，那么子元素将溢出，这时候你可以使用 "clearfix(清除浮动)" 来解决该问题
     <br>
     在父元素上通过添加 clearfix 类，并设置 <span style="color:red;">清除浮动2 overflow: auto; </span>来解决该问题:
