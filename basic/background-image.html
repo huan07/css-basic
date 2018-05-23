@@ -7,9 +7,12 @@
     <style>
         h1 {
             /*
-            1.默认情况下，background-image放置在元素的左上角，并重复垂直和水平方向，
-            2.按照元素的内容撑起来的大小平铺开的, font-size
-            3.没有元素的内容撑开来，要设置元素大小的； width height ！！！！！！！！！！！！！！！
+            1.按照元素的内容撑起来的大小平铺开的, font-size
+
+            2.没有元素的内容撑开来，要设置元素大小的； width height ！！！！！！！！！！！！！！！
+
+            3.默认情况下，background-image放置在元素的左上角，并重复垂直和水平方向
+
             */
             font-size: 100px;
             background-image: url('images/image.jpg');
@@ -22,16 +25,16 @@
         }
 
         .h3 {
-            background-position: center;
             background-repeat: no-repeat;
+            background-position: center;
         }
 
         .div4 { /*        参照     默认是左上角background-position  */
             width: 28px;
             height: 28px;
             background-image: url('images/icon-correct.png');
-            background-size: cover;
             background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .div5 {
@@ -48,9 +51,9 @@
             width: 100%;
             height: 60px;
             background-image: url('images/icon-wyz-logo.png'), url('images/icon-correct.png');
+            background-repeat: no-repeat, no-repeat;
             background-position: left center, right center;
             background-size: 118px, 28px;
-            background-repeat: no-repeat, no-repeat;
         }
     </style>
 </head>
