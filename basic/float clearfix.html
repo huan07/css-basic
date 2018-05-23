@@ -3,59 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <style type="text/css">
-        .div1 {
-            background: #000080;
-            border: 1px solid red;
+    <style>
+        p {
+            width: 300px;
+            margin: 20px;
         }
 
-        .div2 {
-            background: #800080;
-            border: 1px solid red;
-            height: 100px;
-            margin-top: 10px
+        img {
+            width: 200px;
         }
 
-        .left {
+        .img-item {
+            margin: 20px 20px 0 0;
+        }
+
+        .float-left {
             float: left;
-            width: 20%;
-            height: 200px;
-            background: #DDD
         }
 
-        .right {
+        .float-right {
             float: right;
-            width: 30%;
-            height: 80px;
-            background: #DDD
         }
 
-        /*清除浮动代码*/
-        .clearfloat:after {
-            display: block;
+        .clear-float { /* 清除浮动1 */
             clear: both;
-            content: "";
-            visibility: hidden;
-            height: 0
         }
 
-        .clearfloat {
-            zoom: 1
+        .test {
+            border: 3px solid #4CAF50;
+            padding: 5px;
+        }
+
+        .clearfix { /* 清除浮动2 */
+            overflow: auto;
         }
     </style>
 </head>
 <body>
 
+<p>
+    <img class="float-right" src="./images/image.jpg" alt="">
+    浮动元素之前的元素将不会受到影响。
+    浮动元素之后的元素将围绕它。
+</p>
+<p>
+    <img class="float-left" src="./images/image.jpg" alt="">
+    浮动元素之前的元素将不会受到影响。
+    浮动元素之后的元素将围绕它。
+</p>
 
-<!--
-http://www.cnblogs.com/AnotherLife/p/5800751.html
--->
-<div class="div1 clearfloat">
-    <div class="left">Left</div>
-    <div class="right">Right</div>
+<img class="float-left img-item" src="./images/image.jpg" alt="">
+<img class="float-left img-item" src="./images/image.jpg" alt="">
+<img class="float-left img-item" src="./images/image.jpg" alt="">
+<img class="float-left img-item" src="./images/image.jpg" alt="">
+<img class="float-left img-item" src="./images/image.jpg" alt="">
+
+<div class="clear-float">清除浮动1</div>
+<br><br>
+
+<img class="float-left img-item" src="./images/image.jpg" alt="">
+<img class="float-left img-item" src="./images/image.jpg" alt="">
+<div class="float-left" style="width: 200px;">块元素1</div>
+<div class="float-left">块元素2</div>
+<span class="float-left" style="width: 200px;">内联元素1</span>
+<span class="float-left">内联元素2</span>
+
+<div class="clear-float">清除浮动1</div>
+
+<div class="test">
+    <img class="float-right" src="./images/image.jpg" alt="">
+    不仅是技术，更是梦想！！！
 </div>
-<div class="div2">
-    div2
+<div>
+    清除浮动2
+    <br>
+    如果子元素的高度大于父元素，且子元素设置了浮动，那么子元素将溢出，这时候你可以使用 "clearfix(清除浮动)" 来解决该问题
+    <br>
+    在父元素上通过添加 clearfix 类，并设置 <span style="color:red;">清除浮动2 overflow: auto; </span>来解决该问题:
+</div>
+<div class="test clearfix">
+    <img class="float-right" src="./images/image.jpg" alt="">
+    不仅是技术，更是梦想！！！
 </div>
 
 </body>
