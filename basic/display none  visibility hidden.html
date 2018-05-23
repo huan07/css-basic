@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
-        * {
-            margin: 20px;
-        }
-
         .none {
             display: none;
         }
@@ -15,6 +12,12 @@
         .hidden {
             visibility: hidden;
         }
+
+        .opacity {
+            opacity: 0;
+        }
+
+
     </style>
 </head>
 <body>
@@ -24,11 +27,18 @@
 <div class="none">这是一个块 隐藏方式display:none 不占有空间</div>
 
 <div>这是另外一个块</div>
-<br>
+
 
 <p>这是一个段落</p>
 
 <p class="hidden">这是一个段落 隐藏方式visibility:hidden 占有空间，影响布局</p>
+
+<p>这是另外一个段落</p>
+
+
+<p>这是一个段落</p>
+
+<p class="opacity">这是一个段落 隐藏方式opacity: 0 占有空间，影响布局</p>
 
 <p>这是另外一个段落</p>
 </body>
