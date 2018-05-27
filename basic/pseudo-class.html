@@ -5,20 +5,24 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
-        input:checked {
+        input:checked { /* 仅用于单选按钮，复选框 */
             width: 50px;
             height: 50px;
         }
 
-        input[type="text"]:enabled {
+        input[type="text"]:enabled { /* 主要用于表单元素 */
             background-color: rgba(0, 0, 0, .2);
         }
 
-        input[type="text"]:disabled {
+        input[type=text]:disabled {
             background-color: rgba(0, 0, 0, 1);
         }
 
-        .test-optional input:optional {
+        .test-not :not(p) {
+            background-color: gray;
+        }
+
+        .test-optional input:optional { /* 只适用于 input, select 和 textarea 没有required属性 */
             background-color: yellow;
         }
 
@@ -26,11 +30,7 @@
             background-color: yellow;
         }
 
-        .test-not :not(p) {
-            background-color: gray;
-        }
-
-        .test-before p:before {
+        .test-before p:before { /* before after必须有 content 值 */
             content: "Read this -";
             background-color: yellow;
             color: red;
@@ -74,19 +74,19 @@
     Country: <input type="text" disabled="disabled" value="Disneyland" /><br>
 </form>
 
-<form class="test-optional">
-    <input type="text" name="input1" /><br>
-    <input type="text" name="input1" required /><br>
-</form>
-
-<form class="text-focus">
-    First name: <input type="text" value="Mickey" /><br>
-</form>
-
 <div class="test-not">
     <h2>这是标题</h2>
     <p>这是段落</p>
 </div>
+
+<form class="test-optional">
+    选填项样式：<input type="text" name="input1" /><br>
+    必填项样式：<input type="text" name="input1" required /><br>
+</form>
+
+<form class="text-focus">
+    获得焦点样式: <input type="text" value="Mickey" /><br>
+</form>
 
 <div class="test-before">
     <p>My name is Donald</p>
