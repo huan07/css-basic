@@ -16,8 +16,7 @@
     }
 
     .tooltip .tooltiptext {
-        /*
-                visibility: hidden;*/
+        visibility: hidden;
         width: 160px;
         background-color: black;
         color: #fff;
@@ -28,7 +27,7 @@
         position: absolute;
         z-index: 1;
 
-        /*opacity: 0;*/
+        opacity: 0;
         transition: opacity 1s;
     }
 
@@ -38,11 +37,25 @@
         opacity: 1;
     }
 
-    .top {
-        bottom: 100%;
-        margin-bottom: 10px;
+    .bottom {
+        top: 100%;
+        margin-top: 10px;
         left: 50%;
         margin-left: -80px;
+    }
+
+    .left {
+        right: 100%;
+        margin-right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .right {
+        left: 100%;
+        margin-left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .tooltiptext:after {
@@ -55,22 +68,43 @@
         position: absolute;
     }
 
-    .top:after {
-        border-color: red transparent transparent transparent;
-        top: 100%;
+    .bottom:after {
+        border-color: transparent transparent red transparent;
+        bottom: 100%;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .left:after {
+        border-color: transparent transparent transparent red;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .right:after {
+        border-color: transparent red transparent transparent;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
     }
 </style>
 <body>
 
-<div class="tooltip">鼠标移动到这
-    <span class="tooltiptext top">提示文本</span>
+<div class="tooltip">鼠标移动到这 下
+    <span class="tooltiptext bottom">提示文本</span>
 </div>
 <br>
 
-<div class="tooltip">鼠标移动到这 提示文本、箭头基位置
-    <span class="tooltiptext">提示文本</span>
+
+<div class="tooltip">鼠标移动到这 左
+    <span class="tooltiptext left">提示文本</span>
+</div>
+<br>
+
+
+<div class="tooltip">鼠标移动到这 右
+    <span class="tooltiptext right">提示文本</span>
 </div>
 
 
