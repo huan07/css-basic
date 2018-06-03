@@ -8,30 +8,29 @@
         div {
             width: 250px;
             overflow: hidden;
-            white-space: nowrap;
+            white-space: nowrap; /* 规定段落中的文本不进行换行 */
             text-overflow: ellipsis;
 
             border: 1px solid #000000;
         }
 
-        .test {
+        p {
             width: 250px;
             border: 1px solid #000;
+        }
+
+        .test {
             word-wrap: break-word;
         }
 
         .test2 {
-            width: 250px;
-            border: 1px solid #000;
-            word-break: break-all; /* best  best  used */
-            word-wrap: break-word; /* 长单词可以换行拆开 */
+            word-wrap: break-word; /* 在长单词或 URL 地址内部  进行换行 */
+            word-break: break-all; /* 在合适的点换行 */
             text-align: justify; /* 看起来左右对齐 */
         }
 
         .test3 {
-            width: 250px;
-            border: 1px solid #000;
-            word-break: keep-all;
+            word-break: keep-all; /* 只能在半角空格或连字符处换行 */
         }
     </style>
 </head>
