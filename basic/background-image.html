@@ -25,16 +25,16 @@
         }
 
         .h3 {
-            background-repeat: no-repeat;
-            background-position: center;
+            background-repeat: no-repeat; /* background-repeat 默认水平、垂直方向重复背景图像 */
+            background-position: center top; /* background-position 默认是左上角 */
         }
 
-        .div4 { /*        参照     默认是左上角background-position  */
+        .div4 { /*        参照        */
             width: 28px;
             height: 28px;
             background-image: url('images/icon-correct.png');
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: cover; /* 只设置一个宽度，另一个是设置为auto */
         }
 
         .div5 {
@@ -65,10 +65,13 @@
 
 <h1 class="h3">Hello World!Hello World!Hello World!</h1>
 
+
+<!--  -->
 <div class="div4"></div>
 
 <div class="div4 div5"></div>
 
+<!--  -->
 <div class="icon-wrapper">
     <div class="left-right-icon"></div>
 </div>
