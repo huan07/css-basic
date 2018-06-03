@@ -6,12 +6,12 @@
     <style>
         #boxshadow {
             width: 500px;
-            position: relative;
-            -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
             padding: 10px;
             background: white;
             font-size: 0;
+            -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            position: relative;
         }
 
         /* Make the image fit the box */
@@ -23,13 +23,13 @@
 
         #boxshadow::after {
             content: '';
-            position: absolute;
-            z-index: -1; /* hide shadow behind image */
+            width: 70%;
+            height: 100px;
             -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
             box-shadow: 0 15px 20px rgba(0, 0, 0, .3);
-            width: 70%;
+            position: absolute;
+            z-index: -1; /* hide shadow behind image */
             left: 15%; /* one half of the remaining 30% */
-            height: 100px;
             bottom: 0;
         }
     </style>
