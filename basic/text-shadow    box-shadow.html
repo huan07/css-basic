@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
+        body > * {
+            margin: 50px;
+        }
+
         div {
             text-shadow: 5px 5px 20px red;
         }
@@ -13,7 +16,14 @@
             width: 400px;
             height: 200px;
             background-color: #000;
-            box-shadow: 5px 5px 20px red;
+            box-shadow: 5px 5px 20px red; /* 模糊距离 */
+        }
+
+        .div3 {
+            width: 400px;
+            height: 200px;
+            background-color: #000;
+            box-shadow: 5px 5px 20px 10px red; /* 模糊距离，阴影的大小 */
         }
     </style>
 </head>
@@ -24,6 +34,10 @@
 </div>
 
 <div class="div2">
+
+</div>
+
+<div class="div3">
 
 </div>
 
