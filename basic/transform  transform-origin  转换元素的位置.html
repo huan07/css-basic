@@ -5,23 +5,30 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
+        body > * {
+            margin: 40px 0 40px 100px;
+        }
+
         .div1 {
-            height: 200px;
-            width: 200px;
-            position: relative;
+            height: 150px;
+            width: 150px;
             padding: 10px;
             border: 1px solid black;
+            position: relative;
         }
 
         .div2 {
-            position: absolute; /* ？？？*/
+            background-color: pink;
             padding: 50px;
             border: 1px solid black;
-            background-color: red;
-            -webkit-transform: rotate(45deg); /* Safari and Chrome */
-            -webkit-transform-origin: center center; /* Safari and Chrome */
+            position: absolute; /* ？？？? 宽度由内容撑起来的 */
+        }
+
+        .transform {
+            -webkit-transform: rotate(45deg);
+            -webkit-transform-origin: center center;
             transform: rotate(45deg);
-            transform-origin: center center; /* 转换元素的位置（默认是中心位置） 必须先使用 transform ！！！*/
+            transform-origin: center center; /* 转换元素的位置（默认是中心位置）必须先使用 transform ！！！*/
         }
 
         .left-top {
@@ -37,15 +44,19 @@
 <body>
 
 <div class="div1">
-    <div class="div2">HELLO</div>
+    <div class="div2">hi</div>
 </div>
 
 <div class="div1">
-    <div class="div2 left-top">HELLO</div>
+    <div class="div2 transform">hi</div>
 </div>
 
 <div class="div1">
-    <div class="div2 left-bottom">HELLO</div>
+    <div class="div2 transform left-top">hi</div>
+</div>
+
+<div class="div1">
+    <div class="div2 transform left-bottom">hi</div>
 </div>
 
 </body>
