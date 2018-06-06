@@ -12,11 +12,17 @@
         }
 
         .translate {
-            -webkit-transform: translate(150px, 20px); /* Safari and Chrome */
-            transform: translate(150px, 20px);
+            -webkit-transform: translate(150px, -20px);
+            transform: translate(150px, -20px);
+        }
+
+        .translateX {
+            -webkit-transform: translateX(150px);
+            transform: translateX(150px);
         }
 
         .translate2 {
+            -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
         }
     </style>
@@ -26,6 +32,8 @@
 <div></div>
 
 <div class="translate"></div>
+
+<div class="translateX"></div>
 
 <div class="translate2"></div>
 

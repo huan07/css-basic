@@ -6,14 +6,19 @@
     <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
         div {
-            width: 250px;
-            height: 250px;
+            width: 150px;
+            height: 150px;
             background-color: pink;
         }
 
         .rotate {
-            -webkit-transform: rotate(15deg); /* Safari and Chrome */
-            transform: rotate(15deg);
+            -webkit-transform: rotate(30deg);
+            transform: rotate(30deg); /* 2D 旋转 顺时针(正数) */
+        }
+
+        .rotateX {
+            -webkit-transform: rotateX(30deg);
+            transform: rotateX(30deg); /* 水平方向旋转 */
         }
     </style>
 </head>
@@ -22,6 +27,8 @@
 <div></div>
 
 <div class="rotate"></div>
+
+<div class="rotateX"></div>
 
 </body>
 </html>
