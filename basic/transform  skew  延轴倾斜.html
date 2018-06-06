@@ -5,6 +5,10 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
+        body > * {
+            margin: 0 0 100px 100px;
+        }
+
         div {
             width: 150px;
             height: 150px;
@@ -12,8 +16,13 @@
         }
 
         .skew {
-            -webkit-transform: skew(30deg, 20deg); /* Safari and Chrome */
+            -webkit-transform: skew(30deg, 20deg);
             transform: skew(30deg, 20deg);
+        }
+
+        .skewX {
+            -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
         }
     </style>
 </head>
@@ -22,6 +31,8 @@
 <div></div>
 
 <div class="skew"></div>
+
+<div class="skewX"></div>
 
 </body>
 </html>
