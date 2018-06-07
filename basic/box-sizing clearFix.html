@@ -5,8 +5,12 @@
     <title></title>
     <style>
         * {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body > * {
+            margin-bottom: 100px;
         }
 
         .container {
@@ -14,19 +18,25 @@
             border: 1em solid;
         }
 
-        .container:after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
         .box {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
             width: 50%;
             border: 1em solid red;
             float: left;
         }
 
+        .clear-fix:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
         input, textarea {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
             width: 100%;
         }
     </style>
@@ -38,7 +48,10 @@
     <div class="box">这个 div 占据了右边的一半。</div>
 </div>
 
-<div style="height: 200px;"></div>
+<div class="container clear-fix">
+    <div class="box">这个 div 占据了左边的一半。</div>
+    <div class="box">这个 div 占据了右边的一半。</div>
+</div>
 
 <!-- 浏览器兼容性 input, textarea, 和 submit 按钮的宽度不一致 -->
 
