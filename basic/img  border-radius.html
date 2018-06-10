@@ -19,6 +19,16 @@
             border-radius: 50%;
         }
 
+        .response {
+            width: 100%; /* 和屏幕一样宽（图片会比它的原始图片大） */
+            height: auto;
+        }
+
+        .response-max {
+            max-width: 100%; /* 最长是自己的宽度，不够长时，右侧留有空白（图片永远不会大于其原始大小） */
+            height: auto;
+        }
+
         .x-img-container { /* ！！！！！！！！！！！！！！！！！！！ done ！！！*/
             display: block;
             background-color: #fff;
@@ -41,6 +51,10 @@
 
 
 <img src="images/image.jpg" alt="Paris" width="500">
+
+
+<img class="response" src="images/image.jpg" alt="Paris" width="1000" height="300">
+<img class="response-max" src="images/image.jpg" alt="Paris" width="1000" height="300">
 
 
 <img src="image4.jpg" alt="Paris" height="100" onerror="myErrorFun(event)">
