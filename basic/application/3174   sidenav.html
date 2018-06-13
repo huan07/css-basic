@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>便签效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidenav a {
+            text-decoration: none;
+            width: 100px;
+            font-size: 20px;
+            color: white;
+            padding: 15px;
+            border-radius: 0 5px 5px 0;
+
+            position: absolute;
+            left: -80px;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            left: 0;
+        }
+
+        #about {
+            top: 20px;
+            background-color: #4CAF50;
+        }
+
+        #blog {
+            top: 80px;
+            background-color: #2196F3;
+        }
+
+        #projects {
+            top: 140px;
+            background-color: #f44336;
+        }
+
+        #contact {
+            top: 200px;
+            background-color: #555
+        }
+    </style>
+</head>
+<body>
+<div class="sidenav">
+    <a href="#" id="about">About</a>
+    <a href="#" id="blog">Blog</a>
+    <a href="#" id="projects">Projects</a>
+    <a href="#" id="contact">Contact</a>
+</div>
+
+<div style="margin-left:80px;">
+    <h2>便签效果</h2>
+    <p>鼠标移动到指定便签显示隐藏内容。</p>
+</div>
+
+</body>
+</html>

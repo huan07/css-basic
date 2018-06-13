@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .icon-bar {
+            width: 100%;
+            background-color: #555;
+            /* overflow: auto;    两个值都行 */
+            overflow: hidden;
+        }
+
+        .icon-bar a {
+            float: left;
+            width: 20%;
+            padding: 12px 0;
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .icon-bar a:hover {
+            background-color: #000;
+        }
+
+        .icon-bar a.active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<div class="icon-bar">
+    <a class="active" href="#"><i class="fa fa-home"></i></a>
+    <a href="#"><i class="fa fa-search"></i></a>
+    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-globe"></i></a>
+    <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+
+</body>
+</html>
