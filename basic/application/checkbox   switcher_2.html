@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开关切换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        label {
+            -webkit-user-select: none;
+            user-select: none;
+
+            margin: 25px;
+        }
+
+        .switch {
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            position: relative;
+        }
+
+        .switch input {
+            display: none;
+        }
+
+        .slider {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            content: "";
+            height: 26px;
+            width: 26px;
+            position: absolute;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<label class="">
+    <input type="checkbox">
+    <div class=""></div>
+</label>
+
+<label class="">
+    <input type="checkbox" checked>
+    <div class=""></div>
+</label><br><br>
+
+
+<label class="switch">
+    <input type="checkbox">
+    <div class="slider"></div>
+</label>
+
+<label class="switch">
+    <input type="checkbox" checked>
+    <div class="slider"></div>
+</label><br><br>
+
+<label class="switch">
+    <input type="checkbox">
+    <div class="slider round"></div>
+</label>
+
+<label class="switch">
+    <input type="checkbox" checked>
+    <div class="slider round"></div>
+</label>
+
+<div style="width:34px;height: 34px;background: red;border-radius: 17px;"></div>
+<div style="width:34px;height: 34px;background: green;border-radius: 34px;"></div>
+</body>
+</html>

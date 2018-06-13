@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        label {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+<label for="xx">选我</label>
+<input type="checkbox" id="xx">
+<br><br>
+
+
+<input type="checkbox" id="xx2">
+<label for="xx2">选我</label>
+<br><br>
+
+<!-- 推荐用 -->
+<label for="xx3">
+    <input type="checkbox" id="xx3">选我推荐用label方式
+</label>
+<br><br>
+
+
+<label for="zz">
+    <input type="checkbox" id="zz" checked>不选我
+</label>
+<br><br>
+
+
+<label for="zz2">
+    <input type="checkbox" id="zz2" checked disabled>不能改变我
+</label>
+<br><br>
+
+
+<label for="yy"></label>
+<input type="checkbox" id="yy">文本不放在label, 不会触发相应的控件
+<br><br>
+
+
+</body>
+</html>

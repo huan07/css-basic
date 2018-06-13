@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开关切换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        label {
+            -webkit-user-select: none;
+            user-select: none;
+
+            margin: 25px;
+        }
+
+        .switch {
+            display: inline-block;
+            width: 70px;
+            height: 40px;
+            background-color: #999;
+            position: relative;
+        }
+
+        .switch input[type=checkbox] {
+            display: none;
+        }
+
+        .switch .slider {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+
+            transition: 0.5s;
+        }
+
+        input[type=checkbox]:checked + .slider {
+            left: 35px;
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+
+        /* 切换状态找不到父亲元素 无法改变父亲元素的背景 ？？？？ 只有换种思路 */
+    </style>
+</head>
+<body>
+
+<label class="">
+    <input type="checkbox">
+    <div class=""></div>
+</label>
+
+<label class="">
+    <input type="checkbox" checked>
+    <div class=""></div>
+</label><br><br>
+
+
+<label class="switch">
+    <input type="checkbox">
+    <div class="slider"></div>
+</label>
+
+<label class="switch">
+    <input type="checkbox" checked>
+    <div class="slider"></div>
+</label><br><br>
+
+<label class="switch">
+    <input type="checkbox">
+    <div class="slider round"></div>
+</label>
+
+<label class="switch">
+    <input type="checkbox" checked>
+    <div class="slider round"></div>
+</label>
+
+</body>
+</html>
