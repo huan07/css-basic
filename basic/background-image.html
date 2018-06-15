@@ -25,11 +25,16 @@
         }
 
         .h3 {
-            background-repeat: no-repeat; /* background-repeat 默认水平、垂直方向重复背景图像 */
-            background-position: center top; /* background-position 默认是左上角 */
+
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            /* 默认：
+               background-repeat 重复垂直和水平方向 铺满ele的背景大小
+               background-position 放置在元素的左上角：左上角位置 0 0 (0% 0%)
+            */
         }
 
-        .div4 { /*        参照        */
+        .div4 { /*        参照1        */
             width: 28px;
             height: 28px;
             background-image: url('images/icon-correct.png');
@@ -47,7 +52,7 @@
             box-sizing: border-box;
         }
 
-        .icon-wrapper .left-right-icon { /*        参照        */
+        .icon-wrapper .left-right-icon { /*        参照2        */
             width: 100%;
             height: 60px;
             background-image: url('images/icon-wyz-logo.png'), url('images/icon-correct.png');
@@ -57,8 +62,8 @@
         }
     </style>
 </head>
-
 <body>
+
 <h1>Hello World!Hello World!Hello World!</h1>
 
 <h1 class="h2"></h1>
@@ -77,5 +82,4 @@
 </div>
 
 </body>
-
 </html>
