@@ -1,0 +1,27 @@
+@import "./common/util";
+
+.input-wrapper {
+    width: 80%;
+    position: relative;
+    label {
+        position: absolute;
+        width: 25%;
+        color: #999;
+        .fontMixin(14px, 40px);
+        cursor: pointer;
+
+    }
+    input {
+        margin-left: 25%;
+        width: 75%;
+        .fontMixin(14px, 40px);
+        padding: 0 10px;
+        border: 1px solid #d7d7d7;
+        &:focus {
+            outline: none;
+            border-color: #ffa718;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f1b157;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f1b157;
+        }
+    }
+}

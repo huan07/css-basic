@@ -9,9 +9,7 @@
             height: 100px;
             background: red;
             position: relative;
-        }
 
-        .div2:hover {
             -webkit-animation-name: myfirst;
             -webkit-animation-duration: 5s;
             -webkit-animation-timing-function: linear;
@@ -20,9 +18,9 @@
 
             animation-name: myfirst;
             animation-duration: 5s;
-            animation-timing-function: linear;
+            animation-timing-function: linear; /* 从开始到结束以 相同的速度 播放动画 */
             animation-delay: 0s;
-            animation-iteration-count: infinite;
+            animation-iteration-count: infinite; /* 动画播放无限次数 */
         }
 
         @-webkit-keyframes myfirst {
