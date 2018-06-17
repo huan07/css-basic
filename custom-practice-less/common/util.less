@@ -5,3 +5,30 @@
     height: @height;
     line-height: @height;
 }
+
+.triangle(@width) {
+    width: 0;
+    height: 0;
+    border-width: @width;
+    border-style: solid;
+}
+
+.triangle-bottom(@width,@color) {
+    .triangle(@width);
+    border-color: @color transparent transparent transparent;
+}
+
+.triangle-left(@width,@color) {
+    .triangle(@width);
+    border-color: transparent @color transparent transparent;
+}
+
+.triangle-top(@width,@color) {
+    .triangle(@width);
+    border-color: transparent transparent @color transparent;
+}
+
+.triangle-right(@width,@color) {
+    .triangle(@width);
+    border-color: transparent transparent transparent @color;
+}

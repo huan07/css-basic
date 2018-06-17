@@ -8,11 +8,12 @@ label {
   -webkit-user-select: none;
   user-select: none;
 }
-.input-wrapper {
-  width: 80%;
-  position: relative;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.input-wrapper label {
+label {
   position: absolute;
   width: 25%;
   color: #999;
@@ -20,6 +21,10 @@ label {
   height: 40px;
   line-height: 40px;
   cursor: pointer;
+}
+.input-wrapper {
+  width: 80%;
+  position: relative;
 }
 .input-wrapper input {
   margin-left: 25%;
@@ -35,4 +40,66 @@ label {
   border-color: #ffa718;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f1b157;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f1b157;
+}
+.select-wrapper {
+  width: 80%;
+  position: relative;
+  display: inline-block;
+}
+.select-wrapper .select-span,
+.select-wrapper .select-ul {
+  margin-left: 25%;
+  width: 75%;
+  padding: 0 10px;
+  border: 1px solid #d7d7d7;
+}
+.select-wrapper .select-span {
+  display: inline-block;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.select-wrapper .select-span:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #d7d7d7 transparent transparent transparent;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -3px;
+}
+.select-wrapper .select-span + .select-ul {
+  max-width: 100%;
+  /* 父亲元素 必须是 inline-block 才有下拉框的宽度效果 */
+  position: absolute;
+  z-index: 9;
+}
+.select-wrapper .select-span + .select-ul li {
+  margin: 9px 0;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.select-wrapper .select-span:hover {
+  border-color: #ffa718;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f1b157;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f1b157;
+}
+.select-wrapper .select-span:hover:after {
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #d7d7d7 transparent;
+  margin-top: -8px;
+}
+.select-wrapper .select-span:hover + .select-ul {
+  display: block;
 }
