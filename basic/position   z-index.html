@@ -48,16 +48,17 @@
 </head>
 <body>
 
-<div class="pos_static">static=>没有定位，top,left无效 默认属性<span style="color:#2546FF">不会脱离文档流</span></div>
+<div class="pos_static">static => 没有定位，top,left无效 默认属性<span style="color:#2546FF">不会脱离文档流</span></div>
 
-<div class="pos_relative_left">relative left相对于其正常位置向左移动 不影响其他元素的布局 <span style="color:#2546FF">不会脱离文档流</span></div>
+<div class="pos_relative_left">relative => 相对于自身正常位置向左，右，上，下移动 不影响其他元素的布局 <span style="color:#2546FF">不会脱离文档流</span>
+</div>
 
-<div class="window_fixed">fixed相对于浏览器窗口，是固定位置，即使窗口是滚动的它也不会移动 <span style="color:red">脱离文档流</span></div>
+<div class="window_fixed">fixed => 相对于浏览器窗口，是固定位置，即使窗口是滚动的它也不会移动 <span style="color:red">脱离文档流</span></div>
 
-<div class="html_absolute">absolute如果元素没有已定位的父元素，那么它的位置相对于html/body <span style="color:red">脱离文档流</span></div>
+<div class="html_absolute">absolute如果元素没有已定位的父元素，那么它的位置 => 相对于html/body <span style="color:red">脱离文档流</span></div>
 <div class="parent_relative">
     <div class="children_absolute">
-        absolute绝对定位的元素的位置相对于最近的已定位祖先元素：relative, absolute, fixed有效
+        absolute => 相对于最近的已定位祖先元素：relative, absolute, fixed有效
     </div>
     <div>没有脱离文档流的块1 在父亲元素内部的左上位置</div>
     <div>没有脱离文档流的块2 在父亲元素内部的左上位置</div>
