@@ -1,0 +1,107 @@
+.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-row .flex-row-one {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+}
+.flex-row .flex-row-one .overflow-ellipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.x-mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  /*   对浏览器全面覆盖的  不用加width height           */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.x-dialog {
+  position: fixed;
+  z-index: 5000;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  /* 自适应宽度，给一个最大宽度 */
+  max-width: 300px;
+  transform: translate(-50%, -50%);
+  /*  不定宽度，高度元素的水平垂直居中方式  */
+  background-color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.x-dialog .x-dialog__hd {
+  padding: 15px;
+  color: #333;
+}
+.x-dialog .x-dialog__bd {
+  padding: 15px;
+  color: #999;
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  /*IE*/
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.x-dialog .x-dialog__ft {
+  line-height: 48px;
+  font-size: 18px;
+  position: relative;
+}
+.x-dialog .x-dialog__ft:before {
+  /*  参照weui */
+  content: " ";
+  border-top: 1px solid #ccc;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.x-dialog .x-dialog__ft .x-dialog__btn {
+  display: block;
+  /* flex 布局针对div ????*/
+  text-decoration: none;
+  position: relative;
+}
+.x-dialog .x-dialog__ft .x-dialog__btn:after {
+  content: " ";
+  border-left: 1px solid #ccc;
+  transform: scaleX(0.5);
+  transform-origin: 0 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.x-dialog .x-dialog__ft .x-dialog__btn:first-child:after {
+  /* display: none;*/
+}
+.x-dialog .x-dialog__ft .x-dialog__btn:first-child:after {
+  display: none;
+}
+.x-dialog .x-dialog__ft .x-dialog__btn:active {
+  background-color: #eee;
+}
+.x-dialog .x-dialog__ft .x-dialog__btn.x-dialog__btn_default {
+  color: #353535;
+}
+.x-dialog .x-dialog__ft .x-dialog__btn.x-dialog__btn_primary {
+  color: #0BB20C;
+}

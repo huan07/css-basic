@@ -1,0 +1,52 @@
+.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-row .flex-row-one {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+}
+.flex-row .flex-row-one .overflow-ellipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.x-grids {
+  overflow: hidden;
+  /* 清除浮动*/
+}
+.x-grids .x-grid {
+  float: left;
+  width: 33.33333333%;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  border: 1px solid red;
+}
+.x-grids .x-grid .x-grid__icon {
+  height: 28px;
+  background-image: url('../basic/images/icon-correct.png');
+  background-repeat: no-repeat;
+  background-size: 28px;
+  /* 不写的话 图片原始大小 */
+  background-position: center;
+}
+.x-grids .x-grid .x-grid__text {
+  margin-top: 10px;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  text-align: center;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}

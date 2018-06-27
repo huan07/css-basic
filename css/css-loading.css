@@ -1,0 +1,99 @@
+body {
+  background-color: #0CCCC8;
+}
+.container {
+  margin: 100px auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .loading {
+  /*它的一个子元素 水平居中 垂直居中的*/
+  width: 200px;
+  height: 200px;
+  display: -webkit-flex;
+  /* Safari */
+  -webkit-justify-content: center;
+  /* Safari 6.1+ */
+  -webkit-align-items: center;
+  /* Safari 7.0+ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .loading .inner.ball-plus div {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: ball-plus 1s linear infinite;
+  animation: ball-plus 1s linear infinite;
+}
+.container .loading .inner.ball-plus div:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.container .loading .inner.ball-plus div:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+@keyframes ball-plus {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.3);
+    opacity: .7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.container .loading .inner.ball-scale {
+  position: relative;
+  top: -24px;
+  left: -24px;
+}
+.container .loading .inner.ball-scale div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+  /* 最初是看不见的 */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: ball-scale 1.5s linear infinite;
+  animation: ball-scale 1.5s linear infinite;
+}
+.container .loading .inner.ball-scale div:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.container .loading .inner.ball-scale div:nth-child(3) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+@keyframes ball-scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}

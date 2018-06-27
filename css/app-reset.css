@@ -1,0 +1,87 @@
+html {
+  font-size: 62.5%;
+  width: 100%;
+}
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+dl,
+dt,
+dd,
+textarea,
+input,
+button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-weight: normal;
+}
+*:not(input,
+textarea) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+body {
+  font-family: Helvetica, '华文细黑', '宋体', sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+  padding-top: 50px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  outline: none;
+  line-height: 1.5;
+}
+textarea,
+input,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+textarea[disabled],
+input[disabled],
+a[disabled],
+textarea[readonly],
+input[readonly] {
+  -webkit-tap-highlight-color: transparent;
+}
+textarea,
+input {
+  resize: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
