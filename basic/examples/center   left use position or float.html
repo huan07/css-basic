@@ -5,40 +5,56 @@
     <title>向左，向右靠齐</title>
     <link rel="stylesheet" type="text/css" href="../css/0.css">
     <style>
+        .left {
+            height: 60px;
+        }
+
         .container {
             position: relative;
         }
 
+        .container, .container2 {
+            border: 1px dashed red;
+        }
+
         .container .right {
             width: 300px;
+            padding: 10px;
             background-color: olive;
-            padding: 20px;
 
             position: absolute;
             right: 0;
+            top: 0;
         }
 
         .float-right {
             float: right;
 
             width: 300px;
+            padding: 10px;
             background-color: olive;
-            padding: 20px;
-            
-            margin-top: 150px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="right">
-        <p><b>注意: </b>当使用浮动属性对齐,总是包括 !DOCTYPE 声明!如果丢失,它将会在 IE 浏览器产生奇怪的结果。</p>
-    </div>
+    <div class="left">向左靠齐</div>
+    <div class="right">position: absolute; 向右靠齐</div>
+</div>
+<div class="container">
+    <div class="left">向左靠齐</div>
+    <span class="right">position: absolute; 向右靠齐2</span>
 </div>
 
-<div class="float-right">
-    <p><b>注意: </b>当使用浮动属性对齐,总是包括 !DOCTYPE 声明!如果丢失,它将会在 IE 浏览器产生奇怪的结果。</p>
+
+<div class="container2">
+    <div class="left">向左靠齐</div>
+    <div class="float-right">float: right; 向右靠齐</div>
+</div>
+<div class="container2">
+    <div class="left">向左靠齐</div>
+    <span class="float-right">float: right; 向右靠齐2</span>
 </div>
 
 </body>
