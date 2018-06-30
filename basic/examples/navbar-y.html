@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>:hover写在.active之后和之前的区别</title>
+    <link rel="stylesheet" type="text/css" href="../css/0.css">
+    <style>
+        .ul {
+            background-color: #f1f1f1;
+
+            width: 200px;
+        }
+
+        .ul li a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+        }
+
+        .ul li a.active {
+            background-color: #4CAF50;
+        }
+
+        .ul li a:hover:not(.active) { /* */
+            background-color: #555;
+        }
+    </style>
+
+    <style>
+        .ul2 {
+            background-color: #f1f1f1;
+
+            width: 200px;
+        }
+
+        .ul2 li a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+        }
+
+        .ul2 li a:hover {
+            background-color: #555;
+        }
+
+        .ul2 li a.active { /* */
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="ul">
+    <li><a class="active" href="#home">主页</a></li>
+    <li><a href="#news">新闻</a></li>
+    <li><a href="#contact">联系</a></li>
+    <li><a href="#about">关于</a></li>
+</ul>
+
+<ul class="ul2">
+    <li><a class="active" href="#home">主页</a></li>
+    <li><a href="#news">新闻</a></li>
+    <li><a href="#contact">联系</a></li>
+    <li><a href="#about">关于</a></li>
+</ul>
+
+</body>
+</html>
