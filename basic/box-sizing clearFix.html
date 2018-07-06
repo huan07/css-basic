@@ -10,7 +10,7 @@
         }
 
         body > * {
-            margin-bottom: 100px;
+            margin-bottom: 60px;
         }
 
         .container {
@@ -21,9 +21,9 @@
         .box {
             -webkit-box-sizing: border-box; /* width = content + 2*padding + 2*border */
             box-sizing: border-box;
-
             width: 50%;
             border: 10px solid red;
+
             float: left;
         }
 
@@ -36,7 +36,6 @@
         input, textarea {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-
             width: 100%;
         }
     </style>
@@ -44,6 +43,16 @@
 <body>
 
 <div class="container">
+    <div class="box">这个 div 占据了左边的一半。</div>
+    <div class="box">这个 div 占据了右边的一半。</div>
+</div>
+
+<div class="container" style="overflow: hidden;">
+    <div class="box">这个 div 占据了左边的一半。</div>
+    <div class="box">这个 div 占据了右边的一半。</div>
+</div>
+
+<div class="container" style="overflow: auto;">
     <div class="box">这个 div 占据了左边的一半。</div>
     <div class="box">这个 div 占据了右边的一半。</div>
 </div>
