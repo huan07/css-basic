@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-        .div2 {
+        .div, .div2 {
             width: 100px;
             height: 100px;
             background: pink;
@@ -12,15 +12,13 @@
             -webkit-transition-property: width, height, -webkit-transform;
             -webkit-transition-duration: 2s;
             -webkit-transition-timing-function: ease;
-            -webkit-transition-delay: 0s;
 
             transition-property: width, height, transform;
             transition-duration: 2s;
             transition-timing-function: ease;
-            transition-delay: 0s;
         }
 
-        .div2:hover {
+        .div, .div2:hover {
             width: 200px;
             height: 200px;
             -webkit-transform: rotate(180deg);
@@ -29,6 +27,8 @@
     </style>
 </head>
 <body>
+
+<div class="div">? ?</div>
 
 <div class="div2">鼠标移动到 div 元素上，查看过渡效果。</div>
 
