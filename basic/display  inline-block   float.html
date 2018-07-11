@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双inline-block 双float</title>
+    <link rel="stylesheet" type="text/css" href="css/0.css">
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        .item {
+            margin: 5px;
+            border: 2px solid olive;
+            padding: 10px;
+        }
+
+        .inline-block-parent {
+            font-size: 0; /* 清除空隙 */
+        }
+
+        .inline-block {
+            display: inline-block;
+            vertical-align: top; /* 对齐方式 */
+            font-size: 20px;
+        }
+
+        .float-parent {
+            overflow: hidden; /* 清除浮动 */
+        }
+
+        .float-left {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+<!-- div作为子元素 -->
+<div class="inline-block-parent">
+    <div class="inline-block item">布局练习</div>
+    <div class="inline-block item">布局练习</div>
+</div>
+
+<div class="float-parent">
+    <div class="float-left item">布局练习</div>
+    <div class="float-left item">布局练习</div>
+</div>
+
+<!-- span作为子元素 -->
+<div class="inline-block-parent">
+    <div class="inline-block item">布局练习</div>
+    <span class="inline-block item">布局练习</span>
+</div>
+
+<div class="float-parent">
+    <div class="float-left item">布局练习</div>
+    <span class="float-left item">布局练习</span>
+</div>
+
+</body>
+</html>
