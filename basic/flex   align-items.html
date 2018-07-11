@@ -2,22 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>align-items 子元素在侧轴（纵轴）方向上的对齐方式</title>
     <link rel="stylesheet" type="text/css" href="./css/0.css">
+    <link rel="stylesheet" type="text/css" href="./flex.css">
     <style>
-        .flex-container {
-            display: -webkit-flex;
-            display: flex;
-            width: 400px;
-            height: 200px;
-            background-color: lightgrey;
+        .flex-item {
+            height: auto;
         }
 
-        .flex-item {
-            width: 100px;
-            /* height: 100px; 写上就不生效了 */
-            margin: 10px;
-            background-color: cornflowerblue;
+        .flex-start {
+            -webkit-align-items: flex-start;
+            align-items: flex-start;
         }
 
         .flex-end {
@@ -43,26 +38,32 @@
 </head>
 <body>
 
+<div class="flex-container flex-start">
+    <div class="flex-item">flex item 1 flex-start</div>
+    <div class="flex-item">flex item 2</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
 <div class="flex-container flex-end">
-    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 1 flex-end</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
 <div class="flex-container center">
-    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 1 center</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
 <div class="flex-container baseline">
-    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 1 baseline</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
 <div class="flex-container stretch">
-    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 1 stretch</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>

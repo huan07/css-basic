@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>align-self 属性用于设置弹性元素自身在侧轴（纵轴）方向上的对齐方式</title>
+    <link rel="stylesheet" type="text/css" href="./css/0.css">
+    <link rel="stylesheet" type="text/css" href="./flex.css">
+    <style>
+        .flex-item {
+            height: auto;
+            min-height: 100px;
+        }
+
+        .flex-start {
+            -webkit-align-self: flex-start;
+            align-self: flex-start;
+        }
+
+        .flex-end {
+            -webkit-align-self: flex-end;
+            align-self: flex-end;
+        }
+
+        .center {
+            -webkit-align-self: center;
+            align-self: center;
+        }
+
+        .baseline {
+            -webkit-align-self: baseline;
+            align-self: baseline;
+        }
+
+        .stretch {
+            -webkit-align-self: stretch;
+            align-self: stretch;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-item flex-start">flex item 1 flex-start</div>
+    <div class="flex-item flex-end">flex item 2 flex-end</div>
+    <div class="flex-item center">flex item 3 center</div>
+    <div class="flex-item baseline">flex item 4 baseline</div>
+    <div class="flex-item stretch">flex item 5 stretch</div>
+</div>
+
+</body>
+</html>

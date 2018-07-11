@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order子元素越小越靠前</title>
+    <link rel="stylesheet" type="text/css" href="./css/0.css">
+    <link rel="stylesheet" type="text/css" href="./flex.css">
+    <style>
+        .first {
+            -webkit-order: -1;
+            order: -1;
+        }
+
+        .margin-right-auto {
+            margin-right: auto;
+        }
+
+        .center-center {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item first">flex item 2 order</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
+
+<div class="flex-container">
+    <div class="flex-item margin-right-auto">flex item 1 margin-right-auto</div>
+    <div class="flex-item">flex item 2 order</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
+<div class="flex-container">
+    <div class="flex-item center-center">flex item 1 center-center</div>
+</div>
+
+
+</body>
+</html>

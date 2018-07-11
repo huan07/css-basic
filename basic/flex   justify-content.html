@@ -2,24 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>justify-content内容对齐 子元素在沿着弹性容器的主轴线（横轴）方向上对齐</title>
     <link rel="stylesheet" type="text/css" href="./css/0.css">
+    <link rel="stylesheet" type="text/css" href="./flex.css">
     <style>
-        .flex-container {
-            display: -webkit-flex;
-            display: flex;
-            -webkit-justify-content: flex-end;
-            justify-content: flex-end;
-            width: 400px;
-            height: 200px;
-            background-color: lightgrey;
+        .flex-start {
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;
         }
 
-        .flex-item {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            background-color: cornflowerblue;
+        .flex-end {
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
         }
 
         .center {
@@ -40,26 +34,32 @@
 </head>
 <body>
 
-<div class="flex-container">
-    <div class="flex-item">flex item 1</div>
+<div class="flex-container flex-start">
+    <div class="flex-item">flex item 1 flex-start</div>
+    <div class="flex-item">flex item 2</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
+<div class="flex-container flex-end">
+    <div class="flex-item">flex item 1 flex-end</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
 <div class="flex-container center">
-    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 1 center</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
 <div class="flex-container space-between">
-    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 1 space-between</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
 <div class="flex-container space-around">
-    <div class="flex-item">flex item 1</div>
+    <div class="flex-item">flex item 1 space-around</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
