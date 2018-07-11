@@ -2,71 +2,35 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        .x-a {
+            display: inline-block;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            transition: 0.3s;
         }
 
-        .img1 {
-            width: 400px;
-            /*
-                       写两个会按照指定的大小展示 但是比例拿捏不好，图片展示可能会变形
-                       宽高不写 会按照图片本身的大小展示；
-                       只写一个，另一个会自适应宽高；
-                       */
-            height: 120px;
+        .x-a:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
         }
 
-        .response {
-            width: 100%; /* 和屏幕一样宽（图片会比它的原始图片大） */
+        .x-a .x-img {
+            display: block; /* 解除空隙，否则的话 父亲元素要设置 font-size:0 */
+            max-width: 100%;
             height: auto;
-        }
-
-        .response-max {
-            max-width: 100%; /* 最长是自己的宽度，不够长时，右侧留有空白（图片永远不会大于其原始大小） */
-            height: auto;
-        }
-
-        .x-img-container {
-            display: block;
-            background-color: yellow;
-            font-size: 0; /* img的父亲元素要写上font-size属性，否则的话img的下方会有间隙 */
-        }
-
-        .x-img-container img {
-            width: 100%;
-            min-height: 150px;
-            border: 0;
-        }
-
-        .x-img-container p {
-            font-size: 20px;
-            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-<img class="img1" src="../images/image.jpg" alt="Paris">
-
-
-<img src="../images/image.jpg" alt="Paris">
-
-
-<img src="../images/image.jpg" alt="Paris" width="500">
-
-
-<img class="response" src="../images/image.jpg" alt="Paris" width="1000" height="300">
-<img class="response-max" src="../images/image.jpg" alt="Paris" width="1000" height="300">
-
-
-<a target="_blank" href="https://www.baidu.com/" class="x-img-container">
-    <img src="../images/image.jpg" alt="Paris">
-    <p>百度</p>
+<a class="x-a" target="_blank" href="https://www.baidu.com/">
+    <img class="x-img" src="../images/image.jpg" alt="Paris" width="1000" height="300">
 </a>
 
+<a class="x-a" target="_blank" href="https://www.baidu.com/" style="display: block;">
+    <img class="x-img" src="../images/image.jpg" alt="Paris" width="1000" height="300">
+</a>
 
 </body>
 </html>

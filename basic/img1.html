@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .response {
+            width: 100%; /* 和屏幕一样宽（图片会比它的原始图片大） */
+            height: auto;
+        }
+
+        .response-max {
+            max-width: 100%; /* 最长是自己的宽度，不够长时，右侧留有空白（图片永远不会大于其原始大小） */
+            height: auto;
+        }
+
+        .x-img-container {
+            display: block;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: yellow;
+            font-size: 0; /* img的父亲元素要写上font-size属性，否则的话img的下方会有间隙 */
+        }
+
+        .x-img-container img {
+
+            height: auto;
+            border: 0;
+        }
+
+        .width {
+            width: 100%;
+        }
+
+        .max {
+            max-width: 100%;
+        }
+
+        .x-img-container p {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+
+
+<img class="response" src="../images/image.jpg" alt="Paris" width="1000" height="300">
+<img class="response-max" src="../images/image.jpg" alt="Paris" width="1000" height="300">
+
+<a class="x-img-container" target="_blank" href="https://www.baidu.com/">
+    <img class="width" src="../images/image.jpg" alt="Paris">
+    <p>百度</p>
+</a>
+
+<a class="x-img-container" target="_blank" href="https://www.baidu.com/">
+    <img class="max" src="../images/image.jpg" alt="Paris">
+    <p>百度</p>
+</a>
+
+
+</body>
+</html>

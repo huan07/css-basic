@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 62.5%; /*  */
+            line-height: 1;
+        }
+
+        .purple {
+            color: #99208c;
+        }
+
+        .parent {
+            font-size: 20px; /*  */
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .child {
+            font-size: 10em;
+        }
+    </style>
+    <script>
+        // px 相对于显示器屏幕分辨率
+
+        // em 相对于当前对象内文本的字体尺寸 / 浏览器的默认字体尺寸16px（浏览器显示的最小高度是12px）
+        // 1.em的值并不是固定的
+        // 2.em会继承父级元素的字体大小
+
+        // 1em=16px
+    </script>
+</head>
+<body>
+<p>测试1em，相对于<span class="purple">父元素body，</span>但是显示的高度是12px，并不是10px</p>
+
+<h1>测试2em</h1>
+
+<div class="child">测试10em</div>
+
+
+<div class="parent">
+    <p>测试1em，相对于<span class="purple">父元素div，</span></p>
+
+    <h1>测试2em</h1>
+
+    <div class="child">测试10em</div>
+</div>
+
+</body>
+</html>

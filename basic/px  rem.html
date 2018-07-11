@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px; /*  */
+        }
+
+        body {
+            font-size: 62.5%;
+            line-height: 1;
+        }
+
+        .purple {
+            color: #99208c;
+        }
+
+        .parent {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .child {
+            font-size: 10rem;
+        }
+    </style>
+    <script>
+        // rem 相对的只是HTML根元素字体尺寸   除了IE8及更早版本不支持
+        // 做到只修改根元素就成比例地调整所有字体大小，
+        // 又可以避免字体大小逐层复合的连锁反应,
+
+    </script>
+</head>
+<body>
+<p>测试1rem，都是相对于<span class="purple">根元素html，</span></p>
+
+<h1>测试2rem</h1>
+
+<div class="child">测试10rem</div>
+
+
+<div class="parent">
+    <p>测试1rem，都是相对于<span class="purple">根元素html，</span></p>
+
+    <h1>测试2rem</h1>
+
+    <div class="child">测试10rem</div>
+</div>
+
+</body>
+</html>
