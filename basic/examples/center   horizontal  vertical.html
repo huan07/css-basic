@@ -5,6 +5,10 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../css/0.css">
     <style>
+        .inner {
+            border: 3px dashed coral;
+        }
+
         .center {
             padding: 10px 0; /* 1. */
 
@@ -59,28 +63,46 @@
             width: 70px;
             height: 70px;
         }
+
+        .center5 {
+            width: 300px;
+            height: 100px;
+            border: 3px solid rgba(255, 192, 203, 0.1);
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .center5 div {
+            width: 70px;
+            height: 70px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
 
 <div class="center">
-    <p>我是水平垂直居中的。</p>
+    <p class="inner">我是水平垂直居中的。</p>
 </div>
 
 <div class="center2">
-    <p>我是水平垂直居中的。2</p>
+    <p class="inner">我是水平垂直居中的。2</p>
 </div>
 
 <div class="center2">
-    <p class="multi-line">我是水平垂直居中的。2 针对多行文本 针对多行文本 针对多行文本 针对多行文本 针对多行文本</p>
+    <p class="multi-line inner">我是水平垂直居中的。2 针对多行文本 针对多行文本 针对多行文本 针对多行文本 针对多行文本</p>
 </div>
 
 <div class="center3">
-    <p>我是水平垂直居中的。3</p>
+    <p class="inner">我是水平垂直居中的。3</p>
 </div>
 
 <div class="center4">
-    <div style="background-color:coral;">我是水平垂直居中的。4</div>
+    <div class="inner">我是水平垂直居中的。4</div>
+</div>
+
+<div class="center5">
+    <div class="inner">我是水平垂直居中的。5</div>
 </div>
 
 </body>
