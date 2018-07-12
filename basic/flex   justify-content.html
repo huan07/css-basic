@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>justify-content内容对齐 子元素在沿着弹性容器的主轴线（横轴）方向上对齐</title>
+    <title>justify-content 子元素在主轴（横轴）方向上的对齐方式</title>
     <link rel="stylesheet" type="text/css" href="./css/0.css">
     <link rel="stylesheet" type="text/css" href="./flex.css">
     <style>
@@ -11,14 +11,14 @@
             justify-content: flex-start;
         }
 
-        .flex-end {
-            -webkit-justify-content: flex-end;
-            justify-content: flex-end;
-        }
-
         .center {
             -webkit-justify-content: center;
             justify-content: center;
+        }
+
+        .flex-end {
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
         }
 
         .space-between {
@@ -35,19 +35,19 @@
 <body>
 
 <div class="flex-container flex-start">
-    <div class="flex-item">flex item 1 flex-start</div>
-    <div class="flex-item">flex item 2</div>
-    <div class="flex-item">flex item 3</div>
-</div>
-
-<div class="flex-container flex-end">
-    <div class="flex-item">flex item 1 flex-end</div>
+    <div class="flex-item">flex item 1 flex-start 默认值</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
 <div class="flex-container center">
     <div class="flex-item">flex item 1 center</div>
+    <div class="flex-item">flex item 2</div>
+    <div class="flex-item">flex item 3</div>
+</div>
+
+<div class="flex-container flex-end">
+    <div class="flex-item">flex item 1 flex-end</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>

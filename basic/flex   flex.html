@@ -6,6 +6,10 @@
     <link rel="stylesheet" type="text/css" href="./css/0.css">
     <link rel="stylesheet" type="text/css" href="./flex.css">
     <style>
+        .flex-container {
+            width: 500px;
+        }
+
         .flex-item {
             width: auto;
             height: auto; /* 宽度，高度不需要，此处设置为了覆盖 */
@@ -21,14 +25,14 @@
             flex: 1;
         }
 
-        .auto {
-            -webkit-flex: auto;
-            flex: auto;
-        }
-
         .initial {
             -webkit-flex: initial;
             flex: initial;
+        }
+
+        .auto {
+            -webkit-flex: auto;
+            flex: auto;
         }
 
         .none {
@@ -47,15 +51,21 @@
 </div>
 
 <div class="flex-container ">
-    <div class="flex-item auto">flex item 1 auto</div>
-    <div class="flex-item auto">flex item 2</div>
-    <div class="flex-item auto">flex item 3</div>
+    <div class="flex-item ">flex item 1 initial</div>
+    <div class="flex-item ">flex item 2</div>
+    <div class="flex-item ">flex item 3</div>
 </div>
 
 <div class="flex-container ">
-    <div class="flex-item initial">flex item 1 initial</div>
-    <div class="flex-item initial">flex item 2 initial</div>
-    <div class="flex-item initial">flex item 3 initial</div>
+    <div class="flex-item initial">flex item 1 initial 默认值</div>
+    <div class="flex-item initial">flex item 2</div>
+    <div class="flex-item initial">flex item 3</div>
+</div>
+
+<div class="flex-container ">
+    <div class="flex-item auto">flex item 1 auto</div>
+    <div class="flex-item auto">flex item 2</div>
+    <div class="flex-item auto">flex item 3</div>
 </div>
 
 <div class="flex-container ">

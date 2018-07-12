@@ -7,7 +7,12 @@
     <link rel="stylesheet" type="text/css" href="./flex.css">
     <style>
         .flex-item {
-            height: auto;
+            height: auto; /* 不需要设置的，由content及align-items值确定 */
+        }
+
+        .stretch {
+            -webkit-align-items: stretch;
+            align-items: stretch;
         }
 
         .flex-start {
@@ -15,37 +20,32 @@
             align-items: flex-start;
         }
 
-        .flex-end {
-            -webkit-align-items: flex-end;
-            align-items: flex-end;
-        }
-
         .center {
             -webkit-align-items: center;
             align-items: center;
+        }
+
+        .flex-end {
+            -webkit-align-items: flex-end;
+            align-items: flex-end;
         }
 
         .baseline {
             -webkit-align-items: baseline;
             align-items: baseline;
         }
-
-        .stretch {
-            -webkit-align-items: stretch;
-            align-items: stretch;
-        }
     </style>
 </head>
 <body>
 
-<div class="flex-container flex-start">
-    <div class="flex-item">flex item 1 flex-start</div>
+<div class="flex-container stretch">
+    <div class="flex-item">flex item 1 stretch 默认值</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
-<div class="flex-container flex-end">
-    <div class="flex-item">flex item 1 flex-end</div>
+<div class="flex-container flex-start">
+    <div class="flex-item">flex item 1 flex-start</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
@@ -56,14 +56,14 @@
     <div class="flex-item">flex item 3</div>
 </div>
 
-<div class="flex-container baseline">
-    <div class="flex-item">flex item 1 baseline</div>
+<div class="flex-container flex-end">
+    <div class="flex-item">flex item 1 flex-end</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
-<div class="flex-container stretch">
-    <div class="flex-item">flex item 1 stretch</div>
+<div class="flex-container baseline">
+    <div class="flex-item">flex item 1 baseline</div>
     <div class="flex-item">flex item 2</div>
     <div class="flex-item">flex item 3</div>
 </div>

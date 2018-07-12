@@ -6,12 +6,27 @@
     <link rel="stylesheet" type="text/css" href="./css/0.css">
     <link rel="stylesheet" type="text/css" href="./flex.css">
     <style>
-        .nowrap {
-            -webkit-flex-wrap: nowrap;
-            flex-wrap: nowrap;
+        .flex-container {
+            width: 254px;
+            height: 254px;
         }
 
-        .flex-start { /* 不管用呢？？？？ */
+        .flex-item {
+            margin: 0;
+            border: 1px solid white;
+        }
+
+        .wrap {
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .stretch {
+            -webkit-align-content: stretch;
+            align-content: stretch;
+        }
+
+        .flex-start {
             -webkit-align-content: flex-start;
             align-content: flex-start;
         }
@@ -35,60 +50,45 @@
             -webkit-align-content: space-around;
             align-content: space-around;
         }
-
-        .stretch {
-            -webkit-align-content: stretch;
-            align-content: stretch;
-        }
     </style>
 </head>
 <body>
 
-<div class="flex-container nowrap flex-start">
-    <div class="flex-item">flex item 1 nowrap</div>
+<!-- 容器内必须有多行的项目，该属性才能渲染出效果 -->
+
+<div class="flex-container wrap stretch">
+    <div class="flex-item">flex item 1 wrap stretch</div>
     <div class="flex-item">flex item 2</div>
-    <div class="flex-item">flex item 3</div>
-    <div class="flex-item">flex item 3</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
-<div class="flex-container  flex-end nowrap">
-    <div class="flex-item">flex item 1 nowrap</div>
+<div class="flex-container wrap flex-start">
+    <div class="flex-item">flex item 1 wrap flex-start</div>
     <div class="flex-item">flex item 2</div>
-    <div class="flex-item">flex item 3</div>
-    <div class="flex-item">flex item 3</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
-<div class="flex-container nowrap center">
-    <div class="flex-item">flex item 1 nowrap</div>
+<div class="flex-container wrap flex-end ">
+    <div class="flex-item">flex item 1 wrap flex-end</div>
     <div class="flex-item">flex item 2</div>
-    <div class="flex-item">flex item 3</div>
-    <div class="flex-item">flex item 3</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
-<div class="flex-container nowrap space-between">
-    <div class="flex-item">flex item 1 nowrap</div>
+<div class="flex-container wrap center">
+    <div class="flex-item">flex item 1 wrap center</div>
     <div class="flex-item">flex item 2</div>
-    <div class="flex-item">flex item 3</div>
-    <div class="flex-item">flex item 3</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
-<div class="flex-container nowrap space-around">
-    <div class="flex-item">flex item 1 nowrap</div>
+<div class="flex-container wrap space-between">
+    <div class="flex-item">flex item 1 wrap space-between</div>
     <div class="flex-item">flex item 2</div>
-    <div class="flex-item">flex item 3</div>
-    <div class="flex-item">flex item 3</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
-<div class="flex-container nowrap stretch">
-    <div class="flex-item">flex item 1 nowrap</div>
+<div class="flex-container wrap space-around">
+    <div class="flex-item">flex item 1 wrap space-around</div>
     <div class="flex-item">flex item 2</div>
-    <div class="flex-item">flex item 3</div>
-    <div class="flex-item">flex item 3</div>
     <div class="flex-item">flex item 3</div>
 </div>
 
