@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>rem</title>
     <style>
         * {
             margin: 0;
@@ -14,7 +14,7 @@
         }
 
         body {
-            font-size: 62.5%;
+            font-size: 62.5%; /* 不管用 */
             line-height: 1;
         }
 
@@ -23,7 +23,7 @@
         }
 
         .parent {
-            font-size: 20px;
+            font-size: 20px; /* 不管用 */
         }
 
         p {
@@ -31,11 +31,7 @@
         }
 
         h1 {
-            font-size: 2rem;
-        }
-
-        .child {
-            font-size: 10rem;
+            font-size: 5rem;
         }
     </style>
     <script>
@@ -48,17 +44,13 @@
 <body>
 <p>测试1rem，都是相对于<span class="purple">根元素html，</span></p>
 
-<h1>测试2rem</h1>
-
-<div class="child">测试10rem</div>
+<h1>测试5rem</h1>
 
 
 <div class="parent">
     <p>测试1rem，都是相对于<span class="purple">根元素html，</span></p>
 
-    <h1>测试2rem</h1>
-
-    <div class="child">测试10rem</div>
+    <h1>测试5rem</h1>
 </div>
 
 </body>
