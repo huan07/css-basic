@@ -16,14 +16,14 @@
 
         .window_fixed {
             position: fixed;
-            top: 50px;
+            top: 150px;
             right: 50px;
             z-index: 9999; /* 设置在relative, absolute, fixed有效 */
         }
 
         .html_absolute {
             position: absolute;
-            top: 100px;
+            top: 250px;
             right: 100px;
             z-index: 99;
         }
@@ -36,9 +36,19 @@
         }
 
         .parent_relative .children_absolute {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             background-color: #999;
+
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+
+        .parent_relative .x {
+            width: 100px;
+            height: 100px;
+            background-color: olive;
 
             position: absolute;
             top: 100px;
@@ -58,7 +68,12 @@
 <div class="html_absolute">absolute如果元素没有已定位的父元素，那么它的位置 => 相对于html/body <span style="color:red">脱离文档流</span></div>
 <div class="parent_relative">
     <div class="children_absolute">
-        absolute => 相对于最近的已定位祖先元素：relative, absolute, fixed有效
+        <div>
+            absolute => 相对于最近的已定位祖先元素：relative, absolute, fixed有效
+        </div>
+        <div class="x">
+            absolute => 相对于最近的已定位祖先元素：relative, absolute, fixed有效
+        </div>
     </div>
     <div>没有脱离文档流的块1 在父亲元素内部的左上位置</div>
     <div>没有脱离文档流的块2 在父亲元素内部的左上位置</div>
