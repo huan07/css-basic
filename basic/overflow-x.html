@@ -12,43 +12,60 @@
         }
 
         span {
-            margin: 0 10px;
-            padding: 0 20px;
             background-color: black;
             color: white;
         }
 
-        div.scroll {
-            overflow-x: scroll;
-        }
-
         div.auto {
             overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        div.scroll {
+            overflow-x: scroll;
+            overflow-y: hidden;
         }
 
         div.hidden {
             overflow-x: hidden;
+            overflow-y: hidden;
         }
     </style>
 </head>
 <body>
 
-<div class="scroll"><span>overflow-x: scroll;</span>You can use the overflow property when you want to have better
+<div class="auto">
+    <p style="width: 240px;">
+        <span>overflow-x: auto;</span>You can use the overflow property when you want to have better
+        control of the layout. The default value is visible.
+        You can use the overflow property when you want to have better
+        control of the layout. The default value is visible.
+    </p>
+</div>
+
+<div class="auto">
+    <span>overflow-x: auto; 没有被包一层不管用 x </span>You can use the overflow property when you want to have better
     control of the layout. The default value is visible.
     You can use the overflow property when you want to have better
     control of the layout. The default value is visible.
 </div>
 
-<div class="auto"><span>overflow-x: auto;</span>You can use the overflow property when you want to have better
-    control of the layout. The default value is visible.
-    You can use the overflow property when you want to have better
-    control of the layout. The default value is visible.
+<div class="scroll">
+    <p style="width: 240px;">
+        <span>overflow-x: scroll;</span>You can use the overflow property when you want to have better
+        control of the layout. The default value is visible.
+        You can use the overflow property when you want to have better
+        control of the layout. The default value is visible.
+    </p>
 </div>
 
-<div class="hidden"><span>overflow-x: hidden;</span>can use the overflow property when you want to have better
-    control of the layout. The default value is visible.
-    You can use the overflow property when you want to have better
-    control of the layout. The default value is visible.
+<div class="hidden">
+    <p style="width: 240px;">
+        <span>overflow-x: hidden;</span>You can use the overflow property when you want to have better
+        control of the layout. The default value is visible.
+        You can use the overflow property when you want to have better
+        control of the layout. The default value is visible.
+    </p>
 </div>
 
 <div>You can use the overflow property when you want to have better
