@@ -25,7 +25,7 @@
             float: right;
         }
 
-        .clear-float { /* 清除浮动1 */
+        .clear-both { /* 清除浮动1 */
             clear: both;
         }
 
@@ -42,33 +42,24 @@
 <body>
 
 <p>
-    <img class="float-right" src="../images/image.jpg" alt="">
-    浮动元素之前的元素将不会受到影响。
-    浮动元素之后的元素将围绕它。
-</p>
-<p>
     <img class="float-left" src="../images/image.jpg" alt="">
     浮动元素之前的元素将不会受到影响。
     浮动元素之后的元素将围绕它。
 </p>
 
-<img class="float-left img-item" src="../images/image.jpg" alt="">
-<img class="float-left img-item" src="../images/image.jpg" alt="">
+<p>
+    <img class="float-right" src="../images/image.jpg" alt="">
+    浮动元素之前的元素将不会受到影响。
+    浮动元素之后的元素将围绕它。
+    一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到 <span style="color:red;">包含框／另一个浮动框的边框为止</span>
+</p>
+
 <img class="float-left img-item" src="../images/image.jpg" alt="">
 <img class="float-left img-item" src="../images/image.jpg" alt="">
 <img class="float-left img-item" src="../images/image.jpg" alt="">
 
-<div class="clear-float">清除浮动1</div>
+<div class="clear-both" style="color:red">清除浮动1</div>
 <br><br>
-
-<img class="float-left img-item" src="../images/image.jpg" alt="">
-<img class="float-left img-item" src="../images/image.jpg" alt="">
-<div class="float-left" style="width: 200px;">块元素1</div>
-<div class="float-left">块元素2</div>
-<span class="float-left" style="width: 200px;">内联元素1</span>
-<span class="float-left">内联元素2</span>
-
-<div class="clear-float">清除浮动1</div>
 
 <div class="test">
     <img class="float-right" src="../images/image.jpg" alt="">
