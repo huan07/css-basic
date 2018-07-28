@@ -18,15 +18,15 @@
             background-color: rgba(0, 0, 0, 1);
         }
 
-        .test-not :not(p) {
-            background-color: gray;
-        }
-
         .test-optional input:optional { /* 只适用于 input, select 和 textarea 没有required属性 */
             background-color: yellow;
         }
 
         .text-focus input:focus {
+            background-color: yellow;
+        }
+
+        .test-not :not(p) {
             background-color: yellow;
         }
 
@@ -69,15 +69,10 @@
     <input type="checkbox" checked="checked" value="Car" /> I have a car<br>
 
 
-    First name: <input type="text" value="Mickey" /><br>
-    Last name: <input type="text" value="Mouse" /><br>
-    Country: <input type="text" disabled="disabled" value="Disneyland" /><br>
+    enabled: <input type="text" value="Mickey" /><br>
+    enabled: <input type="text" value="Mouse" /><br>
+    disabled: <input type="text" disabled="disabled" value="Disneyland" /><br>
 </form>
-
-<div class="test-not">
-    <h2>这是标题</h2>
-    <p>这是段落</p>
-</div>
 
 <form class="test-optional">
     选填项样式：<input type="text" name="input1" /><br>
@@ -87,6 +82,12 @@
 <form class="text-focus">
     获得焦点样式: <input type="text" value="Mickey" /><br>
 </form>
+
+<!---->
+<div class="test-not">
+    <h2>这是标题</h2>
+    <p>这是段落</p>
+</div>
 
 <div class="test-before">
     <p>My name is Donald</p>
