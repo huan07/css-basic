@@ -40,10 +40,10 @@
 
         .center3 p {
             position: absolute;
-            top: 50%;
+            top: 50%; /* 相对父元素的高度一半 */
             left: 50%;
-            -webkit-transform: translate(-50%, -50%); /* 3. 针对不确定大小的元素，还可以用margin-left:-10px */
-            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%); /* 相对自身宽度，高度的一半 */
+            transform: translate(-50%, -50%); /* 3. 针对不确定大小的元素，还可以用margin-left:-10px */
         }
 
         .center4 {
@@ -52,10 +52,10 @@
             border: 3px solid rgba(255, 192, 203, 0.1);
             /* height: 100vh;*/
             display: -webkit-flex; /* 4. flex布局  */
-            -webkit-justify-content: center;
-            -webkit-align-items: center;
             display: flex;
+            -webkit-justify-content: center;
             justify-content: center;
+            -webkit-align-items: center;
             align-items: center;
         }
 
@@ -83,6 +83,9 @@
 
 <div class="center">
     <p class="inner">我是水平垂直居中的。</p>
+</div>
+<div class="center">
+    我是水平垂直居中的。也可以不被包一层
 </div>
 
 <div class="center2">
