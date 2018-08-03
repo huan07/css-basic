@@ -10,20 +10,23 @@
             border: 1px solid red;
             background-image: url('../images/icon-wyz-logo.png');
             background-repeat: no-repeat;
-            background-size: contain; /* 背景图片将 按比例自适应 内容区域 */
+            background-size: contain; /* 背景图片将 按比例自适应 内容区域           最大大小 */
         }
 
         .div2 {
-            background-size: 118px 38px; /* 看上去和上面一样的效果 */
+            background-size: cover;
+            /* 会把 背景图像扩展 至足够大，以使背景图像完全覆盖背景区域                        */
+            /* 该属性 保持了图片的比例 因此  背景图像的某些部分 无法显示  在背景定位区域中。   最小大小*/
         }
 
         .div3 {
-            background-size: 100% 100%; /* 背景图片将延展覆盖整个区域 */
+            background-size: 118px 38px; /* 看上去和 contain 一样的效果 */
         }
 
         .div4 {
-            background-size: cover; /* 会把 背景图像扩展 至足够大，以使背景图像完全覆盖背景区域 */
-            /* 该属性 保持了图片的比例 因此  背景图像的某些部分 无法显示  在背景定位区域中。*/
+            background-size: 100% 100%;
+            /* 背景图片将延展覆盖整个元素内容区域  */
+            /* 相对于背景定位区域的百分比 */
         }
     </style>
 </head>
