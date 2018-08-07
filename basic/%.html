@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/0.css">
+    <style>
+        body > * {
+            margin: 20px 0;
+        }
+
+        h1, h2, h3 {
+            background-color: olive;
+            text-align: center;
+        }
+
+        div {
+            width: 50%;
+        }
+
+        h1 {
+            width: 50%; /* width, padding, margin % 基于包含块（父元素）宽度的百分比计算 */
+        }
+
+        h2 {
+            width: 200px;
+            padding: 0 25%;
+        }
+
+        h3 {
+            width: 200px;
+            margin-left: 25%;
+            margin-top: 25%;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>1级标题</h1>
+
+<div>
+    <h1>1级标题</h1>
+</div>
+
+<h2>2级标题 测试padding</h2>
+
+<h3>3级标题 测试margin</h3>
+
+</body>
+</html>

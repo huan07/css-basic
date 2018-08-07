@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方案三</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .div {
+            width: 50%;
+            background: aliceblue;
+            max-width: 100%;
+
+            overflow: hidden; /* */
+        }
+
+        .div:after {
+            content: '';
+            display: block;
+            margin-top: 100%; /* */
+        }
+
+        .div2 {
+            width: 50%;
+            background: red;
+            max-width: 100%;
+        }
+
+        .div2:after {
+            content: '';
+            display: block;
+            padding-top: 100%; /* */
+        }
+    </style>
+</head>
+<body>
+
+<div class="div"></div>
+
+<div class="div2"></div>
+
+</body>
+</html>

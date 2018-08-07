@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方案二</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 50%;
+            height: 0;
+            padding-top: 50%;
+            background-color: olive;
+            /*max-width: 30%;*/
+        }
+    </style>
+</head>
+<body>
+
+<div></div><!-- 参照padding % 基于包含块（父元素）宽度的百分比计算 -->
+
+<!-- 缺点：会导致在元素上设置的max-width属性失效（max-height不收缩） -->
+
+</body>
+</html>
