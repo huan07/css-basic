@@ -9,7 +9,7 @@
             left: 30px;
         }
 
-        .pos_relative_left {
+        .pos_relative {
             position: relative;
             left: -30px;
         }
@@ -24,7 +24,7 @@
         .html_absolute {
             position: absolute;
             top: 250px;
-            right: 100px;
+            right: 50px;
             z-index: 99;
         }
 
@@ -60,7 +60,7 @@
 
 <div class="pos_static">static => 没有定位，top,left无效 默认属性<span style="color:#2546FF">不会脱离文档流</span></div>
 
-<div class="pos_relative_left">relative => 相对于自身正常位置向左，右，上，下移动 不影响其他元素的布局 <span style="color:#2546FF">不会脱离文档流</span>
+<div class="pos_relative">relative => 相对于自身正常位置向左，右，上，下移动 不影响其他元素的布局 <span style="color:#2546FF">不会脱离文档流</span>
 </div>
 
 <div class="window_fixed">fixed => 相对于浏览器窗口，是固定位置，即使窗口是滚动的它也不会移动 <span style="color:red">脱离文档流</span></div>
