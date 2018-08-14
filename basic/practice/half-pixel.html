@@ -65,13 +65,20 @@
             top: 0;
         }
 
+        .use-image {
+            background-image: url("../../images/border-top-d7d7d7.png"), url("../../images/border-top-d7d7d7.png");
+            background-repeat: repeat-x, repeat-x;
+            background-position: left top, left bottom;
+        }
     </style>
 </head>
 <body>
 
-<div class="half-line">0.5px的一条线 上下侧</div>
+<div class="half-line">方式1 0.5px的一条线 上下侧</div>
 
-<div class="half-line-2">0.5px的一条线 左右侧</div>
+<div class="half-line-2">方式1 0.5px的一条线 左右侧</div>
+
+<div class="use-image">方式2 用background-image实现</div>
 
 </body>
 </html>
