@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
-        div {
+        .div {
             width: 250px;
             white-space: nowrap; /* 规定段落中的文本不进行换行 */
             overflow: hidden;
@@ -33,11 +33,20 @@
         .test3 {
             word-break: keep-all; /* 只能在半角空格或连字符处换行 */
         }
+
+        .multi-lines {
+            border: 1px solid red;
+            width: 300px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
 
-<div>This is some long text that will not fit in the box</div>
+<div class="div">This is some long text that will not fit in the box</div>
 
 <p class="test"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
     break and wrap to the next line.</p>
@@ -47,6 +56,14 @@
 
 <p class="test3"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
     break and wrap to the next line.</p>
+
+<div class="multi-lines">
+    如果我们要实现多行文本溢出显示省略号呢，
+    如果我们要实现多行文本溢出显示省略号呢，
+    如果我们要实现多行文本溢出显示省略号呢，
+    如果我们要实现多行文本溢出显示省略号呢，
+    如果我们要实现多行文本溢出显示省略号呢
+</div>
 
 </body>
 </html>
