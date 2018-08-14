@@ -13,10 +13,14 @@
             padding: 15px;
         }
 
+        .row {
+            zoom: 1; /* for ie7~8 */
+        }
+
         .row:after {
             content: "";
+            display: table;
             clear: both;
-            display: block;
         }
 
         [class*="col-"] {
@@ -97,7 +101,11 @@
             old town and the modern city.</p>
         <p>Resize the browser window to see how the content respond to the resizing.</p>
     </div>
-
 </div>
+
+<div class="header">
+    <h1>Chania</h1>
+</div>
+
 </body>
 </html>

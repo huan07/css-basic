@@ -5,10 +5,9 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
-        div {
+        .resize {
             width: 300px;
-            padding: 10px 40px;
-            border: 2px solid;
+            border: 2px solid olive;
             resize: both;
             overflow: auto;
         }
@@ -16,8 +15,10 @@
 </head>
 <body>
 
-<div>指定一个div元素，允许用户调整大小
+<div class="resize"> resize: 用户可以调整元素占用空间大小
 </div>
+
+<input type="text" class="resize" value=" resize: 用户可以调整元素占用空间大小 ？？不生效">
 
 </body>
 </html>

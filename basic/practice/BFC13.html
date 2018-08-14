@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .first {
+            margin: 20px;
+            background: lightgreen;
+            width: 100px;
+            height: 100px;
+        }
+
+        ul {
+            display: inline-block;
+            margin: 10px;
+            background: lightblue;
+        }
+
+        li {
+            display: inline-block;
+            margin: 25px;
+        }
+    </style>
+</head>
+
+<body class="claro">
+
+<!--
+嵌套元素的margin重叠
+-->
+
+<div class="first"></div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+
+</html>

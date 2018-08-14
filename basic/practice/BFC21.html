@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .par {
+            width: 300px;
+            border: 5px solid #fcc;
+            overflow: hidden; /* 清除内部浮动 */
+        }
+
+        .child {
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 5px solid #f66;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="par">
+    <div class="child"></div>
+    <div class="child"></div>
+</div>
+
+</body>
+</html>

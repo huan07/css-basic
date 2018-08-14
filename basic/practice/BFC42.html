@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            float: left;
+            height: 50px;
+            width: 200px;
+            background: lightblue;
+        }
+
+        .box2 {
+            /*
+                        width: 400px;*/
+            height: 100px;
+            background: #eee;
+        }
+
+        .bfc {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<!--
+特性2：BFC不会重叠浮动元素
+
+可以用来实现两列自适应布局
+-->
+<div class="box1">我是一个左浮动的元素</div>
+<div class="box2" style="margin-bottom: 100px;">喂喂喂!大家不要生气嘛，生气会犯嗔戒的。悟空你也太调皮了，
+    我跟你说过叫你不要乱扔东西，你怎么又……你看，我还没说完你就把棍子给扔掉了!
+    月光宝盒是宝物，你把它扔掉会污染环境，要是砸到小朋友怎么办，就算砸不到小朋友，
+    砸到花花草草也是不对的。
+</div>
+
+<div class="box1">我是一个左浮动的元素</div>
+<div class="box2 bfc">喂喂喂!大家不要生气嘛，生气会犯嗔戒的。悟空你也太调皮了，
+    我跟你说过叫你不要乱扔东西，你怎么又……你看，我还没说完你就把棍子给扔掉了!
+    月光宝盒是宝物，你把它扔掉会污染环境，要是砸到小朋友怎么办，就算砸不到小朋友，
+    砸到花花草草也是不对的。
+</div>
+</body>
+</html>

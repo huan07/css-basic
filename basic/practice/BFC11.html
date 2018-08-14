@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            color: #f55;
+            background: #fcc;
+            width: 200px;
+            line-height: 100px;
+            text-align: center;
+            margin: 100px;
+        }
+
+        .p2 {
+            margin: 80px;
+        }
+
+        div {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+相邻Box垂直方向margin重叠
+-->
+
+
+<!--
+Box垂直方向的距离由margin决定。属于同一个BFC(上例中是body根元素的BFC)的两个相邻Box的margin会发生重叠
+-->
+<p>Haha</p>
+<p class="p2">Hehe</p>
+
+
+<!--
+解决方式：
+在p外面包裹一层容器，并触发该容器生成一个新BFC。那么两个P便不属于同一个BFC，就不会发生margin重叠了
+-->
+<p>Haha</p>
+<div>
+    <p class="p2">Hehe</p>
+</div>
+
+
+</body>
+</html>

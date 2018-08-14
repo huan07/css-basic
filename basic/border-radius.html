@@ -19,6 +19,12 @@
         img {
             border-radius: 50%;
         }
+
+        .circle {
+            width: 34px;
+            height: 34px;
+            background: red;
+        }
     </style>
 </head>
 <body>
@@ -30,11 +36,11 @@
 <img src="../images/image.jpg" alt="Paris">
 
 <!--画圆的两种方式-->
-<div style="width:34px;height: 34px;background: red;border-radius: 50%;">1</div>
-<div style="width:34px;height: 34px;background: red;border-radius: 17px;">2</div>
+<div class="circle" style="border-radius: 50%;">1</div>
+<div class="circle" style="border-radius: 17px;">2</div>
 
 
-<div style="width:34px;height: 34px;background: green;border-radius: 34px;">x x</div>
+<div class="circle" style="background: green;border-radius: 34px;">x x</div>
 
 </body>
 </html>

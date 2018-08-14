@@ -10,10 +10,9 @@
         }
 
         .div2 {
-            background: #800080;
+            background: #000080;
             border: 1px solid red;
-            height: 100px;
-            margin-top: 10px
+            margin-top: 50px;
         }
 
         .left {
@@ -31,31 +30,32 @@
         }
 
         /* 清除浮动代码 */
-        .clearfloat:after {
-            display: block;
-            clear: both;
-            content: "";
-            visibility: hidden;
-            height: 0
+        .clearfix {
+            zoom: 1; /* for ie7~8 */
         }
 
-        .clearfloat {
-            zoom: 1
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
         }
     </style>
 </head>
 <body>
 
-
 <!--
 http://www.cnblogs.com/AnotherLife/p/5800751.html
 -->
-<div class="div1 clearfloat">
+<div class="div1 clearfix">
     <div class="left">Left</div>
     <div class="right">Right</div>
 </div>
+
 <div class="div2">
-    div2
+    <div class="left">Left</div>
+    <div class="right">Right</div>
 </div>
 
 </body>

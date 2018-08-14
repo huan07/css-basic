@@ -27,10 +27,14 @@
             float: left;
         }
 
+        .clear-fix {
+            zoom: 1;
+        }
+
         .clear-fix:after {
-            content: "";
-            clear: both;
+            content: '';
             display: table;
+            clear: both;
         }
 
         input, textarea {

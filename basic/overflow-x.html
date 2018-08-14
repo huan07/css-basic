@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>overflow-x不管用</title>
+    <title>overflow-x</title>
     <link rel="stylesheet" type="text/css" href="css/0.css">
     <style>
         div {
@@ -16,13 +16,13 @@
             color: white;
         }
 
-        div.auto {
-            overflow-x: auto;
+        div.scroll {
+            overflow-x: scroll;
             overflow-y: hidden;
         }
 
-        div.scroll {
-            overflow-x: scroll;
+        div.auto {
+            overflow-x: auto;
             overflow-y: hidden;
         }
 
@@ -33,6 +33,15 @@
     </style>
 </head>
 <body>
+
+<div class="scroll">
+    <p style="width: 240px;">
+        <span>overflow-x: scroll;</span>You can use the overflow property when you want to have better
+        control of the layout. The default value is visible.
+        You can use the overflow property when you want to have better
+        control of the layout. The default value is visible.
+    </p>
+</div>
 
 <div class="auto">
     <p style="width: 240px;">
@@ -48,15 +57,6 @@
     control of the layout. The default value is visible.
     You can use the overflow property when you want to have better
     control of the layout. The default value is visible.
-</div>
-
-<div class="scroll">
-    <p style="width: 240px;">
-        <span>overflow-x: scroll;</span>You can use the overflow property when you want to have better
-        control of the layout. The default value is visible.
-        You can use the overflow property when you want to have better
-        control of the layout. The default value is visible.
-    </p>
 </div>
 
 <div class="hidden">

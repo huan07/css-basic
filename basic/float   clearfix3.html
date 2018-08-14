@@ -17,10 +17,14 @@
         }
 
         /* 清除浮动代码 */
-        .clearfix::after {
+        .clearfix {
+            zoom: 1; /* for ie7~8 */
+        }
+
+        .clearfix:after {
             content: "";
-            clear: both;
             display: table;
+            clear: both;
         }
 
         .sidemenu {

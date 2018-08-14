@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .half-line, .half-line-2 {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .half-line:before {
+            content: '';
+
+            width: 100%;
+            border-top: 1px solid red;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .half-line:after {
+            content: '';
+
+            width: 100%;
+            border-bottom: 1px solid red;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .half-line-2:before {
+            content: '';
+
+            height: 100%;
+            border-left: 1px solid red;
+            -webkit-transform: scaleX(0.5);
+            transform: scaleX(0.5);
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .half-line-2:after {
+            content: '';
+
+            height: 100%;
+            border-right: 1px solid red;
+            -webkit-transform: scaleX(0.5);
+            transform: scaleX(0.5);
+
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="half-line">0.5px的一条线 上下侧</div>
+
+<div class="half-line-2">0.5px的一条线 左右侧</div>
+
+</body>
+</html>

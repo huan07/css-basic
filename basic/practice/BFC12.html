@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #green {
+            margin: 10px 10px 10px 10px
+        }
+
+        #blue {
+            margin: 10px 10px 10px 10px
+        }
+
+        #red {
+            margin: 10px 10px 10px 10px
+        }
+
+        body {
+            writing-mode: tb-rl;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+相邻Box水平方向margin重叠
+-->
+
+<div id="green" style="background:lightgreen;height:100px;width:100px;"></div>
+<div id="blue" style="background:lightblue;height:100px;width:100px;"></div>
+<div id="red" style="background:pink;height:100px;width:100px;"></div>
+
+<!-- 不管用
+我们可以给div加个display:inline-block，触每个div容器生成一个BFC。那么三个DIV便
+不属于同一个BFC（这个只body根元素形成的BFC），就不会发生margin重叠了
+-->
+
+</body>
+</html>
