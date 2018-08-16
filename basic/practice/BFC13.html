@@ -9,15 +9,17 @@
             padding: 0;
         }
 
-        .box1 {
-            width: 100px;
-            height: 100px;
-            float: left;
-            border: 1px solid #000;
+        .parent {
+            border: 5px solid #4CAF50;
+            padding: 20px;
         }
 
-        .box {
-            background: yellow
+        .child {
+            float: left;
+            width: 200px;
+            height: 50px;
+            border: 1px solid #000;
+            background-color: pink;
         }
 
         .bfc {
@@ -29,24 +31,44 @@
 <!--
 特性3：BFC可以包含浮动----清除浮动
 
-两个div元素浮动，脱离了文档流，父容器内容宽度为零（即发生高度塌陷），未能将子元素包裹住
+两个div元素浮动，脱离了文档流，父容器内容高度为零（即发生高度塌陷），未能将子元素包裹住
 -->
-<div class="box">
-    <div class="box1"></div>
-    <div class="box1"></div>
+<div class="parent">
+    <div class="child"></div>
+    <div class="child"></div>
 </div>
-<br>
-<br>
-<br>
-<br>
+<div>BFC可以包含浮动</div>
 <br>
 <br>
 <br>
 
-<div class="box bfc">
-    <div class="box1"></div>
-    <div class="box1"></div>
+
+<div class="parent bfc">
+    <div class="child"></div>
+    <div class="child"></div>
 </div>
+<div>BFC可以包含浮动</div>
+<br>
+<br>
+<br>
+
+
+<div class="parent">
+    <div class="child"></div>
+</div>
+<div>BFC可以包含浮动</div>
+<br>
+<br>
+<br>
+
+
+<div class="parent bfc">
+    <div class="child"></div>
+</div>
+<div>BFC可以包含浮动</div>
+<br>
+<br>
+<br>
 
 </body>
 </html>
