@@ -2,44 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BFC2</title>
+    <title></title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
 
-        #green {
-            margin: 10px 10px 10px 10px
+        .box1 {
+            float: left;
+            height: 50px;
+            width: 200px;
+            background: lightblue;
         }
 
-        #blue {
-            margin: 10px 10px 10px 10px
+        .box2 {
+            /*
+                        width: 400px;*/
+            height: 100px;
+            background: #eee;
         }
 
-        #red {
-            margin: 10px 10px 10px 10px
-        }
-
-        body {
-            writing-mode: tb-rl;
+        .bfc {
+            overflow: auto;
         }
     </style>
 </head>
 <body>
-
 <!--
-相邻Box水平方向margin重叠
+特性2：BFC不会重叠浮动元素
+
+可以用来实现两列自适应布局
 -->
+<div class="box1">我是一个左浮动的元素</div>
+<div class="box2" style="margin-bottom: 100px;">喂喂喂!大家不要生气嘛，生气会犯嗔戒的。悟空你也太调皮了，
+    我跟你说过叫你不要乱扔东西，你怎么又……你看，我还没说完你就把棍子给扔掉了!
+    月光宝盒是宝物，你把它扔掉会污染环境，要是砸到小朋友怎么办，就算砸不到小朋友，
+    砸到花花草草也是不对的。
+</div>
 
-<div id="green" style="background:lightgreen;height:100px;width:100px;"></div>
-<div id="blue" style="background:lightblue;height:100px;width:100px;"></div>
-<div id="red" style="background:pink;height:100px;width:100px;"></div>
-
-<!-- 不管用
-我们可以给div加个display:inline-block，触每个div容器生成一个BFC。那么三个DIV便
-不属于同一个BFC（这个只body根元素形成的BFC），就不会发生margin重叠了
--->
-
+<div class="box1">我是一个左浮动的元素</div>
+<div class="box2 bfc">喂喂喂!大家不要生气嘛，生气会犯嗔戒的。悟空你也太调皮了，
+    我跟你说过叫你不要乱扔东西，你怎么又……你看，我还没说完你就把棍子给扔掉了!
+    月光宝盒是宝物，你把它扔掉会污染环境，要是砸到小朋友怎么办，就算砸不到小朋友，
+    砸到花花草草也是不对的。
+</div>
 </body>
 </html>

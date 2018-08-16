@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BFC</title>
+    <title></title>
     <style>
         * {
             margin: 0;
@@ -10,46 +10,74 @@
         }
 
         p {
-            color: #f55;
-            background: #fcc;
+            color: #fff;
+            background: #888;
             width: 200px;
-            line-height: 100px;
-            text-align: center;
-            margin: 100px;
+            margin: 20px;
         }
 
-        .p2 {
-            margin: 80px;
+        .box {
+            background: #ccc;
         }
 
-        div {
+        .wrap {
+            background: yellow;
+        }
+
+        .wrap h1 {
+            background: pink;
+            margin: 10px;
+        }
+
+        .bfc {
             overflow: hidden;
+        }
+
+        .padding-border {
+            border: 1px solid black;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
-
 <!--
-相邻Box垂直方向margin重叠
+特性1：BFC会阻止垂直外边距折叠
+
+a.相邻兄弟元素margin重叠问题
+只需要在p外面包裹一层容器，并触发该容器生成一个BFC
+
+b.父子元素margin重叠问题
+父元素生成一个BFC
 -->
+<p>ABC</p>
+<p>abc</p>
 
-
-<!--
-Box垂直方向的距离由margin决定。属于同一个BFC(上例中是body根元素的BFC)的两个相邻Box的margin会发生重叠
--->
-<p>Haha</p>
-<p class="p2">Hehe</p>
-
-
-<!--
-解决方式：
-在p外面包裹一层容器，并触发该容器生成一个新BFC。那么两个P便不属于同一个BFC，就不会发生margin重叠了
--->
-<p>Haha</p>
-<div>
-    <p class="p2">Hehe</p>
+<div class="bfc">
+    <p>ABC 创建BFC之后的布局</p>
 </div>
+<p>abc 创建BFC之后的布局</p>
 
+
+<!--
+-->
+<div class="box">box</div>
+<div class="wrap">
+    <h1>h1</h1>
+</div>
+<br>
+
+
+<div class="box">box</div>
+<div class="wrap bfc">
+    <h1>h1 创建BFC之后的布局</h1>
+</div>
+<br>
+
+
+<div class="box">box</div>
+<div class="wrap padding-border">
+    <h1>h1 添加padding, border隔绝</h1>
+</div>
 
 </body>
 </html>
