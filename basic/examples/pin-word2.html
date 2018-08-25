@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /*
+                        height: 1200px;*/
+        }
+
+        .main {
+            position: fixed; /* 盖住窗口 方便后面div百分比设定 */
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .wrapper-up {
+            height: 50%;
+        }
+
+        .wrapper-down {
+            height: 50%;
+            position: relative;
+        }
+
+        .div-square-up {
+            width: 50%;
+            height: 100%;
+            margin: 0 auto;
+            border: 2px solid red;
+        }
+
+        .div-square-left, .div-square-right {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            border: 2px solid red;
+        }
+
+        .div-square-left {
+            left: 0;
+        }
+
+        .div-square-right {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main">
+
+    <div class="wrapper-up">
+        <div class="div-square-up"></div>
+    </div>
+
+    <div class="wrapper-down">
+        <div class="div-square-left"></div>
+        <div class="div-square-right"></div>
+    </div>
+</div>
+
+</body>
+</html>
