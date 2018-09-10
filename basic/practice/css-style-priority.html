@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div {
+            color: red;
+        }
+
+        .div {
+            color: blue;
+        }
+
+        div {
+            color: green;;
+        }
+
+        /**/
+        #h5 {
+            color: pink;
+            font-size: 32px;
+        }
+
+        h5:last-child {
+            color: pink;
+            font-size: 32px;
+        }
+
+        .h5 {
+            color: pink;
+            font-size: 32px;
+        }
+
+        [class=h5] {
+            color: pink;
+            font-size: 32px;
+        }
+
+        /**/
+        .p {
+            font-size: 16px;
+        }
+
+        p:first-letter {
+            font-size: 26px;
+            color: deeppink;
+        }
+
+        p {
+            font-size: 36px;
+            color: lightpink;
+        }
+
+        * {
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+
+<div class="div" id="div">优先级：id > class > 元素</div>
+
+<h5 class="h5" id="h5">优先级：id > 伪类 > 属性选择器 === class</h5>
+
+<p class="p" id="p">优先级：伪元素 > 元素 > 通配符 </p>
+
+<!--
+
+id > 伪类 > 属性选择器 === class > 元素
+
+-->
+
+</body>
+</html>
