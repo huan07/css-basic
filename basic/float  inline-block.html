@@ -16,7 +16,7 @@
         }
 
         .inline-block-parent {
-            font-size: 0; /* 清除空隙 */
+            font-size: 0; /* inline-block 的边距解决 */
         }
 
         .inline-block {
@@ -39,23 +39,23 @@
 <!-- div作为子元素 -->
 <div class="inline-block-parent">
     <div class="inline-block item">布局练习</div>
-    <div class="inline-block item">布局练习</div>
+    <div class="inline-block item">div布局练习</div>
 </div>
 
 <div class="float-parent">
     <div class="float-left item">布局练习</div>
-    <div class="float-left item">布局练习</div>
+    <div class="float-left item">div布局练习</div>
 </div>
 
 <!-- span作为子元素 -->
 <div class="inline-block-parent">
     <div class="inline-block item">布局练习</div>
-    <span class="inline-block item">布局练习</span>
+    <span class="inline-block item">span布局练习</span>
 </div>
 
 <div class="float-parent">
     <div class="float-left item">布局练习</div>
-    <span class="float-left item">布局练习</span>
+    <span class="float-left item">span布局练习</span>
 </div>
 
 </body>
