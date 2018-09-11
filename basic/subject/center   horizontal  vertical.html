@@ -5,7 +5,11 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../css/0.css">
     <style>
-        .inner {
+        .centerX {
+            border: 3px solid rgba(255, 192, 203, 1);
+        }
+
+        .centerX .innerX {
             border: 3px dashed coral;
         }
 
@@ -13,7 +17,6 @@
             padding: 10px 0; /* 1. */
 
             text-align: center;
-            border: 3px solid rgba(255, 192, 203, 1);
         }
 
         .center2 {
@@ -21,7 +24,6 @@
             height: 100px;
 
             text-align: center;
-            border: 3px solid rgba(255, 192, 203, 0.5);
 
             width: 300px;
         }
@@ -34,7 +36,6 @@
 
         .center3 {
             height: 100px;
-            border: 3px solid rgba(255, 192, 203, 0.3);
             position: relative;
         }
 
@@ -43,13 +44,12 @@
             top: 50%; /* 相对父元素的高度一半 */
             left: 50%;
             -webkit-transform: translate(-50%, -50%); /* 相对自身宽度，高度的一半 */
-            transform: translate(-50%, -50%); /* 3. 针对不确定大小的元素，还可以用margin-left:-10px */
+            transform: translate(-50%, -50%); /* 3. 针对确定大小的元素，还可以用margin-left:-10px */
         }
 
         .center4 {
             width: 300px;
             height: 100px;
-            border: 3px solid rgba(255, 192, 203, 0.1);
             /* height: 100vh;*/
             display: -webkit-flex; /* 4. flex布局  */
             display: flex;
@@ -59,7 +59,7 @@
             align-items: center;
         }
 
-        .center4 div {
+        .center4 p {
             width: 70px;
             height: 70px;
         }
@@ -67,45 +67,77 @@
         .center5 {
             width: 300px;
             height: 100px;
-            border: 3px solid rgba(255, 192, 203, 0.1);
             display: -webkit-flex;
             display: flex;
         }
 
-        .center5 div {
+        .center5 p {
             width: 70px;
             height: 70px;
             margin: auto;
+        }
+
+        .center6 {
+            width: 300px;
+            height: 100px;
+            display: grid;
+        }
+
+        .center6 p {
+            width: 70px;
+            height: 70px;
+            margin: auto;
+        }
+
+        .center7 {
+            display: table;
+            height: 100px;
+        }
+
+        .center7 .inner7 {
+            display: table-cell;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
 
-<div class="center">
-    <p class="inner">我是水平垂直居中的。</p>
+<div class="centerX center">
+    <p class="innerX inner">我是水平垂直居中的。</p>
 </div>
-<div class="center">
+<div class="centerX center">
     我是水平垂直居中的。也可以不被包一层
 </div>
 
-<div class="center2">
-    <p class="inner">我是水平垂直居中的。2</p>
+
+<div class="centerX center2">
+    <p class="innerX ">我是水平垂直居中的。2</p>
+</div>
+<div class="centerX center2">
+    <p class="innerX multi-line">我是水平垂直居中的。2 针对多行文本 针对多行文本 针对多行文本 针对多行文本 针对多行文本</p>
 </div>
 
-<div class="center2">
-    <p class="multi-line inner">我是水平垂直居中的。2 针对多行文本 针对多行文本 针对多行文本 针对多行文本 针对多行文本</p>
+
+<div class="centerX center3">
+    <p class="innerX ">我是水平垂直居中的。3</p>
 </div>
 
-<div class="center3">
-    <p class="inner">我是水平垂直居中的。3</p>
+
+<div class="centerX center4">
+    <p class="innerX">我是水平垂直居中的。4</p>
 </div>
 
-<div class="center4">
-    <div class="inner">我是水平垂直居中的。4</div>
+
+<div class="centerX center5">
+    <p class="innerX">我是水平垂直居中的。5</p>
+</div>
+<div class="centerX center6">
+    <p class="innerX">我是水平垂直居中的。6</p>
 </div>
 
-<div class="center5">
-    <div class="inner">我是水平垂直居中的。5</div>
+
+<div class="centerX center7 ">
+    <div class="innerX inner7">我是水平垂直居中的。7</div>
 </div>
 
 </body>
