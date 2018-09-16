@@ -4,72 +4,68 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        #div {
-            color: red;
-        }
-
-        .div {
-            color: blue;
+        * {
+            margin: 0;
+            padding: 0;
         }
 
         div {
-            color: green;;
+            color: blue !important;
         }
 
-        /**/
-        #h5 {
+        #div {
             color: pink;
-            font-size: 32px;
         }
 
-        h5:last-child {
-            color: pink;
-            font-size: 32px;
-        }
-
-        .h5 {
-            color: pink;
-            font-size: 32px;
-        }
-
-        [class=h5] {
-            color: pink;
-            font-size: 32px;
-        }
-
-        /**/
-        .p {
-            font-size: 16px;
-        }
-
-        p:first-letter {
-            font-size: 26px;
-            color: deeppink;
-        }
-
-        p {
-            font-size: 36px;
-            color: lightpink;
+        .div {
+            color: #0CCCC8;
         }
 
         * {
-            color: hotpink;
+            color: black;
+        }
+
+        /**/
+        div h5:first-child {
+            font-size: 16px;
+        }
+
+        div [class=h5] {
+            font-size: 32px;
+        }
+
+        div .h5 {
+            font-size: 64px;
+        }
+
+        /**/
+        div p {
+            color: olive;
+        }
+
+        div > p:first-child {
+            color: peachpuff;
         }
     </style>
 </head>
 <body>
 
-<div class="div" id="div">优先级：id > class > 元素</div>
-
-<h5 class="h5" id="h5">优先级：id > 伪类 > 属性选择器 === class</h5>
-
-<p class="p" id="p">优先级：伪元素 > 元素 > 通配符 </p>
-
 <!--
-
-id > 伪类 > 属性选择器 === class > 元素
-
+http://www.runoob.com/w3cnote/css-style-priority.html
 -->
+
+<div class="div" id="div" style="color: red">!important > 内联样式 > ID 选择器 > 类选择器 > 元素选择器 > 通配符选择器</div>
+
+
+<div>
+    <h5 class="h5">类 = 属性 = 伪类？？？？伪类最高，类，属性选择器优先级一样的，写在css文件的后面覆盖前面的</h5>
+</div>
+
+
+<div>
+    <p class="p">元素 = 伪元素？？？？伪元素高些</p>
+</div>
+
 
 </body>
 </html>
