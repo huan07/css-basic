@@ -11,7 +11,7 @@
 
             2.没有元素的内容撑开来，要设置元素大小的； width height ！！！！！！！！！！！！！！！
 
-            3.默认情况下，background-image重复垂直和水平方向铺开，并在元素区域的左上角0 0 (0% 0%)
+            3.默认情况下，在元素区域的左上角0 0 (0% 0%)，并background-image重复垂直和水平方向铺开
 
             */
             font-size: 100px;
@@ -19,14 +19,14 @@
         }
 
         .h2 {
-            width: 500px;
-            height: 150px;
+            width: 300px;
+            height: 200px;
             font-size: 0;
         }
 
         .h3 {
-            background-repeat: no-repeat;
             background-position: right bottom;
+            background-repeat: no-repeat;
         }
 
         .icon-wrapper { /* ！！！！！！！！！！！！！！！！！！！！！其他实现方式 参照 app-online！*/
@@ -39,9 +39,9 @@
             width: 100%;
             height: 60px;
             background-image: url(../images/icon-wyz-logo.png), url(../images/icon-correct.png);
-            background-repeat: no-repeat, no-repeat;
             background-position: left center, right center;
             background-size: 118px 38px, 28px 28px; /* 第二个值不写是auto */
+            background-repeat: no-repeat, no-repeat;
         }
     </style>
 </head>
