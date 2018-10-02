@@ -5,7 +5,7 @@
     <title></title>
     <style>
         body > * {
-            margin: 40px;
+            margin: 50px;
         }
 
         .t-shadow {
@@ -14,8 +14,8 @@
 
         .div {
             width: 400px;
-            height: 100px;
-            background-color: #000;
+            height: 50px;
+            background: #000;
         }
 
         .div2 {
@@ -28,6 +28,12 @@
 
         .div4 {
             box-shadow: 0 8px 12px 12px red; /* 模糊距离，阴影的大小 */
+        }
+
+        .div5 {
+            box-shadow: 0 0 0 10px #655,
+            0 0 0 15px deeppink,
+            0 2px 5px 15px rgba(0, 0, 0, .5);
         }
     </style>
 </head>
@@ -42,6 +48,8 @@
 <div class="div div3"></div>
 
 <div class="div div4"></div>
+
+<div class="div div5">逗号分隔语法，可以创建任意数量的投影，层层叠加</div>
 
 </body>
 </html>
