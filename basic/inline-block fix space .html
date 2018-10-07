@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/0.css">
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        .item {
+            margin: 5px;
+            border: 2px solid olive;
+            padding: 10px;
+        }
+
+        .inline-block-parent {
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .fixed {
+            letter-spacing: -8px;
+        }
+
+        .fixed .inline-block {
+            letter-spacing: normal;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+方法一：为<li>设置float:
+ left。不足：有些容器是不能设置浮动，如左右切换的焦点图等。
+
+方法二：将所有<li>写在同一行。不足：代码不美观。
+
+方法三：将<ul>内的字符尺寸直接设为0，即font-size:
+ 0。不足：<ul>中的其他字符尺寸也被设为0，需要额外重新设定其他字符尺寸，且在Safari浏览器依然会出现空白间隔。
+
+方法四：消除<ul>的字符间隔letter-spacing: -8px，而这也设置了<li>内的字符间隔，因此需要将<li>内的字符间隔设为默认letter-spacing: normal。
+-->
+
+<div class="inline-block-parent">
+    <div class="inline-block item">布局练习</div>
+    <div class="inline-block item">div布局练习</div>
+</div>
+
+
+<div class="inline-block-parent fixed">
+    <div class="inline-block item">布局练习</div>
+    <div class="inline-block item">div布局练习</div>
+</div>
+
+</body>
+</html>

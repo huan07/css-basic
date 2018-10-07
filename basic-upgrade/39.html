@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 125%;
+            line-height: 1;
+        }
+
+        .origin {
+            background-color: lightpink;
+        }
+
+        .origin .wrapper {
+            max-width: 900px;
+            margin: 1em auto;
+        }
+
+        p {
+            display: inline-block;
+        }
+
+        /**/
+        .fixed {
+            /*
+                        max-width: 900px;  写不写没有区别 */
+            padding: 1em;
+            padding: 1em calc(50% - 450px);
+            background-color: lightpink;
+        }
+
+    </style>
+</head>
+<body>
+
+<footer class="origin">
+    <div class="wrapper">
+        <p>文案1</p>
+        <p>文案2</p>
+    </div>
+</footer>
+
+<footer class="fixed">
+    <p>文案1</p>
+    <p>文案2</p>
+</footer>
+
+</body>
+</html>

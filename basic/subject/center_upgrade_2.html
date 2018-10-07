@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基于视口单位：仅适用于在视口中居中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            width: 600px;
+
+            border: 1px solid pink;
+
+            text-align: center;
+            /*
+                        margin: 50% auto 0;*/
+            margin: 50vh auto 0;
+            transform: translateY(-50%);
+        }
+    </style>
+
+</head>
+<body>
+
+<section class="parent">
+    <h1>centern header</h1>
+    <p>center paragraph</p>
+</section>
+
+</body>
+</html>

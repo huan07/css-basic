@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基于绝对定位的解决方案：要求元素具有固定的宽度，高度</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            position: relative;
+            width: 600px;
+            height: 120px;
+            border: 1px solid pink;
+
+            text-align: center;
+        }
+
+        .origin {
+            position: absolute;
+            left: 50%; /* 百分比基于已定位的祖先元素 */
+            top: 50%; /* 百分比基于已定位的祖先元素 */
+            width: 300px;
+            height: 80px;
+            margin-left: -150px; /* 移动自身宽度的一半 */
+            margin-top: -40px;
+        }
+
+        .better {
+            position: absolute;
+            left: calc(50% - 150px);
+            top: calc(50% - 40px);
+            width: 300px;
+            height: 80px;
+        }
+
+        .better2 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* 百分比基于元素自身 */
+        }
+    </style>
+</head>
+<body>
+
+<section class="parent">
+    <section class="origin">
+        <h1>centern header</h1>
+        <p>center paragraph</p>
+    </section>
+</section>
+
+
+<section class="parent">
+    <section class="better">
+        <h1>centern header</h1>
+        <p>center paragraph</p>
+    </section>
+</section>
+
+
+<section class="parent">
+    <section class="better2">
+        <h1>centern header</h1>
+        <p>center paragraph</p>
+    </section>
+</section>
+
+</body>
+</html>

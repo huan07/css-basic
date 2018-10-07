@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-        div:nth-child(2) {
+        div:nth-child(2) { /* 是父亲元素的第2个元素并且是div元素 */
             background: pink;
         }
 
-        /*           */
+        /* 是父亲元素的基数个元素并且是p元素 */
         p:nth-child(odd) {
             background: grey;
         }
 
         p:nth-child(even) {
-            background: pink;
+            background: deeppink;
         }
 
-        /*           */
+        /* 是父级的最后一个子元素并且是h1元素 */
         h1:last-child {
             background: red;
         }
@@ -34,23 +34,29 @@
 <div>This is a heading</div>
 
 
-<p>The first paragraph.</p>
-<p>The second paragraph.</p>
-<p>The third paragraph.</p>
+<p>The first paragraph. p</p>
+<p>The second paragraph. p</p>
+<p>The third paragraph. p</p>
+
 
 <section>
     <h1>测试last-child</h1>
     <h1>测试last-child</h1>
 </section>
+<h1>测试last-child</h1>
+<h1>测试last-child x x</h1>
+
 
 <section>
     <a href="javascript:;">联合测试last-child active</a><br>
     <a href="javascript:;">联合测试last-child active</a><br>
-    <a href="javascript:;">联合测试last-child active</a><br>
 </section>
+<a href="javascript:;">联合测试last-child active</a><br>
+<a href="javascript:;">联合测试last-child active</a><br>
 
 
-<p><b>注意:</b> Internet Explorer 8 and以及更早版本的浏览器 :nth-child()选择器.</p>
+<p><b>注意:</b> Internet Explorer 8 and以及更早版本的浏览器 :nth-child()选择器. p</p>
+<p><b>注意:</b> Internet Explorer 8 and以及更早版本的浏览器 :nth-child()选择器. p</p>
 
 </body>
 </html>

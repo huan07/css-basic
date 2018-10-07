@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宽度由 内部内容决定 而不是由它的父元素决定</title>
+
+    <style>
+        figure {
+            border: 1px solid pink;
+        }
+
+        .fixed {
+            width: min-content;
+            margin: auto;
+        }
+
+        .fixed-compat {
+            max-width: 316px;
+            max-width: min-content;
+            margin: auto;
+        }
+
+        .fixed-compat > img {
+            max-width: inherit;
+        }
+
+    </style>
+</head>
+<body>
+
+<figure>
+    <img src="../images/image.jpg" alt="The Pulpit Rock" width="304" height="228">
+    <figcaption>Fig.1 - A view of the pulpit rock in Norway.</figcaption>
+</figure>
+
+
+<figure class="fixed">
+    <img src="../images/image.jpg" alt="The Pulpit Rock" width="304" height="228">
+    <figcaption>Fig.1 - A view of the pulpit rock in Norway.</figcaption>
+</figure>
+
+
+<figure class="fixed-compat">
+    <img src="../images/image.jpg" alt="The Pulpit Rock" width="304" height="228">
+    <figcaption>Fig.1 - A view of the pulpit rock in Norway.</figcaption>
+</figure>
+
+</body>
+</html>
