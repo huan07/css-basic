@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .ul-box {
+            box-sizing: border-box;
+            width: 150px;
+            padding: 0 16px;
+            border: 1px solid #b7b7b7;
+            background-color: #f9f9f9;
+        }
+
+        .cat {
+            width: 32px;
+            height: 24px; /* 在32px * 24px 的区域 只显示大图片部分  */
+            float: left;
+            margin-top: 8px;
+            background: url(../images/sp.jpg) no-repeat;
+        }
+
+        .cat-1 {
+            background-position: 0 0; /* 大图片左上角部分显示 */
+        }
+
+        .cat-2 {
+            background-position: 0 -24px; /* 大图片向下移动24px */
+        }
+
+        .cat-3 {
+            background-position: 0 -48px;
+        }
+
+        .cat-4 {
+            background-position: 0 -72px;
+        }
+
+        .cat-8 {
+            background-position: -40px 0; /* 大图片向左移动40px */
+        }
+
+        .cat-text {
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #d7d7d7;
+            font-weight: normal;
+        }
+
+        ul li:last-child .cat-text {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="ul-box">
+    <li>
+        <i class="cat cat-1"></i>
+        <h3 class="cat-text">服装内衣</h3>
+    </li>
+    <li>
+        <i class="cat cat-2"></i>
+        <h3 class="cat-text">鞋包配饰</h3>
+    </li>
+    <li>
+        <i class="cat cat-3"></i>
+        <h3 class="cat-text">运动户外</h3>
+    </li>
+    <li>
+        <i class="cat cat-4"></i>
+        <h3 class="cat-text">珠宝手表</h3>
+    </li>
+    <li>
+        <i class="cat cat-1"></i>
+        <h3 class="cat-text">手机数码</h3>
+    </li>
+    <li>
+        <i class="cat cat-1"></i>
+        <h3 class="cat-text">家电办公</h3>
+    </li>
+    <li>
+        <i class="cat cat-1"></i>
+        <h3 class="cat-text">护肤彩妆</h3>
+    </li>
+    <li>
+        <i class="cat cat-8"></i>
+        <h3 class="cat-text">母婴用品</h3>
+    </li>
+</ul>
+
+</body>
+</html>
