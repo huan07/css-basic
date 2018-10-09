@@ -9,9 +9,14 @@
             width: 250px;
             white-space: nowrap; /* 规定段落中的文本不进行换行 */
             overflow: hidden;
-            text-overflow: ellipsis;
+            text-overflow: ellipsis; /* 文本溢出包含它的元素，应该发生什么 */
 
             border: 1px solid #000000;
+        }
+
+        .div:hover {
+            overflow: visible;
+            text-overflow: inherit;
         }
 
         p {
@@ -23,7 +28,7 @@
             word-wrap: break-word; /* 在长单词或 URL地址内部  进行换行 */
         }
 
-        .test2 {
+        .test-better {
             word-wrap: break-word;
             word-break: break-all; /* 在合适的点换行 */
 
@@ -51,7 +56,8 @@
 <p class="test"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
     break and wrap to the next line.</p>
 
-<p class="test2"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
+<p class="test-better"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word
+    will
     break and wrap to the next line. best best used .*****</p>
 
 <p class="test3"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will
