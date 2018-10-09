@@ -8,8 +8,12 @@
             margin: 50px;
         }
 
+        .t-shadow_ {
+            text-shadow: 4px 8px 0 red;
+        }
+
         .t-shadow {
-            text-shadow: 4px 8px 12px red;
+            text-shadow: 4px 8px 12px red; /* [阴影模糊半径] 越大越模糊 */
         }
 
         .div {
@@ -19,15 +23,19 @@
         }
 
         .div2 {
-            box-shadow: 4px 8px 12px red; /* 模糊距离 */
+            box-shadow: 4px 8px 12px red;
+        }
+
+        .div3_ {
+            box-shadow: 0 8px 12px red;
         }
 
         .div3 {
-            box-shadow: 0 8px 12px 0 red;
+            box-shadow: 0 8px 12px 6px red; /* [阴影扩展半径] 向外扩展 */
         }
 
         .div4 {
-            box-shadow: 0 8px 12px 12px red; /* 模糊距离，阴影的大小 */
+            box-shadow: 0 8px 12px 12px red; /* X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式] 缺省值为0 */
         }
 
         .div5 {
@@ -39,11 +47,17 @@
 </head>
 <body>
 
+<div class="t-shadow_">
+    Text Shadow Effect!
+</div>
+
 <div class="t-shadow">
     Text Shadow Effect!
 </div>
 
 <div class="div div2"></div>
+
+<div class="div div3_"></div>
 
 <div class="div div3"></div>
 
